@@ -13,7 +13,7 @@
     </div>
     <Cardflowfunction />
     <div class="pageWrapper">
-        <h1>Projects</h1>
+        <h1>Contact</h1>
     </div>
     <Footer />
 </main>
