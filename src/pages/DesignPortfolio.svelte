@@ -7,13 +7,12 @@
 <main>
     <HeaderDesignPortfolio  />
     <div class="pageWrapper">
-        <div style="height: 50px;">
-        </div>
-        <h1>Projects</h1>
+        <div style="height: 50px;"></div>
+        <!-- <h1>Projects</h1>s -->
     </div>
     <Cardflowfunction />
     <div class="pageWrapper">
-        <h1>Contact</h1>
+        <h1>Experience</h1>
     </div>
     <Footer />
 </main>

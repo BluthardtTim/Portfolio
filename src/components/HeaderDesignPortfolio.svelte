@@ -1,9 +1,9 @@
 <script>
     const tooltips = [
-        "Film Enthusiast",
-        "Gourmet Chef",
-        "Cyclist",
-        "Traveler"
+        "photographer",
+        "love to cook",
+        "riding mountainbike",
+        "traveling"
     ];
 
     // Icons für die tooltips
@@ -27,6 +27,9 @@
             <div>
                 <h5>UI/UX Design – Portfolio</h5>
                 <h1>Tim Bluthardt</h1>
+                <p style="margin-top: 40px;">
+                    Hi, I'm Tim and I love to design websites and stuff <br />that makes me happy.
+                </p>
                 <div style="display: flex; flex-direction: row; align-items: center;">
                     <p>that's me</p>
                     <img id="iconarrow" src="../images/icons/arrow-up-right-light.svg" alt="Arrow icon" />
@@ -39,9 +42,6 @@
                         </div>
                     {/each}
                 </div>
-                <p style="margin-top: 40px;">
-                    Hi, I'm Tim and I love to design websites and stuff <br />that makes me happy.
-                </p>
             </div>
         </div>
     </div>
