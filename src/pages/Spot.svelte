@@ -56,10 +56,9 @@
 
     <div class="pageWrapper">
         <div class="savespaceTop"></div>
-        <div class="zwocolumn">
             <div>
                 <h5>Overview of the project</h5>
-                <p>
+                <p class="twocoloumns">
                     The task involved identifying signals and trends in
                     technology and selecting one that we believe has the
                     potential to address a problem within the next 5 to 10
@@ -73,7 +72,7 @@
             </div>
             <div>
                 <h5>Problem we are solving</h5>
-                <p>
+                <p class="twocoloumns">
                     Every day, we receive countless pieces of information from
                     various sources. Whether it's feedback at university, a
                     conversation with friends, a podcast, or simply the task of
@@ -88,14 +87,13 @@
                     form, creating a comprehensive network of your own ideas.
                 </p>
             </div>
-        </div>
         <h5>Future Scenario</h5>
         <p style="font-size: 22px; text-align: center;">
             What if, in 5-10 years, you could use <br />regular glasses with
             location-based information to store ideas and information.
         </p>
         <h5>Spot</h5>
-        <p>
+        <p class="twocoloumns">
             Our tool works with spots – but what exactly are they? <br /> Various
             types of information can be stored in the spots. We have thought long
             and hard about their appearance to prevent your environment from being
@@ -216,6 +214,11 @@
         margin-top: 15vh;
     }
     p {
-        margin-bottom: 5rem;
+        margin-bottom: 7rem;
+    }
+    .twocoloumns{
+        margin-bottom: 7rem;
+        column-count: 2;
+        column-gap: 2rem;
     }
 </style>

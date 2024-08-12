@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     let isProjectsSelected = true;
     let isAboutMeSelected = false;
+
     let highlightLeft = "0px";
     let currentIconSrc = "../images/icons/pen-nib-light.svg"; // Default icon
     let currentText = "Design"; // Default text
@@ -29,6 +30,7 @@
             highlightLeft = `${aboutMeButton.offsetLeft}px`;
         }
     }
+    
 
     // Update the highlight position after the component is mounted
     onMount(() => {
@@ -47,6 +49,7 @@
 <main>
     <div id="wrapper">
         <div id="iconwrapper">
+            <div class="highlightIcons"></div>
             <a class="ankerlink" href="#/photo">
                 <img class="currentIcon" src={currentIconSrc} alt="" />
             </a>
@@ -79,7 +82,10 @@
                 </a>
             {:else}
                 <a class="ankerlink" href="#/"
-                    ><div
+                    >
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    <!-- svelte-ignore a11y-no-static-element-interactions -->
+                    <div
                         id="projectsButton"
                         class="NavButton"
                         class:active={isProjectsSelected}
@@ -89,7 +95,9 @@
                     </div></a
                 >
                 <a class="ankerlink" href="#/aboutme"
-                    ><div
+                    >
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    <!-- svelte-ignore a11y-no-static-element-interactions --><div
                         id="aboutMeButton"
                         class="NavButton"
                         class:active={isAboutMeSelected}
@@ -104,17 +112,22 @@
 </main>
 
 <style>
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     #wrapper {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
-        width: 100vw;
+        /* width: 100vw; */
         position: fixed;
         margin-bottom: 40px;
         bottom: 0;
         gap: 20px;
         z-index: 10;
     }
+    
     #iconwrapper {
         position: relative;
         height: 56px;
@@ -129,8 +142,9 @@
             width 0.5s;
     }
     #iconwrapper:hover {
-        width: 320px; /* Adjust width as needed */
+        width: 300px; /* Adjust width as needed */
     }
+    
     #iconwrapper:hover .currentIcon {
         display: none;
     }
@@ -139,12 +153,6 @@
             brightness(108%) contrast(101%);
         height: 30px;
         width: 30px;
-    }
-    #iconwrapper p {
-        margin-left: 10px;
-        color: white;
-        font-size: 16px;
-        display: inline-block;
     }
 
     @keyframes slideaway {
@@ -160,7 +168,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 30px;
+        gap: 40px;
         opacity: 1;
         transform: translateX(0px);
         transition:
@@ -197,6 +205,21 @@
         transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
         z-index: 100;
     }
+    .NavbarWrapper:hover {
+        animation: bounce 0.5s;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.02);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
 
     .highlight {
         position: absolute;
@@ -208,6 +231,21 @@
         transition: left 0.3s;
         z-index: 0;
         margin-left: 3px;
+    }
+    .highlightIcons {
+        position: absolute;
+        top: 3px;
+        height: 90%;
+        width: 48px;
+        background-color: #80c181;
+        border-radius: 50px;
+        transition: all 0.5s;
+        z-index: 0;
+        /* margin-left: 2px; */
+    }
+    #iconwrapper:hover .highlightIcons {
+        width: 132px; /* Adjust width as needed */
+        transform: translateX(-80px);
     }
     .NavButton.active {
         color: white;

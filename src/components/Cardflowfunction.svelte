@@ -105,8 +105,9 @@
   >
     <a href="#/spot">
       <div class="innercard backgroundimgSpot">
-        <h3>Spot</h3>
+        <h1>Spot</h1>
         <h5>3. Semester <span>— Invention Design</span></h5>
+        <p>A spatial computing tool for thinking, keeping and using ideas.</p>
       </div>
     </a>
   </div>
@@ -122,7 +123,7 @@
   >
     <a href="#/growceries">
       <div class="innercard backgroundimgGrow">
-        <h3>Growceries</h3>
+        <h1>Growceries</h1>
         <h5>1. Semester <span>— Design Sprint</span></h5>
       </div>
     </a>
@@ -139,7 +140,7 @@
   >
     <a href="#/xtend">
       <div class="innercard backgroundimgXtend">
-        <h3>Xtend</h3>
+        <h1>Xtend</h1>
         <h5>2. Semester <span>— Interface Design</span></h5>
       </div>
     </a>

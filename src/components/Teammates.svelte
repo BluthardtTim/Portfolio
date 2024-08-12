@@ -1,14 +1,20 @@
-<!-- Teammates.svelte -->
 <script>
     export let teammates = [];
 
-    // Mapping der Namen zu den Bildpfaden
     const teammateImages = {
         'Amelie': '../images/Portrait.jpg',
         'Julia': '../images/Portrait.jpg',
         'Hannah': '../images/Portrait.jpg',
         'Marc': '../images/Portrait.jpg',
         'Tim': '../images/Portrait.jpg'
+    };
+
+    const tooltips = {
+        'Amelie': 'amelie',
+        'Julia': 'julia',
+        'Hannah': 'hannah',
+        'Marc': 'marc',
+        'Tim': 'me'
     };
 </script>
 
@@ -18,10 +24,12 @@
             {#if teammateImages[teammate]}
                 <div class={`portraitimg img${index + 1}`}>
                     <img src={teammateImages[teammate]} alt={teammate} />
+                    <div class="tooltip">{tooltips[teammate] || teammate}</div>
                 </div>
             {:else}
                 <div class={`portraitimg img${index + 1}`}>
                     <img src="../images/default.jpg" alt="Default" />
+                    <div class="tooltip">{teammate}</div>
                 </div>
             {/if}
         {/each}
@@ -39,6 +47,7 @@
         height: 50px;
         border: solid 3px #f6f6f6;
         border-radius: 25px;
+        position: relative;
     }
     .portraitimg img {
         width: 100%;
@@ -70,5 +79,26 @@
     }
     .img3:hover {
         transform: translateX(25px);
+    }
+    .tooltip {
+        visibility: hidden;
+        position: absolute;
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        z-index: 1000;
+        bottom: -60%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: -5px;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    .portraitimg:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
     }
 </style>
