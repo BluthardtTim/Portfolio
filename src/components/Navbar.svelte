@@ -4,6 +4,7 @@
     let isAboutMeSelected = false;
 
     let highlightLeft = "0px";
+    let highlightLeft2 = "3px";
     let currentIconSrc = "../images/icons/pen-nib-light.svg"; // Default icon
     let currentText = "Design"; // Default text
     let isPhotographySelected = false; // Track if Photography is selected
@@ -30,7 +31,6 @@
             highlightLeft = `${aboutMeButton.offsetLeft}px`;
         }
     }
-    
 
     // Update the highlight position after the component is mounted
     onMount(() => {
@@ -42,25 +42,72 @@
     function changeIconAndText(iconSrc, text) {
         currentIconSrc = iconSrc;
         currentText = text;
-        isPhotographySelected = text === "Photography"; // Update selection state
+        isPhotographySelected = text === "Photography";
+        if (isPhotographySelected) {
+            highlightLeft2 = "123px";
+            document.getElementsByClassName("highlightIcons")[0].style.width = "172px";
+        } else {
+            highlightLeft2 = "3px";
+            document.getElementsByClassName("highlightIcons")[0].style.width = "132px";
+        }
     }
+
+    // Event listener to adjust highlightLeft2 on hover start
+    function onHoverStart() {
+        if (isPhotographySelected) {
+            highlightLeft2 = "123px";
+            document.getElementsByClassName("highlightIcons")[0].style.width = "172px";
+        }
+    }
+
+    // Event listener to reset highlightLeft2 on hover end
+    function onHoverEnd() {
+        if (isPhotographySelected) {
+            highlightLeft2 = "3px";
+            document.getElementsByClassName("highlightIcons")[0].style.width = "132px";
+        }
+    }
+
+    // Attach event listeners for hover start and end
+    onMount(() => {
+        const iconWrapper = document.getElementById("iconwrapper");
+        iconWrapper.addEventListener("mouseenter", onHoverStart);
+        iconWrapper.addEventListener("mouseleave", onHoverEnd);
+    });
 </script>
+
 
 <main>
     <div id="wrapper">
         <div id="iconwrapper">
-            <div class="highlightIcons"></div>
+            <div class="highlightIcons" style="left: {highlightLeft2};"></div>
             <a class="ankerlink" href="#/photo">
                 <img class="currentIcon" src={currentIconSrc} alt="" />
             </a>
             <div class="hoverContent">
-                <a class="ankerlink" href="#/" on:click={() => changeIconAndText("../images/icons/pen-nib-light.svg", "Design")}>
+                <a
+                    class="ankerlink"
+                    href="#/"
+                    on:click={() =>
+                        changeIconAndText(
+                            "../images/icons/pen-nib-light.svg",
+                            "Design",
+                        )}
+                >
                     <div class="DesignNavBarStat">
                         <img src="../images/icons/pen-nib-light.svg" alt="" />
                         Design
                     </div>
                 </a>
-                <a class="ankerlink" href="#/photo" on:click={() => changeIconAndText("../images/icons/camera-light.svg", "Photography")}>
+                <a
+                    class="ankerlink"
+                    href="#/photo"
+                    on:click={() =>
+                        changeIconAndText(
+                            "../images/icons/camera-light.svg",
+                            "Photography",
+                        )}
+                >
                     <div class="DesignNavBarStat">
                         <img src="../images/icons/camera-light.svg" alt="" />
                         Photography
@@ -81,8 +128,7 @@
                     <div class="NavButton">Photo3</div>
                 </a>
             {:else}
-                <a class="ankerlink" href="#/"
-                    >
+                <a class="ankerlink" href="#/">
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <div
@@ -94,10 +140,10 @@
                         Projects
                     </div></a
                 >
-                <a class="ankerlink" href="#/aboutme"
-                    >
+                <a class="ankerlink" href="#/aboutme">
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <!-- svelte-ignore a11y-no-static-element-interactions --><div
+                    <!-- svelte-ignore a11y-no-static-element-interactions -->
+                    <div
                         id="aboutMeButton"
                         class="NavButton"
                         class:active={isAboutMeSelected}
@@ -127,7 +173,7 @@
         gap: 20px;
         z-index: 10;
     }
-    
+
     #iconwrapper {
         position: relative;
         height: 56px;
@@ -138,13 +184,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition:
-            width 0.5s;
+        transition: width 0.5s;
     }
     #iconwrapper:hover {
         width: 300px; /* Adjust width as needed */
     }
-    
+
     #iconwrapper:hover .currentIcon {
         display: none;
     }
@@ -202,7 +247,9 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+        transition:
+            transform 0.3s ease-in-out,
+            width 0.3s ease-in-out;
         z-index: 100;
     }
     .NavbarWrapper:hover {
@@ -243,9 +290,13 @@
         z-index: 0;
         /* margin-left: 2px; */
     }
+    #iconwrapper:not(:hover) .highlightIcons {
+        width: 48px !important;
+    }
+
     #iconwrapper:hover .highlightIcons {
         width: 132px; /* Adjust width as needed */
-        transform: translateX(-80px);
+        /* transform: translateX(-80px); */
     }
     .NavButton.active {
         color: white;

@@ -5,18 +5,17 @@
 </script>
 
 <main>
-    <HeaderDesignPortfolio  />
+    <HeaderDesignPortfolio />
     <div class="pageWrapper">
-        <div style="height: 50px;"></div>
-        <!-- <h1>Projects</h1>s -->
+        <div style="height: 200px;"></div>
+        <p>I have a passion for designing and developing new ideas</p>
     </div>
     <Cardflowfunction />
     <div class="pageWrapper">
-        <h1>Experience</h1>
+        <p>looking for an internship</p>
     </div>
     <Footer />
 </main>
 
 <style>
-    
 </style>

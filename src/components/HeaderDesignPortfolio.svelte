@@ -17,7 +17,7 @@
 
 <main>
     <div id="Wrapper">
-        <div class="savespaceTop"></div>
+        <!-- <div class="savespaceTop"></div> -->
         <div class="pageWrapper">
             <div class="card">
                 <div class="innercard">
@@ -50,11 +50,14 @@
 <style>
     #Wrapper {
         width: 100vw;
-        height: 70vh;
+        height: 85vh;
         background-color: #f6f6f6;
         z-index: -1;
         border-bottom: 0.5px solid #bebebe;
         box-shadow: inset 0px -10px 10px -10px rgba(3, 2, 2, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .pageWrapper {
         display: flex;
