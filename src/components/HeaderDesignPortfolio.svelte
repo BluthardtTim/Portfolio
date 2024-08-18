@@ -96,9 +96,6 @@
         object-fit: cover;
         border-radius: 16px;
     }
-    .savespaceTop {
-        height: 110px;
-    }
     #iconarrow {
         width: 24px;
         height: 24px;

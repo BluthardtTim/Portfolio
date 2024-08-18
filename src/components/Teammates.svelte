@@ -65,19 +65,35 @@
         margin-left: -25px;
         transition: all 0.3s ease-in-out;
     }
+    .img4 {
+        margin-left: -25px;
+        transition: all 0.3s ease-in-out;
+    }
     .img1:hover ~ .img2 {
         transform: translateX(25px);
     }
     .img1:hover ~ .img3 {
         transform: translateX(25px);
     }
+    .img1:hover ~ .img4 {
+        transform: translateX(25px);
+    }
     .img2:hover ~ .img3 {
+        transform: translateX(50px);
+    }
+    .img2:hover ~ .img4 {
+        transform: translateX(50px);
+    }
+    .img3:hover ~ .img4 {
         transform: translateX(50px);
     }
     .img2:hover {
         transform: translateX(25px);
     }
     .img3:hover {
+        transform: translateX(25px);
+    }
+    .img4:hover {
         transform: translateX(25px);
     }
     .tooltip {

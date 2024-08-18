@@ -46,9 +46,13 @@
         if (isPhotographySelected) {
             highlightLeft2 = "123px";
             document.getElementsByClassName("highlightIcons")[0].style.width = "172px";
+            document.getElementById("photonav").classList.add("active");
+            document.getElementById("designnav").classList.remove("active");
         } else {
             highlightLeft2 = "3px";
             document.getElementsByClassName("highlightIcons")[0].style.width = "132px";
+            document.getElementById("photonav").classList.remove("active");
+            document.getElementById("designnav").classList.add("active");
         }
     }
 
@@ -94,7 +98,7 @@
                             "Design",
                         )}
                 >
-                    <div class="DesignNavBarStat">
+                    <div class="DesignNavBarStat" id="designnav">
                         <img src="../images/icons/pen-nib-light.svg" alt="" />
                         Design
                     </div>
@@ -108,7 +112,7 @@
                             "Photography",
                         )}
                 >
-                    <div class="DesignNavBarStat">
+                    <div class="DesignNavBarStat" id="photonav">
                         <img src="../images/icons/camera-light.svg" alt="" />
                         Photography
                     </div>
@@ -298,7 +302,7 @@
         width: 132px; /* Adjust width as needed */
         /* transform: translateX(-80px); */
     }
-    .NavButton.active {
+    .active {
         color: white;
     }
     .NavButton {

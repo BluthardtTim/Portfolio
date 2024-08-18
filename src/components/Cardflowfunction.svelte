@@ -122,7 +122,7 @@
   >
     <a href="#/growceries">
       <div class="innercard backgroundimgGrow">
-        <h1>Growceries</h1>
+        <h1 style="color: black;">Growceries</h1>
         <h5>1. Semester <span>— Design Sprint</span></h5>
       </div>
     </a>
@@ -164,7 +164,7 @@
     height: auto;
     aspect-ratio: 16 / 9; /* Maintain aspect ratio */
     background-color: #f8f9fa;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease; /* Nur Transform animieren */
     background: white;
     border-radius: 22px;
@@ -186,6 +186,9 @@
     left: 0;
     color: black;
     text-decoration: none;
+  }
+  .card:hover {
+    transform: scale(1.01);
   }
   .backgroundimgGrow {
     background-image: url('../images/GrowCard.png');

@@ -80,13 +80,16 @@
         height: auto;
         aspect-ratio: 16 / 9; /* Maintain aspect ratio */
         background-color: #f8f9fa;
-        transition: transform 0.5s ease; /* Nur Transform animieren */
+        transition: transform 0.3s ease; /* Nur Transform animieren */
         background: white;
         border-radius: 22px;
         border: 0.75px #e2e2e2 solid;
         padding: 5px;
         text-decoration: none;
     }
+    .card:hover {
+    transform: scale(1.02);
+  }
     .innercard {
         width: 100%;
         height: 100%;
@@ -98,7 +101,7 @@
         position: relative;
         top: 0;
         left: 0;
-        color: black;
+        color: white;
         text-decoration: none;
         text-align: left;
     }
