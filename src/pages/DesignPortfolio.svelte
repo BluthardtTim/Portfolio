@@ -13,7 +13,8 @@
     </div>
     <Cardflowfunction />
     <div class="pageWrapper">
-        <h3>looking for an internship</h3>
+        <h3>I am currrently looking for an Internship</h3>
+        <p>Starting in March 2025 i want to get inspired.</p>
     </div>
     <Footer />
 </main>

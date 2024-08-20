@@ -39,8 +39,10 @@
                                 style="background-image: url({projects[
                                     projectName
                                 ]
-                                    .imageUrl}); background-size: cover; background-position: center;"
-                            >
+                                    .imageUrl}); background-size: cover; background-position: center;  color: {projectName ===
+                                'Growceries'
+                                    ? 'black'
+                                    : 'white'}">
                                 <h3>{projects[projectName].title}</h3>
                                 <!-- <p>{projects[projectName].description}</p> -->
                             </div>
@@ -88,8 +90,8 @@
         text-decoration: none;
     }
     .card:hover {
-    transform: scale(1.02);
-  }
+        transform: scale(1.02);
+    }
     .innercard {
         width: 100%;
         height: 100%;
@@ -106,6 +108,6 @@
         text-align: left;
     }
     a {
-    text-decoration: none;
-  }
+        text-decoration: none;
+    }
 </style>

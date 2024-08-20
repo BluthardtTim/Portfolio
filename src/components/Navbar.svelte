@@ -1,15 +1,16 @@
 <script>
     import { onMount } from "svelte";
-    let isProjectsSelected = true;
-    let isAboutMeSelected = false;
+    import { location } from "svelte-spa-router";
 
+    let isProjectsSelected = false;
+    let isAboutMeSelected = false;
     let highlightLeft = "0px";
     let highlightLeft2 = "3px";
-    let currentIconSrc = "../images/icons/pen-nib-light.svg"; // Default icon
-    let currentText = "Design"; // Default text
-    let isPhotographySelected = false; // Track if Photography is selected
+    let currentIconSrc = "../images/icons/pen-nib-light.svg";
+    let currentText = "Design";
+    let isPhotographySelected = false;
 
-    // Button selection logic
+    // Funktion zum Setzen des aktiven Buttons
     function setSelected(button) {
         if (button === "projects") {
             isProjectsSelected = true;
@@ -21,24 +22,37 @@
         updateHighlightPosition();
     }
 
-    // Update the highlight position based on the selected button
+    // Aktualisiert die Position des Highlights basierend auf dem aktiven Button
     function updateHighlightPosition() {
         const projectsButton = document.getElementById("projectsButton");
         const aboutMeButton = document.getElementById("aboutMeButton");
-        if (isProjectsSelected) {
+        if (isProjectsSelected && projectsButton) {
             highlightLeft = `${projectsButton.offsetLeft}px`;
-        } else if (isAboutMeSelected) {
+        } else if (isAboutMeSelected && aboutMeButton) {
             highlightLeft = `${aboutMeButton.offsetLeft}px`;
         }
     }
 
-    // Update the highlight position after the component is mounted
+    // Aktualisiere den Zustand basierend auf der aktuellen Route
+    function updateFromRoute(route) {
+        if (route === "/") {
+            setSelected("projects");
+        } else if (route === "/aboutme") {
+            setSelected("aboutme");
+        } else if (route.startsWith("/photo")) {
+            changeIconAndText("../images/icons/camera-light.svg", "Photography");
+        }
+    }
+
+    // Überwache die Route und aktualisiere die Navbar
+    $: updateFromRoute($location);
+
+    // onMount: Aktualisiere die Highlight-Position und überwache die Fenstergröße
     onMount(() => {
         updateHighlightPosition();
-        window.addEventListener("resize", updateHighlightPosition); // Ensure highlight updates on window resize
+        window.addEventListener("resize", updateHighlightPosition);
     });
 
-    // Function to change the icon and text
     function changeIconAndText(iconSrc, text) {
         currentIconSrc = iconSrc;
         currentText = text;
@@ -46,13 +60,9 @@
         if (isPhotographySelected) {
             highlightLeft2 = "123px";
             document.getElementsByClassName("highlightIcons")[0].style.width = "172px";
-            document.getElementById("photonav").classList.add("active");
-            document.getElementById("designnav").classList.remove("active");
         } else {
             highlightLeft2 = "3px";
             document.getElementsByClassName("highlightIcons")[0].style.width = "132px";
-            document.getElementById("photonav").classList.remove("active");
-            document.getElementById("designnav").classList.add("active");
         }
     }
 
@@ -72,7 +82,6 @@
         }
     }
 
-    // Attach event listeners for hover start and end
     onMount(() => {
         const iconWrapper = document.getElementById("iconwrapper");
         iconWrapper.addEventListener("mouseenter", onHoverStart);

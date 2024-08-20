@@ -45,7 +45,7 @@
 <style>
     .slideshow-wrapper {
         position: relative;
-        width: 100%;
+        width: 120%;
         overflow: hidden;
         margin-top: 200px;
     }
@@ -74,20 +74,21 @@
 
     .indicator {
         display: flex;
-        justify-content: center;
-        margin-top: 10px;
+        justify-content: flex-start;
+        margin-top: 20px;
     }
 
     .indicator div {
         width: 10px;
         height: 10px;
-        background-color: #ccc;
-        border-radius: 50%;
+        background-color: #dddddd;
+        border-radius: 5px;
         margin: 0 5px;
         cursor: pointer;
     }
 
     .indicator div.active {
-        background-color: #333;
+        background-color: #80C181;
+        width: 50px;
     }
 </style>

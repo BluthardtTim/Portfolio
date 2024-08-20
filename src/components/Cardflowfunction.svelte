@@ -105,7 +105,7 @@
   >
     <a href="#/spot">
       <div class="innercard backgroundimgSpot">
-        <h1>Spot <span> - A spatial computing tool for thinking, keeping and using ideas.</span></h1>
+        <h1>Spot <span> - A spatial computing tool for thinking, <br>keeping and using ideas.</span></h1>
         <h5>3. Semester <span>— Invention Design</span></h5>
       </div>
     </a>

@@ -5,6 +5,7 @@
     import ProjectHeader from "../components/ProjectHeader.svelte";
     import Footer from "../components/Footer.svelte";
     import ImageSlideshow from "../components/ImageSlideshow.svelte";
+    import FigmaEmbed from "../components/FigmaEmbed.svelte";
     let SpotVideourl = "https://youtu.be/wguCO5G26hc";
     let imagePath = "../images/Portrait.jpg";
     let imageCaption = "This is an example caption";
