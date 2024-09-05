@@ -28,10 +28,10 @@
                 <h5>UI/UX Design – Portfolio</h5>
                 <h1>Tim Bluthardt</h1>
                 <p style="margin-top: 40px;">
-                    Hi, I'm Tim and I love to design websites and stuff <br />that makes me happy.
+                    Hi, I'm Tim, a creative UI/UX designer driven by the challenge <br> of turning ideas into impactful user experiences.
                 </p>
-                <div style="display: flex; flex-direction: row; align-items: center;">
-                    <p>that's me</p>
+                <div class="thatsme">
+                    <p>my values</p>
                     <img id="iconarrow" src="../images/icons/arrow-up-right-light.svg" alt="Arrow icon" />
                 </div>
                 <div id="iconwrapper">
@@ -108,6 +108,11 @@
         flex-direction: row;
         gap: 8px;
     }
+    .thatsme {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }   
     .meicon {
         padding: 16px;
         background-color: white;
@@ -158,5 +163,24 @@
     h5 {
         font-size: 24px;
         margin-bottom: -5px;
+    }
+    @media (max-width: 800px) {
+        .pageWrapper {
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .card {
+            width: 50%;
+            height: auto;
+        }
+        .meicon {
+            display: none;
+        }
+        .thatsme {
+            display: none;
+        }
+        h1 {
+            font-size: 48px;
+        }
     }
 </style>

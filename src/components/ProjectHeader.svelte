@@ -40,7 +40,7 @@
                     <p>{duration}</p>
                 </div>
                 <div>
-                    <h5>team</h5>
+                    <h5>teammates</h5>
                     <Teammates teammates={teamNames} />
                 </div>
             </div>

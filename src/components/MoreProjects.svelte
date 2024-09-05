@@ -29,7 +29,7 @@
     <div id="wrapper">
         <hr id="seperator" />
         <p>More Projects</p>
-        <div id="projectswrapper">
+        <div id="projectswrapper" class="pageWrapper">
             {#each projectNames.slice(0, 2) as projectName}
                 {#if projects[projectName]}
                     <div class="card">
@@ -71,9 +71,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 1200px;
-        margin: 100px auto 0;
-        height: 200px;
+        margin-top: 100px;
+        height: auto;
         gap: 50px;
     }
     .card {
@@ -109,5 +108,24 @@
     }
     a {
         text-decoration: none;
+    }
+    @media (max-width: 800px) {
+        #wrapper {
+            margin-top: 100px;
+            margin-bottom: 0px;
+        }
+        #projectswrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .card {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+        #seperator {
+            width: 80vw;
+        }
     }
 </style>

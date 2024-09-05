@@ -9,12 +9,19 @@
     <div class="pageWrapper">
         <div style="height: 200px;"></div>
         <h3>I have a passion for designing and developing new ideas</h3>
-        <p>This is an example text witch represents the real text, I could tell something about my projects here and why i selected them</p>
+        <p>
+            Every project is an opportunity for me to create something unique
+            that resonates in a better user experience.
+        </p>
     </div>
     <Cardflowfunction />
     <div class="pageWrapper">
         <h3>I am currrently looking for an Internship</h3>
-        <p>Starting in March 2025 i want to get inspired.</p>
+        <p>
+            Starting in March 2025 I'm keen to find opportunities that will
+            inspire me and allow me to use my skills while gaining valuable
+            experience in the field.
+        </p>
     </div>
     <Footer />
 </main>

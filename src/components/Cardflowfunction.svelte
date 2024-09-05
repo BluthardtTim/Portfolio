@@ -36,12 +36,14 @@
     fixedYPositionCard1 = window.innerHeight / 2 - cardHeight / 2;
     let fixedYPositionCard2 = window.innerHeight / 2 - cardHeight / 2 + 20;
     let fixedYPositionCard3 = window.innerHeight / 2 - cardHeight / 2 + 40;
+    console.log(cardHeight);
 
     // Logic für Card1
     if (!card1Fixed && cardRect.top <= fixedYPositionCard1) {
       card1Fixed = true;
       ScrollPositionCard1 = currentScrollY;
-      card1StaticTop = card.offsetTop + 1535;
+      // card1StaticTop = card.offsetTop + 1535;
+      card1StaticTop = card.offsetTop + (cardHeight * 2) + 195;
     } else if (card1Fixed && currentScrollY <= ScrollPositionCard1) {
       card1Fixed = false;
     }
@@ -50,7 +52,8 @@
     if (!card2Fixed && cardRect2.top <= fixedYPositionCard2) {
       card2Fixed = true;
       ScrollPositionCard2 = currentScrollY;
-      card2StaticTop = card2.offsetTop + 738;
+      // card2StaticTop = card2.offsetTop + 738;
+      card2StaticTop = card2.offsetTop + cardHeight + 65;
       card.style.transform = card1Fixed ? "scale(0.98)" : "";
     } else if (card2Fixed && currentScrollY <= ScrollPositionCard2) {
       card2Fixed = false;
@@ -137,10 +140,10 @@
       ? card3StaticTop + 'px'
       : ''};"
   >
-    <a href="#/xtend">
-      <div class="innercard backgroundimgXtend">
-        <h1>Xtend</h1>
-        <h5>2. Semester <span>— Interface Design</span></h5>
+    <a href="#/respiratory">
+      <div class="innercard backgroundimgRespiratory">
+        <h1>Discover your Respiratory system</h1>
+        <h5>2. Semester <span>— Interactive Kommunikation Systems</span></h5>
       </div>
     </a>
   </div>
@@ -200,8 +203,8 @@
     background-size: cover;
     background-position: center;
   }
-  .backgroundimgXtend {
-    background-image: url('../images/XtendCard.png');
+  .backgroundimgRespiratory {
+    background-image: url('../images/RespyCard.png');
     background-size: cover;
     background-position: center;
   }
@@ -226,5 +229,23 @@
   }
   a {
     text-decoration: none;
+  }
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    .container {
+      height: 2000px;
+    }
+    .innercard h1 span {
+      display: none;
+    }
+    .innercard h5 {
+      display: none;
+    }
+    .card {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+    }
   }
 </style>

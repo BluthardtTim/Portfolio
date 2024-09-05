@@ -29,8 +29,4 @@
     .savespaceTop {
         height: 170px;
     }
-    p {
-        font-size: 1rem;
-        margin-bottom: 5rem;
-    }
 </style>

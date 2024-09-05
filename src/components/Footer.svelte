@@ -5,7 +5,7 @@
     <div id="wrapper" class="pageWrapper">
         <div>
             <p>© 2024 Tim Bluthardt</p>
-            <p><a href="">Imprint</a></p>
+            <p><a href="#/imprint">Imprint</a></p>
         </div>
         <div>
             <!-- <p><a href="#/">UI / UX Design</a></p>
@@ -34,5 +34,13 @@
     }
     a:hover {
         color: #000;
+    }
+    @media (max-width: 800px) {
+        #wrapper {
+            flex-direction: column;
+            gap: 20px;
+            height: auto;
+            margin-top: 100px;
+        }
     }
 </style>

@@ -1,12 +1,8 @@
 <script>
+    export let images;
+
     let currentIndex = 0;
-    let images = [
-        '../images/Portrait2.jpg',
-        '../images/SpotCard.png',
-        '../images/SpotCard.png',
-        '../images/SpotCard.png',
-        '../images/SpotCard.png'
-    ];
+    
 
     function scrollToImage(index) {
         const container = document.querySelector('.slideshow-container');

@@ -9,6 +9,8 @@
   import Growceries from "./pages/Growceries.svelte";
   import { derived } from 'svelte/store';
   import Xtend from "./pages/Xtend.svelte";
+  import Imprint from "./pages/imprint.svelte";
+  import Respiratory from "./pages/Respiratory.svelte";
 
   const routes = {
       "/": DesignPortfolio,
@@ -17,6 +19,8 @@
       "/spot": Spot,
       "/growceries": Growceries,
       "/xtend": Xtend,
+      "/imprint": Imprint,
+      "/respiratory": Respiratory,
   };
 
   // Derived store to check if the current route is one of the hidden pages
