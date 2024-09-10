@@ -1,5 +1,5 @@
 <script>
-    import Teammates from "../components/Teammates.svelte";
+    import Teammates from "../components/Teammates copy.svelte";
 
     export let title;
     export let description;
@@ -95,6 +95,27 @@
         gap: 50px;
         margin-top: 15vh;
         width: 50%;
+    }
+    @media (max-width: 800px) {
+        .CaseStudyCredits {
+            margin-top: 60px;
+        }
+        #description {
+            max-width: 100%;
+        }
+        .back {
+            top: 75px;
+            left: 5vw;
+        }
+        #backgroundimg {
+            height: 85vh;
+        }
+        .Projectbunner {
+            height: 85vh;
+        }
+        .savespaceTop {
+            height: 140px;
+        }
     }
 
 </style>

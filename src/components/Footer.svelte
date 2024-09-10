@@ -19,9 +19,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1200px;
         margin: 0 auto;
-        height: 100px;
+        height: 140px;
         color: #c0c0c0;
         margin-top: 200px;
     }

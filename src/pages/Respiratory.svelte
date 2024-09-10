@@ -1,9 +1,11 @@
 <script>
     import Image from "../components/Image.svelte";
-import ProjectHeader from "../components/ProjectHeader.svelte";
+    import ProjectHeader from "../components/ProjectHeader.svelte";
+    import MoreProjects from "../components/MoreProjects.svelte";
+    import Footer from "../components/Footer.svelte";
 
-    let teamNames = ["Moritz", "Ceren", "Tim"];
-    let selectedProjects = ["Growceries", "Xtend"];
+    let teamNames = ["Moritz Schneidawind", "Ceren Celik"];
+    let selectedProjects = ["Spot", "Growceries"];
 </script>
 
 <main>
@@ -37,9 +39,9 @@ import ProjectHeader from "../components/ProjectHeader.svelte";
                 present the breathing system interactively. The challenge was to
                 find a balance between a learning value and user experience. We
                 wanted to create an experience that not only explained the
-                mechanics of breathing but also made it visually appealing. Early
-                on, we generated several ideas, but one concept quickly stood
-                out: an interactive "x-ray" of the human lung. This idea
+                mechanics of breathing but also made it visually appealing.
+                Early on, we generated several ideas, but one concept quickly
+                stood out: an interactive "x-ray" of the human lung. This idea
                 involved simulating an x-ray view of the lungs, where users
                 could see the respiratory system in action, personalized to
                 their own body in real time.
@@ -61,20 +63,28 @@ import ProjectHeader from "../components/ProjectHeader.svelte";
         </div>
         <Image
             src="../images/Respiratory/Project.png"
-            caption="Project at the exebition" />
+            caption="Project at the exebition"
+        />
+        <div>
+            <h5>Technical Background</h5>
+            <p class="twocoloumns">
+                The Respy experience includes a pulse sensor that scans your
+                pulse for 10 seconds. The average pulse value from this scan is
+                then multiplied by 1.4 to estimate your breaths per minute. This
+                calculated value controls the speed of the lung animation
+                displayed on the monitor. While the user perceives the animation
+                as reflecting their current breathing rate, it is actually a
+                manipulated pulse value, creating a realistic but simulated
+                representation of their lung activity in real-time.
+            </p>
+        </div>
     </div>
+    <MoreProjects projectNames={selectedProjects} />
+    <Footer />
 </main>
 
 <style>
-    .savespaceTop {
-        height: 165px;
-    }
     p {
         margin-bottom: 7rem;
-    }
-    .twocoloumns {
-        margin-bottom: 7rem;
-        column-count: 2;
-        column-gap: 2rem;
     }
 </style>

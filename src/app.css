@@ -22,12 +22,12 @@ h1 span {
   color: #9D9D9D;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 24px;
   margin-bottom: 1rem;
   font-weight: 500;
 }
 h5 {
-  font-size: 1.5rem;
+  font-size: 20px;
   margin-bottom: 0.7rem;
   font-weight: 400;
   color: #9D9D9D;
@@ -42,10 +42,39 @@ p {
   font-weight: 400;
   line-height: 1.4;
 }
+.twocoloumns {
+  margin-bottom: 7rem;
+  column-count: 2;
+  column-gap: 2rem;
+}
 a {
   color: #80C181;
 }
 img{
   border-radius: 2px;
   max-width: 100%;
+}
+.savespaceTop {
+  height: 170px;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .twocoloumns {
+    column-count: 1;
+  }
+  .savespaceTop {
+    height: 100px;
+  }
 }

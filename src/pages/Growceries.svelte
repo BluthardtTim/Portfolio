@@ -4,7 +4,7 @@
     import Footer from "../components/Footer.svelte";
     import Image from "../components/Image.svelte";
 
-    let selectedProjects = ["Spot", "Xtend"];
+    let selectedProjects = ["Spot", "Respiratory"];
 </script>
 
 <main>
@@ -13,7 +13,7 @@
         description="A platform that connects local farmers with consumers."
         myRole="Concept, Design, Development"
         duration="1. Semester, March 23 – June 23"
-        teamNames={["Marc", "Julia", "Hannah", "Tim"]}
+        teamNames={["Marc Schade", "Julia Zöllner", "Hannah Moser"]}
         backgroundImage="../images/GrowProjectBanner.png"
     />
 
@@ -70,16 +70,8 @@
 </main>
 
 <style>
-    .savespaceTop {
-        height: 170px;
-    }
     p {
         margin-bottom: 7rem;
-    }
-    .twocoloumns {
-        margin-bottom: 7rem;
-        column-count: 2;
-        column-gap: 2rem;
     }
     img {
         margin-bottom: 3rem;

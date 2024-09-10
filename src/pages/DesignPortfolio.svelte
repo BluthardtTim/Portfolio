@@ -8,14 +8,16 @@
     <HeaderDesignPortfolio />
     <div class="pageWrapper">
         <div style="height: 200px;"></div>
-        <h3>I have a passion for designing and developing new ideas</h3>
+        <h3>I have a passion for <span>designing</span> and <span>developing</span> new ideas</h3>
         <p>
             Every project is an opportunity for me to create something unique
             that resonates in a better user experience.
         </p>
     </div>
+    <div style="height: 100px;"></div>
     <Cardflowfunction />
     <div class="pageWrapper">
+        <div style="height: 200px;"></div>
         <h3>I am currrently looking for an Internship</h3>
         <p>
             Starting in March 2025 I'm keen to find opportunities that will
@@ -27,4 +29,15 @@
 </main>
 
 <style>
+    .pageWrapper {
+        text-align: center;
+    }
+    h3 span {
+        color: #80C181;
+    }
+    p {
+        color: #c0c0c0;
+        max-width: 800px;
+        margin: 0 auto;
+    }
 </style>

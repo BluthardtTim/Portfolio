@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div>
-                <h5>UI/UX Design – Portfolio</h5>
+                <h3>UI/UX Design – Portfolio</h3>
                 <h1>Tim Bluthardt</h1>
                 <p style="margin-top: 40px;">
                     Hi, I'm Tim, a creative UI/UX designer driven by the challenge <br> of turning ideas into impactful user experiences.
@@ -160,9 +160,10 @@
     h1 {
         font-size: 62px;
     }
-    h5 {
-        font-size: 24px;
+    h3 {
         margin-bottom: -5px;
+        color: #9D9D9D;
+        font-weight: 400;
     }
     @media (max-width: 800px) {
         .pageWrapper {
@@ -171,7 +172,8 @@
         }
         .card {
             width: 50%;
-            height: auto;
+            height: 65vw;
+            margin-bottom: 20px;
         }
         .meicon {
             display: none;

@@ -10,8 +10,8 @@
     let imagePath = "../images/Portrait.jpg";
     let imageCaption = "This is an example caption";
 
-    let teamNames = ["Amelie", "Julia", "Tim"];
-    let selectedProjects = ["Growceries", "Xtend"];
+    let teamNames = ["Amelie Schlüter", "Julia Zöllner"];
+    let selectedProjects = ["Growceries", "Respiratory"];
 
     let imagesSlideshow = [
         "../images/Spot/VisionPro.JPG",
@@ -125,16 +125,8 @@
 </main>
 
 <style>
-    .savespaceTop {
-        height: 165px;
-    }
     p {
         margin-bottom: 7rem;
-    }
-    .twocoloumns {
-        margin-bottom: 7rem;
-        column-count: 2;
-        column-gap: 2rem;
     }
     img {
         margin-bottom: 3rem;

@@ -1,5 +1,7 @@
 <!-- Projects.svelte -->
 <script>
+    import Respiratory from "../pages/Respiratory.svelte";
+
     export let projectNames = [];
 
     // Mapping der Projektnamen zu den Projektdetails
@@ -21,6 +23,12 @@
             description: "Description for Xtend",
             imageUrl: "../images/XtendCard.png",
             route: "xtend",
+        },
+        Respiratory: {
+            title: "Respiratory",
+            description: "Description for Respiratory",
+            imageUrl: "../images/RespyCard.png",
+            route: "respiratory",
         },
     };
 </script>

@@ -109,7 +109,7 @@
                 >
                     <div class="DesignNavBarStat" id="designnav">
                         <img src="../images/icons/pen-nib-light.svg" alt="" />
-                        Design
+                        <p>Design</p>
                     </div>
                 </a>
                 <a
@@ -123,7 +123,7 @@
                 >
                     <div class="DesignNavBarStat" id="photonav">
                         <img src="../images/icons/camera-light.svg" alt="" />
-                        Photography
+                        <p>Photography</p>
                     </div>
                 </a>
             </div>
@@ -331,5 +331,19 @@
     }
     .ankerlink:hover {
         color: white;
+    }
+    @media (max-width: 800px) {
+        .DesignNavBarStat p {
+            display: none;
+        }
+        .hoverContent {
+            gap: 20px;
+        }
+        #iconwrapper:hover {
+            width: 120px;
+        }
+        #iconwrapper:hover .highlightIcons {
+        width: 56px;
+        }
     }
 </style>
