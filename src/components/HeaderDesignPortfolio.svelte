@@ -19,7 +19,7 @@
     <div id="Wrapper">
         <!-- <div class="savespaceTop"></div> -->
         <div class="pageWrapper">
-            <div class="card">
+            <div class="imageCard">
                 <div class="innercard">
                     <img src="../images/Portrait2.jpg" alt="Portrait" />
                 </div>
@@ -66,7 +66,7 @@
         align-items: center;
         gap: 10rem;
     }
-    .card {
+    .imageCard {
         width: 330px;
         height: 480px;
         background-color: #f8f9fa;
@@ -170,7 +170,7 @@
             flex-direction: column;
             gap: 2rem;
         }
-        .card {
+        .imageCard {
             width: 50%;
             height: 65vw;
             margin-bottom: 20px;

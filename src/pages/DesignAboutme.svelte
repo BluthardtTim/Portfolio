@@ -10,7 +10,7 @@
             <div>
                 <h5>Hi, I'm Tim</h5>
                 <p>
-                    I'm currently studying Interaction Design at the Hochschule
+                    I'm currently studying Interaction Design at Hochschule
                     für Gestaltung in Schwäbisch Gmünd, Germany. I have a strong
                     interest in new technologies and am curious about where the
                     future of technology is heading. Through my studies, I'm

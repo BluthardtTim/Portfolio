@@ -25,7 +25,7 @@
 
   // Derived store to check if the current route is one of the hidden pages
   const isHiddenPage = derived(location, $location => 
-      $location === "/spot" || $location === "/growceries" || $location === "/xtend"
+      $location === "/spot" || $location === "/growceries" || $location === "/respiratory"
   );
 
   // Scroll to top on route change
