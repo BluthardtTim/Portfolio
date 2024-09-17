@@ -9,10 +9,11 @@
     <div class="pageWrapper">
         <div style="height: 200px;"></div>
         <h3>I have a passion for <span>designing</span> and <span>developing</span> new ideas</h3>
-        <p>
+        <p style="margin-bottom: 60px;">
             Every project is an opportunity for me to create something unique
             that resonates in a better user experience.
         </p>
+        <div style="display: flex; flex-direction: row; justify-content: center;"><h5>Discover my Projects</h5><img style="width: 24px;height: 24px" src="../images/icons/arrow-down-light.svg" alt=""></div>
     </div>
     <div style="height: 100px;"></div>
     <Cardflowfunction />
