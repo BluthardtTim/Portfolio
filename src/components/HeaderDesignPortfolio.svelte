@@ -28,7 +28,7 @@
                 <h3>UI/UX Design – Portfolio</h3>
                 <h1>Tim Bluthardt</h1>
                 <p style="margin-top: 40px;">
-                    Hi, I'm Tim, a creative UI/UX designer driven by the challenge <br> of turning ideas into impactful user experiences.
+                    Hi, I'm Tim, a creative UI/UX designer driven by the challenge of turning ideas into impactful user experiences.
                 </p>
                 <div class="thatsme">
                     <p>my values</p>
@@ -171,9 +171,9 @@
             gap: 2rem;
         }
         .imageCard {
-            width: 50%;
-            height: 65vw;
-            margin-bottom: 20px;
+            width: 45%;
+            height: 55vw;
+            margin-bottom: 10px;
         }
         .meicon {
             display: none;

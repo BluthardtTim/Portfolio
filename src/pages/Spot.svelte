@@ -68,7 +68,7 @@
         <img src="../images/Spot/SpotIdeation.png" alt="Spot" />
         <h5>Future Scenario</h5>
         <p style="font-size: 22px; text-align: center;">
-            What if, in 5-10 years, you could use <br />regular glasses with
+            What if, in 5-10 years, you could use regular glasses with
             location-based information to store ideas and information.
         </p>
         <h5>Spot</h5>
