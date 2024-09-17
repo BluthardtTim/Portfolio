@@ -7,7 +7,7 @@
 <main>
     <HeaderDesignPortfolio />
     <div class="pageWrapper">
-        <div style="height: 200px;"></div>
+        <div class="spacer200"></div>
         <h3>I have a passion for <span>designing</span> and <span>developing</span> new ideas</h3>
         <p style="margin-bottom: 60px;">
             Every project is an opportunity for me to create something unique
@@ -15,10 +15,10 @@
         </p>
         <div style="display: flex; flex-direction: row; justify-content: center;"><h5>Discover my Projects</h5><img style="width: 24px;height: 24px" src="../images/icons/arrow-down-light.svg" alt=""></div>
     </div>
-    <div style="height: 100px;"></div>
+    <div class="spacer100"></div>
     <Cardflowfunction />
     <div class="pageWrapper">
-        <div style="height: 200px;"></div>
+        <div class="spacer200"></div>
         <h3>I am currrently looking for an Internship</h3>
         <p>
             Starting in March 2025 I'm keen to find opportunities that will
@@ -33,6 +33,12 @@
     .pageWrapper {
         text-align: center;
     }
+    .spacer200 {
+        height: 200px;
+    }
+    .spacer100 {
+        height: 100px;
+    }
     h3 span {
         color: #80C181;
     }
@@ -40,5 +46,13 @@
         color: #c0c0c0;
         max-width: 800px;
         margin: 0 auto;
+    }
+    @media (max-width: 800px) {
+        .spacer200 {
+            height: 100px;
+        }
+        .spacer100 {
+            height: 50px;
+        }
     }
 </style>

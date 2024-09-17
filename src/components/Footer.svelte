@@ -40,6 +40,7 @@
             gap: 20px;
             height: auto;
             margin-top: 100px;
+            margin-bottom: 110px;
         }
     }
 </style>
