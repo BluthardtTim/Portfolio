@@ -1,4 +1,5 @@
 <script>
+
   import Navbar from "./components/Navbar.svelte";
   import Router, { location } from "svelte-spa-router";
   import { onMount, afterUpdate } from 'svelte';

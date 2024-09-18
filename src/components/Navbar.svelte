@@ -299,7 +299,7 @@
         position: absolute;
         top: 3px;
         height: 90%;
-        width: 48px;
+        width: 50px;
         background-color: #80c181;
         border-radius: 50px;
         transition: all 0.5s;

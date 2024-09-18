@@ -39,6 +39,9 @@
     .spacer100 {
         height: 100px;
     }
+    h3 {
+        font-size: 22px;
+    }
     h3 span {
         color: #80C181;
     }
@@ -46,6 +49,7 @@
         color: #c0c0c0;
         max-width: 800px;
         margin: 0 auto;
+        font-size: 18px;
     }
     @media (max-width: 800px) {
         .spacer200 {

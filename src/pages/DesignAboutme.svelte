@@ -5,7 +5,7 @@
 <main>
     <div id="wrapper">
         <div class="pageWrapper">
-            <div style="height: 200px;"></div>
+            <div class="savespaceTop"></div>
             <div></div>
             <div>
                 <h5>Hi, I'm Tim</h5>
@@ -107,7 +107,7 @@
             grid-template-columns: 1fr;
         }
         .spacer {
-            height: 0px;
+            display: none;
         }
     }
 </style>
