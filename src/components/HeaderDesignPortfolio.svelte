@@ -164,6 +164,7 @@
         margin-bottom: -5px;
         color: #9D9D9D;
         font-weight: 400;
+        font-size: 24px;
     }
     @media (max-width: 800px) {
         #Wrapper {

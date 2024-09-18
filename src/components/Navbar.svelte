@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import { location } from "svelte-spa-router";
 
+
     let isProjectsSelected = false;
     let isAboutMeSelected = false;
     let isPhotographySelected = false;
@@ -200,7 +201,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: width 0.5s;
+        transition: width 0.4s ease-in-out;
     }
     #iconwrapper:hover {
         width: 300px; /* Adjust width as needed */
@@ -307,7 +308,7 @@
         margin-left: 3px;
     }
     #iconwrapper:not(:hover) .highlightIcons {
-        width: 48px !important;
+        width: 50px !important;
     }
 
     #iconwrapper:hover .highlightIcons {
