@@ -39,10 +39,10 @@
                     <h5>duration</h5>
                     <p>{duration}</p>
                 </div>
-                <div>
+                <!-- <div>
                     <h5>teammates</h5>
                     <Teammates teammates={teamNames} />
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@
     }
     .CaseStudyCredits {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 50px;
         margin-top: 15vh;
         width: 50%;
@@ -99,6 +99,8 @@
     @media (max-width: 800px) {
         .CaseStudyCredits {
             margin-top: 60px;
+            width: 100%;
+            gap: 20px;
         }
         #description {
             max-width: 100%;

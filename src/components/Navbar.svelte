@@ -342,6 +342,10 @@
         color: white;
     }
     @media (max-width: 800px) {
+        #wrapper {
+            gap: 15px;
+            margin-bottom: 10px;
+        }
         .DesignNavBarStat p {
             display: none;
         }

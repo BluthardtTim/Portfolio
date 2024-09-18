@@ -23,10 +23,6 @@
         "/respiratory": Respiratory,
     };
   
-    const isHiddenPage = derived(location, $location => 
-        $location === "/spot" || $location === "/growceries" || $location === "/respiratory"
-    );
-  
     let isNavbarVisible = false; // Navbar initially hidden on mobile
   
     // Function to toggle the navbar visibility based on scroll position
@@ -63,9 +59,7 @@
   
   <main>
     <Router {routes} />
-    {#if !$isHiddenPage && isNavbarVisible}
-        <Navbar />
-    {/if}
+    <Navbar />
   </main>
   
   <style>
