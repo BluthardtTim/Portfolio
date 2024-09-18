@@ -167,12 +167,12 @@
     }
     @media (max-width: 800px) {
         #Wrapper {
-            height: 100vh;
+            height: 80vh;
         }
         .pageWrapper {
             flex-direction: column;
             gap: 2rem;
-            margin-bottom: 100px;
+            margin-bottom: 20px;
         }
         .imageCard {
             width: 45%;

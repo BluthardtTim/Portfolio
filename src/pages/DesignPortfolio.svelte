@@ -40,7 +40,7 @@
         height: 100px;
     }
     h3 {
-        font-size: 22px;
+        font-size: 24px;
     }
     h3 span {
         color: #80C181;
