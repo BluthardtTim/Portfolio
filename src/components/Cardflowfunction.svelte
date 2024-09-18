@@ -143,7 +143,7 @@
   }
   @media (max-width: 800px) {
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
     }
     .container {
       height: 2000px;

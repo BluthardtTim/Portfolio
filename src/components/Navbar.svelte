@@ -2,7 +2,6 @@
     import { onMount } from "svelte";
     import { location } from "svelte-spa-router";
 
-
     let isProjectsSelected = false;
     let isAboutMeSelected = false;
     let isPhotographySelected = false;

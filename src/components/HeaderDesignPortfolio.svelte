@@ -68,7 +68,7 @@
     }
     .imageCard {
         width: 330px;
-        height: 480px;
+        aspect-ratio: 9 / 15;
         background-color: #f8f9fa;
         background: white;
         border-radius: 22px;
@@ -173,11 +173,12 @@
         .pageWrapper {
             flex-direction: column;
             gap: 2rem;
+            margin-bottom: 20px;
         }
         .imageCard {
-            width: 45%;
-            height: 55vw;
-            margin-bottom: 10px;
+            width: 55%;
+            height: 65vw;
+            margin-bottom: 30px;
         }
         .meicon {
             display: none;
