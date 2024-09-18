@@ -6,7 +6,7 @@
     export let myRole;
     export let duration;
     export let teamNames;
-    export let backgroundImage;
+    // export let backgroundImage;
 
     function goBack() {
         window.history.back();
@@ -16,7 +16,7 @@
 <main>
     <div class="Projectbunner">
         <div id="backgroundimg">
-            <img src={backgroundImage} alt="backgroundImage" />
+            <!-- <img src={backgroundImage} alt="backgroundImage" /> -->
         </div>
         <div class="pageWrapper">
             <div class="savespaceTop"></div>
@@ -57,11 +57,11 @@
         height: 70vh;
         z-index: -1;
     }
-    #backgroundimg img {
+    /* #backgroundimg img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
+    } */
     .back {
         position: absolute;
         top: 174px;
@@ -78,7 +78,7 @@
     .Projectbunner {
         width: 100vw;
         height: 70vh;
-        /* background-color: #f6f6f6; */
+        background-color: #f6f6f6;
         z-index: -2;
         border-bottom: 0.5px solid #bebebe;
         box-shadow: inset 0px -10px 10px -10px rgba(3, 2, 2, 0.1);

@@ -4,22 +4,11 @@
     import Image from "../components/Image.svelte";
     import ProjectHeader from "../components/ProjectHeader.svelte";
     import Footer from "../components/Footer.svelte";
-    import ImageSlideshow from "../components/ImageSlideshow.svelte";
-    import FigmaEmbed from "../components/FigmaEmbed.svelte";
     let SpotVideourl = "https://youtu.be/wguCO5G26hc";
-    let imagePath = "../images/Portrait.jpg";
-    let imageCaption = "This is an example caption";
 
     let teamNames = ["Amelie Schlüter", "Julia Zöllner"];
     let selectedProjects = ["Growceries", "Respiratory"];
 
-    let imagesSlideshow = [
-        "../images/Spot/VisionPro.JPG",
-        "../images/Portrait2.jpg",
-        "../images/SpotCard.png",
-        "../images/SpotCard.png",
-        "../images/SpotCard.png",
-    ];
 </script>
 
 <main>
@@ -29,7 +18,6 @@
         myRole="Concept design, realisation of video in film, editing"
         duration="3. Semester, March 23 – June 24"
         {teamNames}
-        backgroundImage="../images/SpotProjectBanner.png"
     />
 
     <div class="pageWrapper">

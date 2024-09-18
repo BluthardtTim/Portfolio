@@ -153,7 +153,7 @@
                         class:active={isProjectsSelected}
                         on:click={() => setSelected("projects")}
                     >
-                        Projects
+                        <p>Projects</p>
                     </div></a
                 >
                 <a class="ankerlink" href="#/aboutme">
@@ -165,7 +165,7 @@
                         class:active={isAboutMeSelected}
                         on:click={() => setSelected("aboutme")}
                     >
-                        About me
+                        <p>About me</p>
                     </div></a
                 >
             {/if}
@@ -246,6 +246,9 @@
         justify-content: center;
         text-decoration: none;
     }
+    .DesignNavBarStat p {
+            font-size: 16px;
+        }
     .DesignNavBarStat img {
         filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(153deg)
             brightness(108%) contrast(101%);
@@ -267,6 +270,9 @@
             transform 0.3s ease-in-out,
             width 0.3s ease-in-out;
         z-index: 100;
+    }
+    .NavbarWrapper p {
+        font-size: 16px;
     }
     .NavbarWrapper:hover {
         animation: bounce 0.5s;
