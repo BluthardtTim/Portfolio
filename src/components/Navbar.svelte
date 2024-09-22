@@ -152,7 +152,7 @@
                     <div
                         id="projectsButton"
                         class="NavButton"
-                        class:active={isProjectsSelected}
+                        class:active={isDesignSelected}
                         on:click={() => setSelected("projects")}
                     >
                         <p>Projects</p>
