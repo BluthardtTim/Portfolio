@@ -27,7 +27,7 @@
             <div>
                 <h3>UI/UX Design – Portfolio</h3>
                 <h1>Tim Bluthardt</h1>
-                <p style="margin-top: 40px;">
+                <p style="margin-top: 40px; max-width: 600px;">
                     Hi, I'm Tim, a creative UI/UX designer driven by the challenge of turning ideas into impactful user experiences.
                 </p>
                 <div class="thatsme">
@@ -67,8 +67,8 @@
         gap: 10rem;
     }
     .imageCard {
-        width: 330px;
-        aspect-ratio: 9 / 15;
+        width: 300px;
+        aspect-ratio: 9 / 14;
         background-color: #f8f9fa;
         background: white;
         border-radius: 22px;

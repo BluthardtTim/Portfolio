@@ -12,6 +12,7 @@
 
     // Funktion zum Setzen des aktiven Buttons
     function setSelected(button) {
+        console.log('Setting selected:', button);
         isProjectsSelected = button === "projects";
         isAboutMeSelected = button === "aboutme";
         isPhotographySelected = button === "photography";
@@ -42,6 +43,7 @@
         if (route === "/") {
             setSelected("projects");
             setSelected("design");
+            
             changeIconAndText("../images/icons/pen-nib-light.svg");
         } else if (route === "/aboutme") {
             setSelected("aboutme");
@@ -97,7 +99,7 @@
         <div id="iconwrapper">
             <div 
     class="highlightIcons" 
-    style="left: {highlightLeft2}; width: {isPhotographySelected ? '162px' : isDesignSelected ? '130px' : '48px'};">
+    style="left: {highlightLeft2}; width: {isPhotographySelected ? '169px' : isDesignSelected ? '130px' : '48px'};">
 </div>
 
             <a class="ankerlink" href="#/photo">
@@ -320,7 +322,7 @@
         width: 132px; /* Adjust width as needed */
         /* transform: translateX(-80px); */
     }
-    .active {
+    .NavButton.active p{
         color: white;
     }
     .NavButton {
@@ -344,7 +346,7 @@
     @media (max-width: 800px) {
         #wrapper {
             gap: 15px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .DesignNavBarStat p {
             display: none;
