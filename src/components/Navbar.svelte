@@ -76,6 +76,10 @@ function updateHighlightPosition() {
     onMount(() => {
     const iconWrapper = document.getElementById("iconwrapper");
 
+    if (window.innerWidth < 800) {
+        leftPhoto = '54px';
+    }
+
     iconWrapper.addEventListener("mouseenter", () => {
         requestAnimationFrame(() => {
             const designNav = document.getElementById("designnav");
@@ -105,7 +109,7 @@ function updateHighlightPosition() {
         <div id="iconwrapper">
             <div 
                 class="highlightIcons" 
-                style="left: {highlightLeft2}; width: {selectedMain === 'photography' ? '169px' : selectedMain === 'design' ? '130px' : '48px'};">
+                style="left: {highlightLeft2}; width: {selectedMain === 'photography' ? '169px' : selectedMain === 'design' ? '130px' : '50px'};">
             </div>
 
             <a class="ankerlink" href="#/photo">
@@ -127,7 +131,7 @@ function updateHighlightPosition() {
             </div>
         </div>
         <div class="NavbarWrapper">
-            <div class="highlight" style="left: {highlightLeft}; width: {selectedMain === 'photography' ? '99px' : selectedMain === 'design' ? '114px' : '48px'};"></div>
+            <div class="highlight" style="left: {highlightLeft}; width: {selectedMain === 'photography' ? '99px' : selectedMain === 'design' ? '114px' : '50px'};"></div>
             {#if selectedMain === "photography"}
                 <a class="ankerlink" href="#/photo">
                     <div id="photo1Button" class="NavButton">Photo1</div>
@@ -334,7 +338,7 @@ function updateHighlightPosition() {
             gap: 20px;
         }
         #iconwrapper:hover {
-            width: 120px;
+            width: 118px;
         }
         #iconwrapper:hover .highlightIcons {
         width: 56px !important;
