@@ -2,21 +2,22 @@
     import { onMount } from "svelte";
     import { location } from "svelte-spa-router";
 
-    let isProjectsSelected = false;
-    let isAboutMeSelected = false;
-    let isPhotographySelected = false;
-    let isDesignSelected = false;
+    let selectedItem = "projects"; // Default selection
+    let selectedMain = "design";   // For Design or Photography
     let highlightLeft = "0px";
     let highlightLeft2 = "0px";
     let currentIconSrc = "../images/icons/pen-nib-light.svg";
+    let leftPhoto = '123px';
+    let leftDesign = '0px';
 
     // Funktion zum Setzen des aktiven Buttons
     function setSelected(button) {
-        console.log('Setting selected:', button);
-        isProjectsSelected = button === "projects";
-        isAboutMeSelected = button === "aboutme";
-        isPhotographySelected = button === "photography";
-        isDesignSelected = button === "design";
+        selectedItem = button;
+        updateHighlightPosition();
+    }
+
+    function setMainSelected(main) {
+        selectedMain = main;
         updateHighlightPosition();
     }
 
@@ -27,28 +28,30 @@
         const designNav = document.getElementById("designnav");
         const photoNav = document.getElementById("photonav");
 
-        if (isProjectsSelected && projectsButton) {
-            highlightLeft = `${projectsButton.offsetLeft}px`;
-        } else if (isAboutMeSelected && aboutMeButton) {
-            highlightLeft = `${aboutMeButton.offsetLeft}px`;
-        } else if (isDesignSelected && designNav) {
-            highlightLeft2 = `${designNav.offsetLeft}px`;
-        } else if (isPhotographySelected && photoNav) {
-            highlightLeft2 = `${photoNav.offsetLeft}px`;
-        }
+        highlightLeft = (selectedItem === "projects" && projectsButton) 
+            ? `${projectsButton.offsetLeft}px`
+            : (selectedItem === "aboutme" && aboutMeButton)
+            ? `${aboutMeButton.offsetLeft}px` 
+            : highlightLeft;
+
+        highlightLeft2 = (selectedMain === "design" && designNav) 
+            ? `${designNav.offsetLeft}px`
+            : (selectedMain === "photography" && photoNav)
+            ? `${photoNav.offsetLeft}px`
+            : highlightLeft2;
     }
 
     // Aktualisiere den Zustand basierend auf der aktuellen Route
     function updateFromRoute(route) {
         if (route === "/") {
             setSelected("projects");
-            setSelected("design");
-            
+            setMainSelected("design");
             changeIconAndText("../images/icons/pen-nib-light.svg");
         } else if (route === "/aboutme") {
             setSelected("aboutme");
+            setMainSelected("design");
         } else if (route.startsWith("/photo")) {
-            setSelected("photography");
+            setMainSelected("photography");
             changeIconAndText("../images/icons/camera-light.svg")
         }
     }
@@ -58,77 +61,51 @@
 
     // onMount: Aktualisiere die Highlight-Position und überwache die Fenstergröße
     onMount(() => {
-        updateHighlightPosition();
+    const iconWrapper = document.getElementById("iconwrapper");
 
-        const iconWrapper = document.getElementById("iconwrapper");
+    iconWrapper.addEventListener("mouseenter", () => {
+        requestAnimationFrame(() => {
+            const designNav = document.getElementById("designnav");
+            const photoNav = document.getElementById("photonav");
 
-        // Füge den Mouseleave-EventListener hinzu
-        iconWrapper.addEventListener("mouseleave", () => {
-            highlightLeft2 = "0px";
+            if (selectedMain === "photography" && photoNav) {
+                highlightLeft2 = leftPhoto;
+            } else if (selectedMain === "design" && designNav) {
+                highlightLeft2 = leftDesign;
+            }
         });
-
-        // Füge den Mouseenter-EventListener hinzu
-        iconWrapper.addEventListener("mouseenter", () => {
-            setTimeout(() => {
-                const designNav = document.getElementById("designnav");
-                const photoNav = document.getElementById("photonav");
-
-                if (isPhotographySelected && photoNav) {
-                    highlightLeft2 = `${photoNav.offsetLeft}px`;
-                    console.log('photo', photoNav.offsetLeft);
-                } else if (isDesignSelected && designNav) {
-                    highlightLeft2 = `${designNav.offsetLeft}px`;
-                    console.log('design', designNav.offsetLeft);
-                }
-            }, 300); // Wartezeit von 100ms, um sicherzustellen, dass das Layout vollständig aktualisiert ist
-        });
-
     });
+
+    iconWrapper.addEventListener("mouseleave", () => {
+        highlightLeft2 = "0px";
+    });
+});
+
 
     function changeIconAndText(iconSrc) {
         currentIconSrc = iconSrc;
     }
 </script>
 
-
-
-
-
 <main>
     <div id="wrapper">
         <div id="iconwrapper">
             <div 
-    class="highlightIcons" 
-    style="left: {highlightLeft2}; width: {isPhotographySelected ? '169px' : isDesignSelected ? '130px' : '48px'};">
-</div>
+                class="highlightIcons" 
+                style="left: {highlightLeft2}; width: {selectedMain === 'photography' ? '169px' : selectedMain === 'design' ? '130px' : '48px'};">
+            </div>
 
             <a class="ankerlink" href="#/photo">
                 <img class="currentIcon" src={currentIconSrc} alt="" />
             </a>
             <div class="hoverContent">
-                <a  
-                    
-                    class="ankerlink"
-                    href="#/"
-                    on:click={() =>
-                        changeIconAndText(
-                            "../images/icons/pen-nib-light.svg"
-                        )}
-                >
+                <a class="ankerlink" href="#/" on:click={() => changeIconAndText("../images/icons/pen-nib-light.svg")}>
                     <div class="DesignNavBarStat" id="designnav">
                         <img src="../images/icons/pen-nib-light.svg" alt="" />
                         <p>Design</p>
                     </div>
                 </a>
-                <a
-                    
-                    class="ankerlink"
-                    href="#/photo"
-                    on:click={() =>
-                        changeIconAndText(
-                            "../images/icons/camera-light.svg"
-                        )}
-                >
+                <a class="ankerlink" href="#/photo" on:click={() => changeIconAndText("../images/icons/camera-light.svg")}>
                     <div class="DesignNavBarStat" id="photonav">
                         <img src="../images/icons/camera-light.svg" alt="" />
                         <p>Photography</p>
@@ -138,7 +115,7 @@
         </div>
         <div class="NavbarWrapper">
             <div class="highlight" style="left: {highlightLeft};"></div>
-            {#if isPhotographySelected}
+            {#if selectedMain === "photography"}
                 <a class="ankerlink" href="#/photo1">
                     <div class="NavButton">Photo1</div>
                 </a>
@@ -147,33 +124,21 @@
                 </a>
             {:else}
                 <a class="ankerlink" href="#/">
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <!-- svelte-ignore a11y-no-static-element-interactions -->
-                    <div
-                        id="projectsButton"
-                        class="NavButton"
-                        class:active={isDesignSelected}
-                        on:click={() => setSelected("projects")}
-                    >
+                    <div id="projectsButton" class="NavButton" class:active={selectedItem === "projects"} on:click={() => setSelected("projects")}>
                         <p>Projects</p>
-                    </div></a
-                >
+                    </div>
+                </a>
                 <a class="ankerlink" href="#/aboutme">
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <!-- svelte-ignore a11y-no-static-element-interactions -->
-                    <div
-                        id="aboutMeButton"
-                        class="NavButton"
-                        class:active={isAboutMeSelected}
-                        on:click={() => setSelected("aboutme")}
-                    >
+                    <div id="aboutMeButton" class="NavButton" class:active={selectedItem === "aboutme"} on:click={() => setSelected("aboutme")}>
                         <p>About me</p>
-                    </div></a
-                >
+                    </div>
+                </a>
             {/if}
         </div>
     </div>
 </main>
+
+
 
 <style>
     main {
@@ -299,7 +264,7 @@
         width: 114px;
         background-color: #80c181;
         border-radius: 50px;
-        transition: left 0.3s;
+        transition: left 0.5s;
         z-index: 0;
         margin-left: 3px;
     }
@@ -313,6 +278,7 @@
         transition: all 0.5s;
         z-index: 0;
         margin-left: 3px;
+        transform-origin: right;
     }
     #iconwrapper:not(:hover) .highlightIcons {
         width: 50px !important;
