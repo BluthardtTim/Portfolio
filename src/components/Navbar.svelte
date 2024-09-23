@@ -22,39 +22,52 @@
     }
 
     // Aktualisiert die Position des Highlights basierend auf dem aktiven Button
-    function updateHighlightPosition() {
-        const projectsButton = document.getElementById("projectsButton");
-        const aboutMeButton = document.getElementById("aboutMeButton");
-        const designNav = document.getElementById("designnav");
-        const photoNav = document.getElementById("photonav");
+function updateHighlightPosition() {
+    const projectsButton = document.getElementById("projectsButton");
+    const aboutMeButton = document.getElementById("aboutMeButton");
+    const photo1Button = document.getElementById("photo1Button");
+    const photo2Button = document.getElementById("photo2Button");
+    const designNav = document.getElementById("designnav");
+    const photoNav = document.getElementById("photonav");
 
+    if (selectedMain === "design") {
         highlightLeft = (selectedItem === "projects" && projectsButton) 
             ? `${projectsButton.offsetLeft}px`
             : (selectedItem === "aboutme" && aboutMeButton)
             ? `${aboutMeButton.offsetLeft}px` 
             : highlightLeft;
-
-        highlightLeft2 = (selectedMain === "design" && designNav) 
-            ? `${designNav.offsetLeft}px`
-            : (selectedMain === "photography" && photoNav)
-            ? `${photoNav.offsetLeft}px`
-            : highlightLeft2;
+        highlightLeft2 = designNav ? `${designNav.offsetLeft}px` : highlightLeft2;
+    } else if (selectedMain === "photography") {
+        highlightLeft = (selectedItem === "photo1" && photo1Button)
+            ? `${photo1Button.offsetLeft}px`
+            : (selectedItem === "photo2" && photo2Button)
+            ? `${photo2Button.offsetLeft}px`
+            : highlightLeft;
+        highlightLeft2 = photoNav ? `${photoNav.offsetLeft}px` : highlightLeft2;
     }
+}
+
 
     // Aktualisiere den Zustand basierend auf der aktuellen Route
     function updateFromRoute(route) {
-        if (route === "/") {
-            setSelected("projects");
-            setMainSelected("design");
-            changeIconAndText("../images/icons/pen-nib-light.svg");
-        } else if (route === "/aboutme") {
-            setSelected("aboutme");
-            setMainSelected("design");
-        } else if (route.startsWith("/photo")) {
-            setMainSelected("photography");
-            changeIconAndText("../images/icons/camera-light.svg")
-        }
+    if (route === "/") {
+        setSelected("projects");
+        setMainSelected("design");
+        changeIconAndText("../images/icons/pen-nib-light.svg");
+    } else if (route === "/aboutme") {
+        setSelected("aboutme");
+        setMainSelected("design");
+    } else if (route === "/photo") {
+        setSelected("photo1");
+        setMainSelected("photography");
+        changeIconAndText("../images/icons/camera-light.svg");
+    } else if (route === "/photo2") {
+        setSelected("photo2");
+        setMainSelected("photography");
+        changeIconAndText("../images/icons/camera-light.svg");
     }
+}
+
 
     // Überwache die Route und aktualisiere die Navbar
     $: updateFromRoute($location);
@@ -114,13 +127,13 @@
             </div>
         </div>
         <div class="NavbarWrapper">
-            <div class="highlight" style="left: {highlightLeft};"></div>
+            <div class="highlight" style="left: {highlightLeft}; width: {selectedMain === 'photography' ? '99px' : selectedMain === 'design' ? '114px' : '48px'};"></div>
             {#if selectedMain === "photography"}
-                <a class="ankerlink" href="#/photo1">
-                    <div class="NavButton">Photo1</div>
+                <a class="ankerlink" href="#/photo">
+                    <div id="photo1Button" class="NavButton">Photo1</div>
                 </a>
                 <a class="ankerlink" href="#/photo2">
-                    <div class="NavButton">Photo2</div>
+                    <div id="photo2Button" class="NavButton">Photo2</div>
                 </a>
             {:else}
                 <a class="ankerlink" href="#/">

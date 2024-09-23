@@ -11,6 +11,7 @@
     import Xtend from "./pages/Xtend.svelte";
     import Imprint from "./pages/imprint.svelte";
     import Respiratory from "./pages/Respiratory.svelte";
+    import Photo2 from "./pages/Photo2.svelte";
   
     const routes = {
         "/": DesignPortfolio,
@@ -21,6 +22,7 @@
         "/xtend": Xtend,
         "/imprint": Imprint,
         "/respiratory": Respiratory,
+        "/photo2": Photo2,
     };
   
     let isNavbarVisible = false; // Navbar initially hidden on mobile

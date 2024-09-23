@@ -4,220 +4,88 @@
 
 <main>
     <div class="pageWrapper">
-        <div style="height: 200px;"></div>
+        <div class="spacer200"></div>
         <h3>Imprint</h3>
+        <div class="spacer100"></div>
+        <p style="margin-bottom:40px;">
+            Tim Bluthardt<br />
+            Luisenstraße 7<br />
+            71723 Großbottwar<br />
+            Germany
+        </p>
+        <p style="margin-bottom:40px;">tim.bluthardt@gmail.com</p>
 
-        <h3>Impressum und Datenschutz</h3>
+        <p>Angaben gemäß § 5 TMG</p>
 
-		<p><b>Verantwortliche Stelle im Sinne der Datenschutzgesetze und für die Internetseite timbluthardt.de ist:</b>
-		</p>
-		<p style="margin-bottom:40px;">Tim Bluthardt<br>
-			Luisenstraße 7<br>
-			71723 Großbottwar<br>
-			Germany</p>
-		<p style="margin-bottom:40px;"> tim.bluthardt@gmail.com</p>
+        <p>
+            Verbraucherstreitbeilegung/Universalschlichtungsstelle Wir sind
+            nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor
+            einer Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
 
-		<p>Wir haben diese Datenschutzerklärung (Fassung 26.01.2023-312398037) verfasst, um Ihnen gemäß der Vorgaben der
-			<a class="adsimple-312398037"
-				href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=312398037#d1e2269-1-1"
-				target="_blank" rel="noopener">Datenschutz-Grundverordnung (EU) 2016/679</a> und anwendbaren nationalen
-			Gesetzen zu erklären, welche personenbezogenen Daten (kurz Daten) wir als Verantwortliche &#8211; und die
-			von uns beauftragten Auftragsverarbeiter (z. B. Provider) &#8211; verarbeiten, zukünftig verarbeiten werden
-			und welche rechtmäßigen Möglichkeiten Sie haben. Die verwendeten Begriffe sind geschlechtsneutral zu
-			verstehen.<br />
-			Kurz gesagt: Wir informieren Sie umfassend über Daten, die wir über Sie verarbeiten.</p>
-		<p>Datenschutzerklärungen klingen für gewöhnlich sehr technisch und verwenden juristische Fachbegriffe. Diese
-			Datenschutzerklärung soll Ihnen hingegen die wichtigsten Dinge so einfach und transparent wie möglich
-			beschreiben. Soweit es der Transparenz förderlich ist, werden technische <strong
-				class="adsimple-312398037">Begriffe leserfreundlich erklärt</strong>, Links zu weiterführenden
-			Informationen geboten und <strong class="adsimple-312398037">Grafiken</strong> zum Einsatz gebracht. Wir
-			informieren damit in klarer und einfacher Sprache, dass wir im Rahmen unserer Geschäftstätigkeiten nur dann
-			personenbezogene Daten verarbeiten, wenn eine entsprechende gesetzliche Grundlage gegeben ist. Das ist
-			sicher nicht möglich, wenn man möglichst knappe, unklare und juristisch-technische Erklärungen abgibt, so
-			wie sie im Internet oft Standard sind, wenn es um Datenschutz geht. Ich hoffe, Sie finden die folgenden
-			Erläuterungen interessant und informativ und vielleicht ist die eine oder andere Information dabei, die Sie
-			noch nicht kannten.<br />
-			Wenn trotzdem Fragen bleiben, möchten wir Sie bitten, sich an die unten bzw. im Impressum genannte
-			verantwortliche Stelle zu wenden, den vorhandenen Links zu folgen und sich weitere Informationen auf
-			Drittseiten anzusehen. Unsere Kontaktdaten finden Sie selbstverständlich auch im Impressum.</p>
-		<p id="anwendungsbereich" class="adsimple-312398037"><b>Anwendungsbereich</b></p>
-		<p>Diese Datenschutzerklärung gilt für alle von uns im Unternehmen verarbeiteten personenbezogenen Daten und für
-			alle personenbezogenen Daten, die von uns beauftragte Firmen (Auftragsverarbeiter) verarbeiten. Mit
-			personenbezogenen Daten meinen wir Informationen im Sinne des Art. 4 Nr. 1 DSGVO wie zum Beispiel Name,
-			E-Mail-Adresse und postalische Anschrift einer Person. Die Verarbeitung personenbezogener Daten sorgt dafür,
-			dass wir unsere Dienstleistungen und Produkte anbieten und abrechnen können, sei es online oder offline. Der
-			Anwendungsbereich dieser Datenschutzerklärung umfasst:</p>
-		<ul class="adsimple-312398037">
-			<li class="adsimple-312398037">alle Onlineauftritte (Websites, Onlineshops), die wir betreiben</li>
-			<li class="adsimple-312398037">Social Media Auftritte und E-Mail-Kommunikation</li>
-			<li class="adsimple-312398037">mobile Apps für Smartphones und andere Geräte</li>
-		</ul>
-		<p>
-			<strong class="adsimple-312398037">Kurz gesagt:</strong> Die Datenschutzerklärung gilt für alle Bereiche, in
-			denen personenbezogene Daten im Unternehmen über die genannten Kanäle strukturiert verarbeitet werden.
-			Sollten wir außerhalb dieser Kanäle mit Ihnen in Rechtsbeziehungen eintreten, werden wir Sie gegebenenfalls
-			gesondert informieren.
-		</p>
-		<p id="rechtsgrundlagen" class="adsimple-312398037"><b>Rechtsgrundlagen</b></p>
-		<p>In der folgenden Datenschutzerklärung geben wir Ihnen transparente Informationen zu den rechtlichen
-			Grundsätzen und Vorschriften, also den Rechtsgrundlagen der Datenschutz-Grundverordnung, die uns
-			ermöglichen, personenbezogene Daten zu verarbeiten.<br />
-			Was das EU-Recht betrifft, beziehen wir uns auf die VERORDNUNG (EU) 2016/679 DES EUROPÄISCHEN PARLAMENTS UND
-			DES RATES vom 27. April 2016. Diese Datenschutz-Grundverordnung der EU können Sie selbstverständlich online
-			auf EUR-Lex, dem Zugang zum EU-Recht, unter <a class="adsimple-312398037"
-				href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679">https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679</a>
-			nachlesen.</p>
-		<p>Wir verarbeiten Ihre Daten nur, wenn mindestens eine der folgenden Bedingungen zutrifft:</p>
-		<ol>
-			<li class="adsimple-312398037">
-				<strong class="adsimple-312398037">Einwilligung</strong> (Artikel 6 Absatz 1 lit. a DSGVO): Sie haben
-				uns Ihre Einwilligung gegeben, Daten zu einem bestimmten Zweck zu verarbeiten. Ein Beispiel wäre die
-				Speicherung Ihrer eingegebenen Daten eines Kontaktformulars.
-			</li>
-			<li class="adsimple-312398037">
-				<strong class="adsimple-312398037">Vertrag</strong> (Artikel 6 Absatz 1 lit. b DSGVO): Um einen Vertrag
-				oder vorvertragliche Verpflichtungen mit Ihnen zu erfüllen, verarbeiten wir Ihre Daten. Wenn wir zum
-				Beispiel einen Kaufvertrag mit Ihnen abschließen, benötigen wir vorab personenbezogene Informationen.
-			</li>
-			<li class="adsimple-312398037">
-				<strong class="adsimple-312398037">Rechtliche Verpflichtung</strong> (Artikel 6 Absatz 1 lit. c DSGVO):
-				Wenn wir einer rechtlichen Verpflichtung unterliegen, verarbeiten wir Ihre Daten. Zum Beispiel sind wir
-				gesetzlich verpflichtet Rechnungen für die Buchhaltung aufzuheben. Diese enthalten in der Regel
-				personenbezogene Daten.
-			</li>
-			<li class="adsimple-312398037">
-				<strong class="adsimple-312398037">Berechtigte Interessen</strong> (Artikel 6 Absatz 1 lit. f DSGVO): Im
-				Falle berechtigter Interessen, die Ihre Grundrechte nicht einschränken, behalten wir uns die
-				Verarbeitung personenbezogener Daten vor. Wir müssen zum Beispiel gewisse Daten verarbeiten, um unsere
-				Website sicher und wirtschaftlich effizient betreiben zu können. Diese Verarbeitung ist somit ein
-				berechtigtes Interesse.
-			</li>
-		</ol>
-		<p>Weitere Bedingungen wie die Wahrnehmung von Aufnahmen im öffentlichen Interesse und Ausübung öffentlicher
-			Gewalt sowie dem Schutz lebenswichtiger Interessen treten bei uns in der Regel nicht auf. Soweit eine solche
-			Rechtsgrundlage doch einschlägig sein sollte, wird diese an der entsprechenden Stelle ausgewiesen.</p>
-		<p>Zusätzlich zu der EU-Verordnung gelten auch noch nationale Gesetze:</p>
-		<ul class="adsimple-312398037">
-			<li class="adsimple-312398037">In <strong class="adsimple-312398037">Österreich</strong> ist dies das
-				Bundesgesetz zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten (<strong
-					class="adsimple-312398037">Datenschutzgesetz</strong>), kurz <strong
-					class="adsimple-312398037">DSG</strong>.</li>
-			<li class="adsimple-312398037">In <strong class="adsimple-312398037">Deutschland</strong> gilt das <strong
-					class="adsimple-312398037">Bundesdatenschutzgesetz</strong>, kurz<strong class="adsimple-312398037">
-					BDSG</strong>.</li>
-		</ul>
-		<p>Sofern weitere regionale oder nationale Gesetze zur Anwendung kommen, informieren wir Sie in den folgenden
-			Abschnitten darüber.</p>
-		<p id="kontaktdaten-verantwortliche" class="adsimple-312398037"><b>Kontaktdaten des Verantwortlichen</b></p>
-		<p>Sollten Sie Fragen zum Datenschutz oder zur Verarbeitung personenbezogener Daten haben, finden Sie
-			nachfolgend die Kontaktdaten der verantwortlichen Person bzw. Stelle:<br />
-			<span class="adsimple-312398037" style="font-weight: 400">Tim Bluthardt<br />
-				Luisenstraße 7<br />
-				71723 Großbottwar</span>
-			<br />
-			<span style="font-weight: 400">Vertretungsberechtigt: Tim Bluthardt</span>
-			<br />
-			E-Mail: <a href="mailto:tim.bluthardt@gmail.com">tim.bluthardt@gmail.com</a>
-			<br />
-			Telefon: <a href="tel:+49 1590 2014562">+49 1590 2014562</a>
-			<br />
-			Impressum: <a href="https://www.timbluthardt.de.de/impressum/">https://www.timbluthardt.de.de/impressum/</a>
-		</p>
-		<p id="speicherdauer" class="adsimple-312398037"><b>Speicherdauer</b></p>
-		<p>Dass wir personenbezogene Daten nur so lange speichern, wie es für die Bereitstellung unserer
-			Dienstleistungen und Produkte unbedingt notwendig ist, gilt als generelles Kriterium bei uns. Das bedeutet,
-			dass wir personenbezogene Daten löschen, sobald der Grund für die Datenverarbeitung nicht mehr vorhanden
-			ist. In einigen Fällen sind wir gesetzlich dazu verpflichtet, bestimmte Daten auch nach Wegfall des
-			ursprüngliches Zwecks zu speichern, zum Beispiel zu Zwecken der Buchführung.</p>
-		<p>Sollten Sie die Löschung Ihrer Daten wünschen oder die Einwilligung zur Datenverarbeitung widerrufen, werden
-			die Daten so rasch wie möglich und soweit keine Pflicht zur Speicherung besteht, gelöscht.</p>
-		<p>Über die konkrete Dauer der jeweiligen Datenverarbeitung informieren wir Sie weiter unten, sofern wir weitere
-			Informationen dazu haben.</p>
-		<p id="rechte-dsgvo" class="adsimple-312398037"><b>Rechte laut Datenschutz-Grundverordnung</b></p>
-		<p>Gemäß Artikel 13, 14 DSGVO informieren wir Sie über die folgenden Rechte, die Ihnen zustehen, damit es zu
-			einer fairen und transparenten Verarbeitung von Daten kommt:</p>
-		<ul class="adsimple-312398037">
-			<li class="adsimple-312398037">Sie haben laut Artikel 15 DSGVO ein Auskunftsrecht darüber, ob wir Daten von
-				Ihnen verarbeiten. Sollte das zutreffen, haben Sie Recht darauf eine Kopie der Daten zu erhalten und die
-				folgenden Informationen zu erfahren:
-				<ul class="adsimple-312398037">
-					<li class="adsimple-312398037">zu welchem Zweck wir die Verarbeitung durchführen;</li>
-					<li class="adsimple-312398037">die Kategorien, also die Arten von Daten, die verarbeitet werden;
-					</li>
-					<li class="adsimple-312398037">wer diese Daten erhält und wenn die Daten an Drittländer übermittelt
-						werden, wie die Sicherheit garantiert werden kann;</li>
-					<li class="adsimple-312398037">wie lange die Daten gespeichert werden;</li>
-					<li class="adsimple-312398037">das Bestehen des Rechts auf Berichtigung, Löschung oder Einschränkung
-						der Verarbeitung und dem Widerspruchsrecht gegen die Verarbeitung;</li>
-					<li class="adsimple-312398037">dass Sie sich bei einer Aufsichtsbehörde beschweren können (Links zu
-						diesen Behörden finden Sie weiter unten);</li>
-					<li class="adsimple-312398037">die Herkunft der Daten, wenn wir sie nicht bei Ihnen erhoben haben;
-					</li>
-					<li class="adsimple-312398037">ob Profiling durchgeführt wird, ob also Daten automatisch ausgewertet
-						werden, um zu einem persönlichen Profil von Ihnen zu gelangen.</li>
-				</ul>
-			</li>
-			<li class="adsimple-312398037">Sie haben laut Artikel 16 DSGVO ein Recht auf Berichtigung der Daten, was
-				bedeutet, dass wir Daten richtig stellen müssen, falls Sie Fehler finden.</li>
-			<li class="adsimple-312398037">Sie haben laut Artikel 17 DSGVO das Recht auf Löschung („Recht auf
-				Vergessenwerden“), was konkret bedeutet, dass Sie die Löschung Ihrer Daten verlangen dürfen.</li>
-			<li class="adsimple-312398037">Sie haben laut Artikel 18 DSGVO das Recht auf Einschränkung der Verarbeitung,
-				was bedeutet, dass wir die Daten nur mehr speichern dürfen aber nicht weiter verwenden.</li>
-			<li class="adsimple-312398037">Sie haben laut Artikel 20 DSGVO das Recht auf Datenübertragbarkeit, was
-				bedeutet, dass wir Ihnen auf Anfrage Ihre Daten in einem gängigen Format zur Verfügung stellen.</li>
-			<li class="adsimple-312398037">Sie haben laut Artikel 21 DSGVO ein Widerspruchsrecht, welches nach
-				Durchsetzung eine Änderung der Verarbeitung mit sich bringt.
-				<ul class="adsimple-312398037">
-					<li class="adsimple-312398037">Wenn die Verarbeitung Ihrer Daten auf Artikel 6 Abs. 1 lit. e
-						(öffentliches Interesse, Ausübung öffentlicher Gewalt) oder Artikel 6 Abs. 1 lit. f
-						(berechtigtes Interesse) basiert, können Sie gegen die Verarbeitung Widerspruch einlegen. Wir
-						prüfen danach so rasch wie möglich, ob wir diesem Widerspruch rechtlich nachkommen können.</li>
-					<li class="adsimple-312398037">Werden Daten verwendet, um Direktwerbung zu betreiben, können Sie
-						jederzeit gegen diese Art der Datenverarbeitung widersprechen. Wir dürfen Ihre Daten danach
-						nicht mehr für Direktmarketing verwenden.</li>
-					<li class="adsimple-312398037">Werden Daten verwendet, um Profiling zu betreiben, können Sie
-						jederzeit gegen diese Art der Datenverarbeitung widersprechen. Wir dürfen Ihre Daten danach
-						nicht mehr für Profiling verwenden.</li>
-				</ul>
-			</li>
-			<li class="adsimple-312398037">Sie haben laut Artikel 22 DSGVO unter Umständen das Recht, nicht einer
-				ausschließlich auf einer automatisierten Verarbeitung (zum Beispiel Profiling) beruhenden Entscheidung
-				unterworfen zu werden.</li>
-			<li class="adsimple-312398037">Sie haben laut Artikel 77 DSGVO das Recht auf Beschwerde. Das heißt, Sie
-				können sich jederzeit bei der Datenschutzbehörde beschweren, wenn Sie der Meinung sind, dass die
-				Datenverarbeitung von personenbezogenen Daten gegen die DSGVO verstößt.</li>
-		</ul>
-		<p>
-			Kurz gesagt: Sie haben Rechte &#8211; zögern Sie nicht, die oben gelistete verantwortliche Stelle bei uns zu
-			kontaktieren!</p>
-		<p>Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre
-			datenschutzrechtlichen Ansprüche in sonst einer Weise verletzt worden sind, können Sie sich bei der
-			Aufsichtsbehörde beschweren. Diese ist für Österreich die Datenschutzbehörde, deren Website Sie unter <a
-				class="adsimple-312398037" href="https://www.dsb.gv.at/?tid=312398037" target="_blank"
-				rel="noopener">https://www.dsb.gv.at/</a> finden. In Deutschland gibt es für jedes Bundesland einen
-			Datenschutzbeauftragten. Für nähere Informationen können Sie sich an die <a class="adsimple-312398037"
-				href="https://www.bfdi.bund.de/DE/Home/home_node.html" target="_blank" rel="noopener">Bundesbeauftragte
-				für den Datenschutz und die Informationsfreiheit (BfDI)</a> wenden. Für unser Unternehmen ist die
-			folgende lokale Datenschutzbehörde zuständig:</p>
-		<p id="baden-wuerttemberg-datenschutzbehoerde" class="adsimple-312398037"><b>Baden-Württemberg
-				Datenschutzbehörde</b></p>
-		<p>
-			<strong class="adsimple-312398037">Landesbeauftragter für Datenschutz:</strong> Dr. Stefan Brink<br />
-			<strong class="adsimple-312398037">Adresse:</strong> Königstraße 10a, 70173 Stuttgart<br />
-			<strong class="adsimple-312398037">Telefonnr.:</strong> 07 11/61 55 41-0<br />
-			<strong class="adsimple-312398037">E-Mail-Adresse:</strong> poststelle@lfdi.bwl.de<br />
-			<strong class="adsimple-312398037">Website:</strong> <a class="adsimple-312398037"
-				href="https://www.baden-wuerttemberg.datenschutz.de/?tid=312398037" target="_blank"
-				rel="noopener">https://www.baden-wuerttemberg.datenschutz.de/</a>
-		</p>
-		<p>Alle Texte sind urheberrechtlich geschützt.</p>
-		<p style="margin-top:15px">Quelle: Erstellt mit dem <a href="https://www.adsimple.de/datenschutz-generator/"
-				title="Datenschutz Generator von AdSimple für Deutschland">Datenschutz Generator</a> von AdSimple</p>
-        
+        <h5>Haftung für Inhalte</h5>
+
+        <p>
+            Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte
+            auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach
+            §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+            verpflichtet, übermittelte oder gespeicherte fremde Informationen zu
+            überwachen oder nach Umständen zu forschen, die auf eine
+            rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung
+            oder Sperrung der Nutzung von Informationen nach den allgemeinen
+            Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist
+            jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten
+            Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
+            Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+        </p>
+
+        <h5>Haftung für Inhalte</h5>
+
+        <p>
+            Unser Angebot enthält Links zu externen Websites Dritter, auf deren
+            Inhalte wir keinen Einfluss haben. Deshalb können wir für diese
+            fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
+            verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber
+            der Seiten verantwortlich. Die verlinkten Seiten wurden zum
+            Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
+            Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht
+            erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten
+            Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung
+            nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
+            derartige Links umgehend entfernen.
+        </p>
+
+        <h5>Urheberrecht</h5>
+
+        <p>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
+            diesen Seiten unterliegen dem deutschen Urheberrecht. Die
+            Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
+            Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der
+            schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+            Downloads und Kopien dieser Seite sind nur für den privaten, nicht
+            kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser
+            Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte
+            Dritter beachtet. Insbesondere werden Inhalte Dritter als solche
+            gekennzeichnet. Sollten Sie trotzdem auf eine
+            Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
+            entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen
+            werden wir derartige Inhalte umgehend entfernen.
+        </p>
+
+        <p>Quelle: e-recht24.de</p>
     </div>
     <Footer />
 </main>
 
 <style>
-
+    p {
+        margin-bottom: 5rem;
+    }
+    .spacer200 {
+        height: 200px;
+    }
+    .spacer100 {
+        height: 100px;
+    }
 </style>
