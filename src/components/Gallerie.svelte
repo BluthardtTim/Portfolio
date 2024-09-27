@@ -64,6 +64,11 @@
         display: grid;
         gap: 10px;
       }
+      .column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
     
       .gallery img {
         width: 100%;

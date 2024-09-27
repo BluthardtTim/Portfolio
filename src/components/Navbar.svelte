@@ -138,11 +138,11 @@ function updateHighlightPosition() {
         <div class="NavbarWrapper">
             <div class="highlight" style="left: {highlightLeft}; width: {selectedMain === 'photography' ? '99px' : selectedMain === 'design' ? '114px' : '50px'};"></div>
             {#if selectedMain === "photography"}
-                <a class="ankerlink" href="#/photo">
-                    <div id="photo1Button" class="NavButton">Photo1</div>
+                <a class="ankerlink" href="#/photo" >
+                    <div id="photo1Button" class="NavButton" class:active={selectedItem === "photo1"}>Photo1</div>
                 </a>
                 <a class="ankerlink" href="#/photo2">
-                    <div id="photo2Button" class="NavButton">Photo2</div>
+                    <div id="photo2Button" class="NavButton" class:active={selectedItem === "photo2"}>Photo2</div>
                 </a>
             {:else}
                 <a class="ankerlink" href="#/">
