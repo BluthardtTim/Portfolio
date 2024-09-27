@@ -21,14 +21,10 @@
                     photographer.
                 </p>
             </div>
-            <div></div>
             <div class="spacer"></div>
             <div class="spacer"></div>
-            <div class="card">
-                <div class="innercard">
-                    <img src="../images/AboutMe/AboutMeMTB.jpg" alt="Portrait" />
-                </div>
-            </div>
+            <div class="spacer"></div>
+            
             <div>
                 <p>
                     Apart from design, I am passionate about sports. I spend most
@@ -38,11 +34,16 @@
                     just playing basketball with friends.
                 </p>
             </div>
+            <div class="spacer"></div>
             <div class="card">
                 <div class="innercard">
-                    <img src="../images/Portrait.jpg" alt="Portrait" />
+                    <img src="../images/AboutMe/AboutMeMTB.jpg" alt="Portrait" />
                 </div>
             </div>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            
             <div>
                 <p>
                     My second creative passion is photography. My camera has
@@ -52,6 +53,12 @@
                     have a look at my
                     <a href="#/photo">photography portfolio</a>
                 </p>
+            </div>
+            <div class="spacer"></div>
+            <div class="card">
+                <div class="innercard">
+                    <img src="../images/Portrait.jpg" alt="Portrait" />
+                </div>
             </div>
         </div>
         <Footer />
@@ -67,6 +74,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
+    }
+    h5 {
+        font-size: 24px;
+        margin-bottom: 2rem;
     }
     .card {
         width: 100%;
@@ -100,7 +111,7 @@
         border-radius: 16px;
     }
     .spacer {
-        height: 100px;
+        height: 50px;
     }
     @media (max-width: 800px) {
         .pageWrapper {

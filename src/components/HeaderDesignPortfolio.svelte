@@ -1,6 +1,6 @@
 <script>
     const tooltips = [
-        "photographer",
+        "photographer and filmmaker",
         "love to cook",
         "riding mountainbike",
         "traveling"

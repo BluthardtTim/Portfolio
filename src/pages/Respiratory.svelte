@@ -3,9 +3,11 @@
     import ProjectHeader from "../components/ProjectHeader.svelte";
     import MoreProjects from "../components/MoreProjects.svelte";
     import Footer from "../components/Footer.svelte";
+    import YouTubeVideoEmbed from "../components/YouTubeVideoEmbed.svelte";
 
     let teamNames = ["Moritz Schneidawind", "Ceren Celik"];
     let selectedProjects = ["Spot", "Growceries"];
+    let RespiratoryVideourl = "https://youtu.be/wimssUKgVVg";
 </script>
 
 <main>
@@ -15,7 +17,6 @@
         myRole="Concept design, realisation of prototype with arduino"
         duration="2. Semester, October 23 – February 24"
         {teamNames}
-        backgroundImage="../images/RespyBanner.png"
     />
     <div id="wrapper" class="pageWrapper">
         <div class="savespaceTop"></div>
@@ -32,6 +33,7 @@
                 process.
             </p>
         </div>
+        <div class="spacer"></div>
         <div>
             <h5>Design Prozess</h5>
             <p class="twocoloumns">
@@ -47,6 +49,7 @@
                 their own body in real time.
             </p>
         </div>
+        <div class="spacer"></div>
         <div>
             <h5>Project</h5>
             <p class="twocoloumns">
@@ -65,6 +68,7 @@
             src="../images/Respiratory/Project.png"
             caption="Project at the exebition"
         />
+        <div class="spacer"></div>
         <div>
             <h5>Technical Background</h5>
             <p class="twocoloumns">
@@ -78,13 +82,22 @@
                 representation of their lung activity in real-time.
             </p>
         </div>
+        <div class="spacer"></div>
+        <h5>The final Video</h5>
+        <p class="twocoloumns">
+            To present our concept, we created a video...
+        </p>
+        <YouTubeVideoEmbed url={RespiratoryVideourl} project='Respiratory'/>
     </div>
     <MoreProjects projectNames={selectedProjects} />
     <Footer />
 </main>
 
 <style>
+    .spacer {
+        height: 7rem;
+    }
     p {
-        margin-bottom: 7rem;
+        margin-bottom: 3rem;
     }
 </style>

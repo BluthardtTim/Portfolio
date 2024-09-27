@@ -18,7 +18,7 @@
 <style>
     .image-container {
         text-align: left;
-        margin: 6rem 0;
+        margin: 2rem 0;
     }
     img {
         max-width: 100%;
@@ -29,5 +29,6 @@
         color: #888;
         font-style: italic;
         margin-left: 1rem;
+        font-size: 14px;
     }
 </style>

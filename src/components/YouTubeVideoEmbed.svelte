@@ -1,5 +1,6 @@
 <script>
     export let url;
+    export let project;
     
     // Extrahiere die Video-ID aus der URL
     function extractVideoId(url) {
@@ -10,18 +11,26 @@
 
     let videoId = extractVideoId(url);
     let videoLoaded = false; // Steuert, ob das Video geladen wurde
+
+    let thumbnails = {
+        Spot: "../images/Spot/SpotVideoThumbnail.png",
+        Growceries: "../images/Growceries/GrowVideoThumbnail.png",
+        Respiratory: "../images/Respiratory/RespiratoryVideoThumbnail.png",
+    };
 </script>
 
 {#if videoId}
     <div class="video-container">
         {#if !videoLoaded}
             <img 
-                src="../images/Spot/SpotVideoThumbnail.png" 
+                src={thumbnails[project]} 
                 alt="Video Thumbnail" 
                 class="video-thumbnail" 
                 on:click={() => videoLoaded = true} 
             />
-            <div class="play-button" on:click={() => videoLoaded = true}></div>
+            <div class="play-button" on:click={() => videoLoaded = true}>
+                <img src="../images/icons/play.svg" alt="icon">
+            </div>
         {/if}
         
         {#if videoLoaded}
@@ -48,6 +57,7 @@
         overflow: hidden;
         max-width: 100%;
         background: #000;
+        border-radius: 12px;
     }
 
     .video-container iframe, .video-thumbnail {
@@ -61,6 +71,11 @@
 
     .video-thumbnail {
         object-fit: cover;
+        border-radius: 12px;
+        transition: all 0.3s ease-in-out;
+    }
+    .video-thumbnail:hover {
+        transform: scale(1.02);
     }
 
     .play-button {
@@ -68,10 +83,19 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 80px;
-        height: 80px;
-        background: url('/path/to/play-button-icon.png') no-repeat center center;
-        background-size: contain;
+        width: 70px;
+        height: 70px;
+        /* background: url('/path/to/play-button-icon.png') no-repeat center center; */
+        /* background-size: contain; */
+        background-color: white;
+        border-radius: 40px;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: width 0.3s ease-in-out;
+    }
+    .play-button:hover {
+        width: 120px;
     }
 </style>

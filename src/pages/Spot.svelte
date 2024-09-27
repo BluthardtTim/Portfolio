@@ -23,7 +23,7 @@
     <div class="pageWrapper">
         <div class="savespaceTop"></div>
         <div>
-            <h5>Overview of the project</h5>
+            <h5>What is Spot?</h5>
             <p class="twocoloumns">
                 The task involved identifying signals and trends in technology
                 and selecting one that we believe has the potential to address a
@@ -35,6 +35,7 @@
                 gets nesesary.
             </p>
         </div>
+        <div class="spacer"></div>
         <div>
             <h5>Problem we are solving</h5>
             <p class="twocoloumns">
@@ -52,13 +53,14 @@
                 comprehensive network of your own ideas.
             </p>
         </div>
-
+        <div class="spacer"></div>
         <img src="../images/Spot/SpotIdeation.png" alt="Spot" />
         <h5>Future Scenario</h5>
         <p style="font-size: 22px; text-align: center;">
             What if, in 5-10 years, you could use regular glasses with
             location-based information to store ideas and information.
         </p>
+        <div class="spacer"></div>
         <h5>Spot</h5>
         <p class="twocoloumns">
             Our tool works with spots – but what exactly are they? Various types
@@ -75,12 +77,14 @@
             spots an expiration date, reminding you in time and specify who is
             allowed to see your spots.
         </p>
+        <video src="../videos/Spot_apperiance.mp4" autoplay loop></video>
         <p>
             When you provide a specific prop to your Spot, its behavior and
             appearance change accordingly. This feature ensures that your
             environment remains uncluttered and you maintain complete control
             over your stored information.
         </p>
+        <div class="spacer"></div>
         <h5>Immersive Space</h5>
         <p class="twocoloumns">
             Sometimes, you may want to actively engage with your thoughts. For
@@ -97,31 +101,40 @@
             src="../images/Spot/ImmersiveSpace.png"
             caption="Immersive Space"
         />
+        <div class="spacer"></div>
         <h5>The Prototype</h5>
         <p>
-            To make our vision for Spot tangible, we built a prototype for the
+            To make our vision for Spot experiencebale, we built a prototype for the
             Apple Vision Pro. This allows us to create and interact with Spots
-            already today.
+            already today. Our teammate Amelie developed the prototype for the Vision Pro,
+            thanks to that we were able to to make some final touches to the concept of our tool
+            with real life experience of how Spot interacts with the environment.
         </p>
         <Image src="../images/Spot/SpotPrototype.png" caption="Apple Vision Pro Prototype" />
-
+        <div class="spacer"></div>
         <h5>The final Video</h5>
-        <YouTubeVideoEmbed url={SpotVideourl} />
+        <p class="twocoloumns">
+            To present our concept, we created a video that shows the potential
+            of Spot. The video shows how Spot can be used in everyday life
+            and how it can help you store and reuse your thoughts.
+            Spot is a spacial concept yet but with the ongoing development of spacial computing 
+            and device to make it usefull I belive that Spot can be 
+            a usefull tool in the future.
+        </p>
+        <YouTubeVideoEmbed url={SpotVideourl} project='Spot'/>
     </div>
     <MoreProjects projectNames={selectedProjects} />
     <Footer />
 </main>
 
 <style>
+    .spacer {
+        height: 7rem;
+    }
     p {
-        margin-bottom: 7rem;
+        margin-bottom: 3rem;
     }
     img {
         margin-bottom: 3rem;
-    }
-    @media (max-width: 800px) {
-        .twocoloumns {
-            column-count: 1;
-        }
     }
 </style>

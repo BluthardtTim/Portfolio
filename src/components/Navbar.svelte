@@ -87,8 +87,12 @@ function updateHighlightPosition() {
 
             if (selectedMain === "photography" && photoNav) {
                 highlightLeft2 = leftPhoto;
+                photoNav.classList.add("active");
+                designNav.classList.remove("active");
             } else if (selectedMain === "design" && designNav) {
                 highlightLeft2 = leftDesign;
+                designNav.classList.add("active");
+                photoNav.classList.remove("active");
             }
         });
     });
@@ -116,19 +120,20 @@ function updateHighlightPosition() {
                 <img class="currentIcon" src={currentIconSrc} alt="" />
             </a>
             <div class="hoverContent">
-                <a class="ankerlink" href="#/" on:click={() => changeIconAndText("../images/icons/pen-nib-light.svg")}>
+                <a class="ankerlink" href="#/" on:click={() => { selectedMain = 'design'; changeIconAndText("../images/icons/pen-nib-light.svg"); }}>
                     <div class="DesignNavBarStat" id="designnav">
                         <img src="../images/icons/pen-nib-light.svg" alt="" />
                         <p>Design</p>
                     </div>
                 </a>
-                <a class="ankerlink" href="#/photo" on:click={() => changeIconAndText("../images/icons/camera-light.svg")}>
+                <a class="ankerlink" href="#/photo" on:click={() => { selectedMain = 'photography'; changeIconAndText("../images/icons/camera-light.svg"); }}>
                     <div class="DesignNavBarStat" id="photonav">
                         <img src="../images/icons/camera-light.svg" alt="" />
                         <p>Photography</p>
                     </div>
                 </a>
             </div>
+            
         </div>
         <div class="NavbarWrapper">
             <div class="highlight" style="left: {highlightLeft}; width: {selectedMain === 'photography' ? '99px' : selectedMain === 'design' ? '114px' : '50px'};"></div>
@@ -305,7 +310,7 @@ function updateHighlightPosition() {
         width: 132px; /* Adjust width as needed */
         /* transform: translateX(-80px); */
     }
-    .NavButton.active p{
+    .active{
         color: white;
     }
     .NavButton {
