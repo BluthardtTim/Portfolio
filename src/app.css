@@ -43,6 +43,9 @@ p {
   font-weight: 400;
   line-height: 1.4;
 }
+.spacer {
+  height: 7rem;
+}
 .twocoloumns {
   margin-bottom: 7rem;
   column-count: 2;
@@ -52,8 +55,13 @@ a {
   color: #80C181;
 }
 img{
-  border-radius: 2px;
+  border-radius: 12px;
   max-width: 100%;
+}
+video {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 3rem;
 }
 .savespaceTop {
   height: 170px;
@@ -64,10 +72,10 @@ img{
     font-size: 2rem;
   }
   h3 {
-    font-size: 22px;
+    font-size: 26px;
   }
   h5 {
-    font-size: 20px;
+    font-size: 24px;
   }
   p {
     font-size: 18px;
