@@ -3,9 +3,9 @@
 
   // Array mit den Kartendaten
   const cards = [
-    { id: 1, title: "Spot", description: "A spacial computing tool for thinking, keeping and using ideas.", semesterinfo: "3. Semester – Invention Design", imgClass: "backgroundimgSpot" },
-    { id: 2, title: "Growceries", description: "An application that connects local farmers with customers to reduce food waste", semesterinfo: "1. Semester – Design Sprint", imgClass: "backgroundimgGrow" },
-    { id: 3, title: "Respiratory", description: "An Interactive Exhibition Design to discover your own lung in real time", semesterinfo: "2. Semester – Exhibition Design", imgClass: "backgroundimgRespiratory" }
+    { id: 1, title: "Spot", description: "A spacial computing tool for thinking, keeping and using ideas.", semesterinfo: "Invention Design", imgClass: "backgroundimgSpot" },
+    { id: 2, title: "Growceries", description: "An application that connects local farmers with customers to reduce food waste", semesterinfo: "Design Sprint", imgClass: "backgroundimgGrow" },
+    { id: 3, title: "Respiratory", description: "An Interactive Exhibition Design to discover your own lung in real time", semesterinfo: "Exhibition Design", imgClass: "backgroundimgRespiratory" }
   ];
 
   let loseStatus = Array(cards.length).fill(false); // Status für jede Karte
@@ -55,6 +55,7 @@
   h3 {
     font-weight: 300;
     color: #9D9D9D;
+    font-size: 22px;
   }
   .container {
     height: auto;
