@@ -116,7 +116,7 @@
     .meicon {
         padding: 16px;
         background-color: white;
-        border-radius: 16px;
+        border-radius: 12px;
         width: 65px;
         position: relative;
         display: flex;

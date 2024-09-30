@@ -3,6 +3,9 @@
     import Router, { location } from "svelte-spa-router";
     import { onMount } from 'svelte';
     import { derived } from 'svelte/store';
+    import { Analytics } from "@vercel/analytics/react"
+
+
     import DesignPortfolio from "./pages/DesignPortfolio.svelte";
     import DesignAboutme from "./pages/DesignAboutme.svelte";
     import PhotographyPortfolio from "./pages/PhotographyPortfolio.svelte";
