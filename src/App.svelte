@@ -3,7 +3,7 @@
     import Router, { location } from "svelte-spa-router";
     import { onMount } from 'svelte';
     import { derived } from 'svelte/store';
-    import { Analytics } from "@vercel/analytics/react"
+    import { inject } from '@vercel/analytics'
 
 
     import DesignPortfolio from "./pages/DesignPortfolio.svelte";
