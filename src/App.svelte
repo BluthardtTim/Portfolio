@@ -3,7 +3,6 @@
     import Router, { location } from "svelte-spa-router";
     import { onMount } from 'svelte';
     import { derived } from 'svelte/store';
-    import { inject } from "@vercel/analytics";
 
 
     import DesignPortfolio from "./pages/DesignPortfolio.svelte";
@@ -15,8 +14,6 @@
     import Imprint from "./pages/imprint.svelte";
     import Respiratory from "./pages/Respiratory.svelte";
     import PhotoAboutme from "./pages/PhotoAboutme.svelte";
-  
-    inject();
 
     const routes = {
         "/": DesignPortfolio,
