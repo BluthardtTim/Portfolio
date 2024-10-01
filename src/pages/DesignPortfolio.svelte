@@ -13,8 +13,10 @@
             <span>developing</span> new ideas
         </h3>
         <p style="margin-bottom: 60px;">
-            Every project is an opportunity for me to create something unique
-            that resonates in a better user experience.
+            With my interest in gaining an well-rounded knowledge in the rapidly
+            evolving digital world, including UI/UX Design, Web Application
+            Development and creating visual content with Photo- and Videography,
+            I'm passionate about becoming a designer.
         </p>
         <div
             style="display: flex; flex-direction: row; justify-content: center;"
@@ -31,10 +33,11 @@
     <Cardflowfunction />
     <div class="pageWrapper">
         <div class="spacer200"></div>
-        <h3>I am currrently looking for an Internship</h3>
+        <h3>I am currently looking for an internship</h3>
         <p>
-            Starting in March 2025 I'm open for opportunities that will inspire
-            me and allow me to use my skills while gaining valuable experiences.
+            Starting in spring of 2025 I’m looking for an internship in a team
+            where I can expand my skills to a new level and gain valuable
+            experiences.
         </p>
     </div>
     <Footer />
@@ -59,7 +62,7 @@
     }
     p {
         color: #9d9d9d;
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
         font-size: 18px;
     }

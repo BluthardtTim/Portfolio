@@ -27,7 +27,7 @@ function updateHighlightPosition() {
     const projectsButton = document.getElementById("projectsButton");
     const aboutMeButton = document.getElementById("aboutMeButton");
     const photo1Button = document.getElementById("photo1Button");
-    const photo2Button = document.getElementById("photo2Button");
+    const photoAboutmeButton = document.getElementById("photoAboutmeButton");
     const designNav = document.getElementById("designnav");
     const photoNav = document.getElementById("photonav");
 
@@ -41,8 +41,8 @@ function updateHighlightPosition() {
     } else if (selectedMain === "photography") {
         highlightLeft = (selectedItem === "photo1" && photo1Button)
             ? `${photo1Button.offsetLeft}px`
-            : (selectedItem === "photo2" && photo2Button)
-            ? `${photo2Button.offsetLeft}px`
+            : (selectedItem === "photoAboutme" && photoAboutmeButton)
+            ? `${photoAboutmeButton.offsetLeft}px`
             : highlightLeft;
         highlightLeft2 = photoNav ? `${photoNav.offsetLeft}px` : highlightLeft2;
     }
@@ -62,8 +62,8 @@ function updateHighlightPosition() {
         setSelected("photo1");
         setMainSelected("photography");
         changeIconAndText("../images/icons/camera-light.svg");
-    } else if (route === "/photo2") {
-        setSelected("photo2");
+    } else if (route === "/photoAboutme") {
+        setSelected("photoAboutme");
         setMainSelected("photography");
         changeIconAndText("../images/icons/camera-light.svg");
     }
@@ -137,13 +137,13 @@ function updateHighlightPosition() {
             
         </div>
         <div class="NavbarWrapper">
-            <div class="highlight" style="left: {highlightLeft}; width: {selectedMain === 'photography' ? '99px' : selectedMain === 'design' ? '114px' : '50px'};"></div>
+            <div class="highlight" style="left: {highlightLeft};"></div>
             {#if selectedMain === "photography"}
                 <a class="ankerlink" href="#/photo" >
-                    <div id="photo1Button" class="NavButton" class:active={selectedItem === "photo1"}>Photo1</div>
+                    <div id="photo1Button" class="NavButton" class:active={selectedItem === "photo1"}>Projects</div>
                 </a>
-                <a class="ankerlink" href="#/photo2">
-                    <div id="photo2Button" class="NavButton" class:active={selectedItem === "photo2"}>Photo2</div>
+                <a class="ankerlink" href="#/photoAboutme">
+                    <div id="photoAboutmeButton" class="NavButton" class:active={selectedItem === "photoAboutme"}>About me</div>
                 </a>
             {:else}
                 <a class="ankerlink" href="#/">
@@ -183,7 +183,7 @@ function updateHighlightPosition() {
     #iconwrapper {
         position: relative;
         height: 56px;
-        width: 56px;
+        width: 57px;
         background-color: #393939;
         border: solid 0.5px #bcbcbc;
         border-radius: 50px;
@@ -222,12 +222,10 @@ function updateHighlightPosition() {
         gap: 40px;
         opacity: 1;
         transform: translateX(0px);
-        transition:
-            opacity 0.3s ease-in-out,
-            transform 0.3s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
     #iconwrapper:hover .hoverContent {
-        animation: slideaway 200ms ease-in-out;
+        animation: slideaway 500ms ease-in-out;
         display: flex;
     }
     .DesignNavBarStat {
@@ -284,7 +282,7 @@ function updateHighlightPosition() {
         position: absolute;
         top: 3px;
         height: 90%;
-        width: 114px;
+        width: 115px;
         background-color: #80c181;
         border-radius: 50px;
         transition: left 0.5s;

@@ -3,7 +3,7 @@
     import Router, { location } from "svelte-spa-router";
     import { onMount } from 'svelte';
     import { derived } from 'svelte/store';
-    import { inject } from '@vercel/analytics';
+    import { inject } from "@vercel/analytics";
 
 
     import DesignPortfolio from "./pages/DesignPortfolio.svelte";
@@ -14,8 +14,10 @@
     import Xtend from "./pages/Xtend.svelte";
     import Imprint from "./pages/imprint.svelte";
     import Respiratory from "./pages/Respiratory.svelte";
-    import Photo2 from "./pages/Photo2.svelte";
+    import PhotoAboutme from "./pages/PhotoAboutme.svelte";
   
+    inject();
+
     const routes = {
         "/": DesignPortfolio,
         "/aboutme": DesignAboutme,
@@ -25,7 +27,7 @@
         "/xtend": Xtend,
         "/imprint": Imprint,
         "/respiratory": Respiratory,
-        "/photo2": Photo2,
+        "/photoAboutme": PhotoAboutme,
     };
   
     let isNavbarVisible = false; // Navbar initially hidden on mobile

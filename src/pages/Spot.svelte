@@ -15,8 +15,8 @@
     <ProjectHeader
         title="Spot"
         description="A spatial computing tool for thinking, keeping and using ideas."
-        myRole="Concept design, realisation of video in film, editing"
-        duration="3. Semester, March 23 – June 24"
+        myRole="concept visual Design video film and editing"
+        duration="four months"
         {teamNames}
     />
 
@@ -58,7 +58,7 @@
         <h5>Future Scenario</h5>
         <p style="font-size: 22px; text-align: center;">
             What if, in 5-10 years, you could use regular glasses with
-            location-based information to store ideas and information.
+            location-based information to store ideas and information?
         </p>
         <div class="spacer"></div>
         <h5>Spot</h5>
@@ -103,7 +103,7 @@
         />
         <div class="spacer"></div>
         <h5>The Prototype</h5>
-        <p>
+        <p class="twocoloumns">
             To make our vision for Spot experiencebale, we built a prototype for the
             Apple Vision Pro. This allows us to create and interact with Spots
             already today. Our teammate Amelie developed the prototype for the Vision Pro,
@@ -112,7 +112,7 @@
         </p>
         <Image src="../images/Spot/SpotPrototype.png" caption="Apple Vision Pro Prototype" />
         <div class="spacer"></div>
-        <h5>The final Video</h5>
+        <h5>This is Spot</h5>
         <p class="twocoloumns">
             To present our concept, we created a video that shows the potential
             of Spot. The video shows how Spot can be used in everyday life

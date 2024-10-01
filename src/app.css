@@ -50,6 +50,7 @@ p {
   margin-bottom: 7rem;
   column-count: 2;
   column-gap: 2rem;
+  break-inside: avoid;
 }
 a {
   color: #80C181;

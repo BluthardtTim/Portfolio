@@ -1,6 +1,5 @@
 <script>
     import Footer from "../components/Footer.svelte";
-    import MeIcons from "../components/MeIcons.svelte";
 </script>
 
 <main>
@@ -25,20 +24,7 @@
             <div class="spacer"></div>
             <div class="spacer"></div>
             <div class="spacer"></div>
-            <MeIcons/>
-            <div>
-                <p>
-                    These Icons descripe...
-                </p>
-            </div>
-            <div class="spacer"></div>
-            <div class="spacer"></div>
             
-            <div class="card">
-                <div class="innercard">
-                    <img src="../images/AboutMe/AboutMeMTB.jpg" alt="Portrait" />
-                </div>
-            </div>
             <div>
                 <p>
                     Apart from design, I am passionate about sports. I spend most
@@ -48,11 +34,16 @@
                     just playing basketball with friends.
                 </p>
             </div>
+            <div class="spacer"></div>
             <div class="card">
                 <div class="innercard">
-                    <img src="../images/Portrait.jpg" alt="Portrait" />
+                    <img src="../images/AboutMe/AboutMeMTB.jpg" alt="Portrait" />
                 </div>
             </div>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            
             <div>
                 <p>
                     My second creative passion is photography. My camera has
@@ -62,6 +53,12 @@
                     have a look at my
                     <a href="#/photo">photography portfolio</a>
                 </p>
+            </div>
+            <div class="spacer"></div>
+            <div class="card">
+                <div class="innercard">
+                    <img src="../images/Portrait.jpg" alt="Portrait" />
+                </div>
             </div>
         </div>
         <Footer />

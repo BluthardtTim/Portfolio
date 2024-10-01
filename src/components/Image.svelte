@@ -29,6 +29,6 @@
         color: #888;
         font-style: italic;
         margin-left: 1rem;
-        font-size: 14px;
+        font-size: 16px;
     }
 </style>

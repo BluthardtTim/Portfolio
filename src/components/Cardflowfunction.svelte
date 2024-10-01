@@ -54,7 +54,7 @@
   }
   h3 {
     font-weight: 300;
-    color: #9D9D9D;
+    color: #9d9d9d;
     font-size: 22px;
   }
   .container {

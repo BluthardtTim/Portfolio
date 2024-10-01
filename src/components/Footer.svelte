@@ -3,29 +3,20 @@
 
 <main>
     <div id="wrapper" class="pageWrapper">
-        <div>
             <p>© 2024 Tim Bluthardt</p>
             <p><a href="#/imprint">Imprint</a></p>
-        </div>
-        <div>
-            <!-- <p><a href="#/">UI / UX Design</a></p>
-            <p><a href="#/photo">Photography</a></p> -->
-        </div>
     </div>
 </main>
 
 <style>
     #wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         margin: 0 auto;
         height: 140px;
         color: #c0c0c0;
         margin-top: 200px;
-    }
-    #wrapper div {
-        display: flex;
         gap: 50px;
     }
     a {
@@ -34,13 +25,21 @@
     a:hover {
         color: #000;
     }
+    @media (max-width: 1350px) {
+        #wrapper{
+            justify-content: space-between;
+        }
+    }
+    @media (max-width: 1000px) {
+        #wrapper{
+            margin-bottom: 110px;
+            justify-content: flex-start;
+        }
+    }
     @media (max-width: 800px) {
         #wrapper {
-            flex-direction: column;
-            gap: 20px;
             height: auto;
             margin-top: 100px;
-            margin-bottom: 110px;
         }
     }
 </style>

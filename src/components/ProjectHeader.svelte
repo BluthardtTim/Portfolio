@@ -32,7 +32,7 @@
             <h3 id="description">{description}</h3>
             <div class="CaseStudyCredits">
                 <div>
-                    <h5>my roll</h5>
+                    <h5>my role</h5>
                     <p>{myRole}</p>
                 </div>
                 <div>
