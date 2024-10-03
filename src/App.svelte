@@ -14,6 +14,8 @@
     import Imprint from "./pages/imprint.svelte";
     import Respiratory from "./pages/Respiratory.svelte";
     import PhotoAboutme from "./pages/PhotoAboutme.svelte";
+    import Traumpalast from "./pages/Traumpalast.svelte";
+
 
     const routes = {
         "/": DesignPortfolio,
@@ -25,6 +27,7 @@
         "/imprint": Imprint,
         "/respiratory": Respiratory,
         "/photoAboutme": PhotoAboutme,
+        "/traumpalast": Traumpalast,
     };
   
     let isNavbarVisible = false; // Navbar initially hidden on mobile

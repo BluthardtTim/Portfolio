@@ -1,5 +1,6 @@
 <script>
     import Cardflowfunction from "../components/Cardflowfunction.svelte";
+    import Contact from "../components/Contact.svelte";
     import Footer from "../components/Footer.svelte";
     import HeaderDesignPortfolio from "../components/HeaderDesignPortfolio.svelte";
 </script>
@@ -39,6 +40,7 @@
             where I can expand my skills to a new level and gain valuable
             experiences.
         </p>
+        <Contact/>
     </div>
     <Footer />
 </main>

@@ -7,15 +7,14 @@
     let SpotVideourl = "https://youtu.be/wguCO5G26hc";
 
     let teamNames = ["Amelie Schlüter", "Julia Zöllner"];
-    let selectedProjects = ["Growceries", "Respiratory"];
-
+    let selectedProjects = ["Growceries", "Traumpalast"];
 </script>
 
 <main>
     <ProjectHeader
         title="Spot"
         description="A spatial computing tool for thinking, keeping and using ideas."
-        myRole="concept visual Design video film and editing"
+        myRole="concept, visual Design, video film and editing"
         duration="four months"
         {teamNames}
     />
@@ -102,26 +101,51 @@
             caption="Immersive Space"
         />
         <div class="spacer"></div>
-        <h5>The Prototype</h5>
+        <h5>Spot allready today</h5>
         <p class="twocoloumns">
-            To make our vision for Spot experiencebale, we built a prototype for the
-            Apple Vision Pro. This allows us to create and interact with Spots
-            already today. Our teammate Amelie developed the prototype for the Vision Pro,
-            thanks to that we were able to to make some final touches to the concept of our tool
-            with real life experience of how Spot interacts with the environment.
+            To make our vision for Spot experiencebale, we built a prototype for
+            the Apple Vision Pro. This allows us to create and interact with
+            Spots already today. Our teammate Amelie developed the prototype for
+            the Vision Pro, thanks to that we were able to to make some final
+            touches to the concept of our tool with real life experience of how
+            Spot interacts with the environment.
         </p>
-        <Image src="../images/Spot/SpotPrototype.png" caption="Apple Vision Pro Prototype" />
+        <Image
+            src="../images/Spot/SpotPrototype.png"
+            caption="Apple Vision Pro Prototype"
+        />
         <div class="spacer"></div>
         <h5>This is Spot</h5>
         <p class="twocoloumns">
             To present our concept, we created a video that shows the potential
-            of Spot. The video shows how Spot can be used in everyday life
-            and how it can help you store and reuse your thoughts.
-            Spot is a spacial concept yet but with the ongoing development of spacial computing 
-            and device to make it usefull I belive that Spot can be 
-            a usefull tool in the future.
+            of Spot. The video shows how Spot can be used in everyday life and
+            how it can help you store and reuse your thoughts. Spot is a spacial
+            concept yet but with the ongoing development of spacial computing
+            and device to make it usefull I belive that Spot can be a usefull
+            tool in the future.
         </p>
-        <YouTubeVideoEmbed url={SpotVideourl} project='Spot'/>
+        <YouTubeVideoEmbed url={SpotVideourl} project="Spot" />
+        <div class="spacer"></div>
+        <h5>Vision of Spot</h5>
+        <p class="twocoloumns">
+            Our vision for Spot goes further. The concept is infinitely
+            expandable. What if institutions like universities could use Spots
+            to send announcements to all students? Or if producers could use
+            them to share instructions and important information?
+        </p>
+        <div class="spacer"></div>
+        <h5>Spot at Exhibition</h5>
+        <p class="twocoloumns">
+            We had the opportunity to present Spot not only at our internal
+            semester exhibition but also at the Make exhibition. Make is an
+            exhibition with changing locations in southern Germany that focuses
+            on new technologies and startups, allowing them to showcase their
+            latest projects.
+        </p>
+        <Image
+            src="../images/Spot/SpotExhibition.png"
+            caption="'Make' Exhibition"
+        />
     </div>
     <MoreProjects projectNames={selectedProjects} />
     <Footer />

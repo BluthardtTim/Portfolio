@@ -3,8 +3,8 @@
 
 <main>
     <div id="wrapper" class="pageWrapper">
-            <p>© 2024 Tim Bluthardt</p>
-            <p><a href="#/imprint">Imprint</a></p>
+        <p>© 2024 Tim Bluthardt</p>
+        <p><a href="#/imprint">Imprint</a></p>
     </div>
 </main>
 
@@ -25,14 +25,14 @@
     a:hover {
         color: #000;
     }
-    @media (max-width: 1350px) {
+    @media (max-width: 1550px) {
         #wrapper{
             justify-content: space-between;
         }
     }
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
         #wrapper{
-            margin-bottom: 110px;
+            padding-bottom: 110px;
             justify-content: flex-start;
         }
     }
@@ -40,6 +40,7 @@
         #wrapper {
             height: auto;
             margin-top: 100px;
+            justify-content: center;
         }
     }
 </style>

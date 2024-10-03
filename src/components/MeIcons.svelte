@@ -8,7 +8,7 @@
 
     // Icons für die tooltips
     const icons = [
-        "../images/icons/film-strip-light.svg",
+        "../images/icons/camera-light.svg",
         "../images/icons/chef-hat-light.svg",
         "../images/icons/person-simple-bike-light.svg",
         "../images/icons/airplane-tilt-light.svg",
@@ -70,5 +70,10 @@
     .meicon:hover .tooltip {
         visibility: visible;
         opacity: 1;
+    }
+    @media (max-width: 800px) {
+    .meicon {
+            display: none;
+        }
     }
 </style>

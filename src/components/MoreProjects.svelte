@@ -30,6 +30,12 @@
             imageUrl: "../images/RespyCard.png",
             route: "respiratory",
         },
+        Traumpalast: {
+            title: "Traumpalast App Redesign",
+            description: "Description for Traumpalast",
+            imageUrl: "../images/TraumpalastCard.png",
+            route: "traumpalast",
+        },
     };
 </script>
 

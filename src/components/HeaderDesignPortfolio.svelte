@@ -125,9 +125,6 @@
             height: 65vw;
             margin-bottom: 30px;
         }
-        .meicon {
-            display: none;
-        }
         .thatsme {
             display: none;
         }

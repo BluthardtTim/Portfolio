@@ -33,8 +33,8 @@
             <div class="CaseStudyCredits">
                 <div>
                     <h5>my role</h5>
-                    <p>{myRole}</p>
-                </div>
+                    <p>{@html myRole.split(', ').join('<br>')}</p>
+                </div>                
                 <div>
                     <h5>duration</h5>
                     <p>{duration}</p>
@@ -91,10 +91,10 @@
     }
     .CaseStudyCredits {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 50px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
         margin-top: 15vh;
-        width: 60%;
+        width: 100%;
     }
     @media (max-width: 800px) {
         .CaseStudyCredits {

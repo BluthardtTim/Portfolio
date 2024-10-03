@@ -1,11 +1,34 @@
 <script>
   import { onMount } from "svelte";
 
-  // Array mit den Kartendaten
+  // Array mit den Kartendaten, einschließlich videoUrl
   const cards = [
-    { id: 1, title: "Spot", description: "A spacial computing tool for thinking, keeping and using ideas.", semesterinfo: "Invention Design", imgClass: "backgroundimgSpot" },
-    { id: 2, title: "Growceries", description: "An application that connects local farmers with customers to reduce food waste", semesterinfo: "Design Sprint", imgClass: "backgroundimgGrow" },
-    { id: 3, title: "Respiratory", description: "An Interactive Exhibition Design to discover your own lung in real time", semesterinfo: "Exhibition Design", imgClass: "backgroundimgRespiratory" }
+    {
+      id: 1,
+      title: "Spot",
+      description:
+        "A spacial computing tool for thinking, keeping and using ideas.",
+      semesterinfo: "Invention Design",
+      imgClass: "backgroundimgSpot",
+      videoUrl: "path/to/spot-video.mp4",
+    },
+    {
+      id: 2,
+      title: "Growceries",
+      description:
+        "Don't waste, share the taste!",
+      semesterinfo: "Design Sprint",
+      imgClass: "backgroundimgGrow",
+      videoUrl: "path/to/grow-video.mp4",
+    },
+    {
+      id: 3,
+      title: "Traumpalast",
+      description: "An Application Redesign",
+      semesterinfo: "Exhibition Design",
+      imgClass: "backgroundimgTraumpalast",
+      videoUrl: "../videos/TraumpalastKeyvisual.mp4",
+    },
   ];
 
   let loseStatus = Array(cards.length).fill(false); // Status für jede Karte
@@ -21,6 +44,15 @@
       console.log(cardHeight);
     }
   });
+
+  function playVideo(videoElement) {
+    videoElement.play();
+  }
+
+  function pauseVideo(videoElement) {
+    videoElement.pause();
+    videoElement.currentTime = 0; // Zurücksetzen auf den Anfang
+  }
 </script>
 
 <main>
@@ -30,17 +62,35 @@
         class:lose={loseStatus[index]}
         class="card"
         style="
-          top: calc({viewportHeight / 2}px - {cardHeight / 2}px + {index * 15}px); 
+          top: calc({viewportHeight / 2}px - {cardHeight / 2}px + {index *
+          15}px); 
         "
       >
         <a href={`#/${card.title.toLowerCase()}`}>
-          <div class="innercard {card.imgClass}">
+          <div
+            class="innercard {card.imgClass}"
+            on:mouseenter={(e) =>
+              playVideo(e.currentTarget.querySelector("video"))}
+            on:mouseleave={(e) =>
+              pauseVideo(e.currentTarget.querySelector("video"))}
+          > 
+          <div style="height: 100%; z-index: 20; display: flex; justify-content: space-between; flex-direction: column;">
             <div>
               <h1>{card.title}</h1>
               <h3>{card.description}</h3>
             </div>
-            <img class="icon" src="../images/icons/arrow-up-right-light.svg" alt="Arrow" />
+            <img
+              class="icon"
+              src="../images/icons/arrow-up-right-light.svg"
+              alt="Arrow"
+            />
             <h5>{card.semesterinfo}</h5>
+          </div>
+            <!-- Video element -->
+            <video class="card-video" muted loop>
+              <source src={card.videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </a>
       </div>
@@ -49,6 +99,11 @@
 </main>
 
 <style>
+  h1,
+  h3,
+  h5 {
+    z-index: 2;
+  }
   h1 {
     color: white;
   }
@@ -104,11 +159,12 @@
     position: absolute;
     top: 60px;
     right: 60px;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(9deg) brightness(103%) contrast(103%);
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(9deg)
+      brightness(103%) contrast(103%);
     transition: transform 0.5s ease;
   }
   .backgroundimgGrow {
-    background-image: url('../images/GrowCard.png');
+    background-image: url("../images/GrowCard.png");
     background-size: cover;
     background-position: center;
   }
@@ -119,12 +175,12 @@
     filter: none;
   }
   .backgroundimgSpot {
-    background-image: url('../images/SpotCard.png');
+    background-image: url("../images/SpotCard.png");
     background-size: cover;
     background-position: center;
   }
-  .backgroundimgRespiratory {
-    background-image: url('../images/RespyCard.png');
+  .backgroundimgTraumpalast {
+    background-image: url("../images/TraumpalastCard.png");
     background-size: cover;
     background-position: center;
   }
@@ -142,6 +198,21 @@
   a {
     text-decoration: none;
   }
+  .card-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .innercard:hover .card-video {
+    opacity: 1;
+  }
+
   @media (max-width: 800px) {
     h1 {
       font-size: 1.7rem;
@@ -166,13 +237,13 @@
       aspect-ratio: 9 / 16;
     }
     .backgroundimgSpot {
-      background-image: url('../images/SpotCard_mobile.png');
+      background-image: url("../images/SpotCard_mobile.png");
     }
     .backgroundimgGrow {
-      background-image: url('../images/GrowCard_mobile.png');
+      background-image: url("../images/GrowCard_mobile.png");
     }
-    .backgroundimgRespiratory {
-      background-image: url('../images/RespyCard_mobile.png');
+    .backgroundimgTraumpalast {
+      background-image: url("../images/TraumpalastCard_mobile.png");
     }
   }
 </style>

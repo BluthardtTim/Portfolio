@@ -5,7 +5,7 @@
     import Image from "../components/Image.svelte";
     import YouTubeVideoEmbed from "../components/YouTubeVideoEmbed.svelte";
 
-    let selectedProjects = ["Spot", "Respiratory"];
+    let selectedProjects = ["Spot", "Traumpalast"];
     let GrowceriesVideourl = "https://youtu.be/Di2I94OvIoo";
 </script>
 
@@ -13,8 +13,8 @@
     <ProjectHeader
         title="Growceries"
         description="A platform that connects local farmers with consumers."
-        myRole="Concept, Design, Development"
-        duration="1. Semester, March 23 – June 23"
+        myRole="User Research, Information architecture, Visual Design, User Testing, Video"
+        duration="one week"
         teamNames={["Marc Schade", "Julia Zöllner", "Hannah Moser"]}
     />
 
@@ -44,8 +44,6 @@
             witch is to much for their own usage. Throught that customers have
             easier access to regional and ecological food.
         </p>
-
-        <div class="spacer"></div>
         <Image
             src="../images/Growceries/GrowFlow.png"
             caption="Workflow of Growceries"
