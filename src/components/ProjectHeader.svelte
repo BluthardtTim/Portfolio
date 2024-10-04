@@ -101,6 +101,7 @@
             margin-top: 60px;
             width: 100%;
             gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
         }
         #description {
             max-width: 100%;

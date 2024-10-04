@@ -18,8 +18,8 @@
             >
                 <h5>Hi, I'm Tim</h5>
                 <p>
-                    I'm currently studying Interaction Design at Hochschule für
-                    Gestaltung in Schwäbisch Gmünd, Germany. I have a strong
+                    I'm currently studying Interaction Design at University of
+                    Design in Schwäbisch Gmünd, Germany. I have a strong
                     interest in new technologies and am curious about where the
                     future of technology is heading. Through my studies, I'm
                     exploring how design and technology come together to create
@@ -72,7 +72,7 @@
                 <p>
                     My second creative passion is photography. My camera has
                     been with me for a few years now. If you are interested
-                    interested in seeing more of my work, you can check out my
+                     in seeing more of my work, you can check out my
                     <a href="#/photo">gallery</a>
                 </p>
             </div>
