@@ -76,7 +76,7 @@
             spots an expiration date, reminding you in time and specify who is
             allowed to see your spots.
         </p>
-        <video src="../videos/Spot_apperiance.mp4" autoplay loop></video>
+        <video src="../videos/Spot_apperiance.mp4" autoplay loop playsinline muted></video>
         <p>
             When you provide a specific prop to your Spot, its behavior and
             appearance change accordingly. This feature ensures that your
@@ -160,5 +160,10 @@
     }
     img {
         margin-bottom: 3rem;
+    }
+    @media (max-width: 800px) {
+        p {
+            margin-bottom: 1rem;
+        }
     }
 </style>

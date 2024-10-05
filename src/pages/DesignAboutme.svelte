@@ -158,5 +158,13 @@
         .spacer {
             display: none;
         }
+        .imageCard {
+            width: 55%;
+            height: 65vw;
+            margin-bottom: 30px;
+        }
+        .savespaceTop {
+            height: 10px;
+        }
     }
 </style>

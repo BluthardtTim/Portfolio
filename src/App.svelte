@@ -1,9 +1,6 @@
 <script>
     import Navbar from "./components/Navbar.svelte";
     import Router, { location } from "svelte-spa-router";
-    import { onMount } from 'svelte';
-    import { derived } from 'svelte/store';
-
 
     import DesignPortfolio from "./pages/DesignPortfolio.svelte";
     import DesignAboutme from "./pages/DesignAboutme.svelte";
@@ -15,7 +12,6 @@
     import Respiratory from "./pages/Respiratory.svelte";
     import PhotoAboutme from "./pages/PhotoAboutme.svelte";
     import Traumpalast from "./pages/Traumpalast.svelte";
-
 
     const routes = {
         "/": DesignPortfolio,
@@ -30,38 +26,6 @@
         "/traumpalast": Traumpalast,
     };
   
-    let isNavbarVisible = false; // Navbar initially hidden on mobile
-  
-    // Function to toggle the navbar visibility based on scroll position
-    function handleScroll() {
-        if (window.innerWidth <= 800) {
-            // If scroll position is at the top, hide the navbar, otherwise show it
-            isNavbarVisible = window.scrollY > 0;
-        }
-    }
-  
-    onMount(() => {
-        // Only add the scroll listener if the viewport width is <= 800px
-        if (window.innerWidth <= 800) {
-            window.addEventListener('scroll', handleScroll);
-        } else {
-            isNavbarVisible = true; // Show navbar by default on larger screens
-        }
-  
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    });
-  
-    $: {
-        location.subscribe(() => {
-            scrollToTop();
-        });
-    }
-  
-    function scrollToTop() {
-        window.scrollTo(0, 0);
-    }
   </script>
   
   <main>

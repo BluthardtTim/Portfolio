@@ -82,7 +82,17 @@
         />
 
         <div class="spacer"></div>
-        <YouTubeVideoEmbed url={TraupalastVideourl} project="Traumpalast" />
+        <div>
+            <p class="twocoloumns">
+                To present the final visual design, this is how we made sure our
+                at the beginning of the process defined How might We Questions
+                are implemented in the new Design:
+            </p>
+        </div>
+        <Image src="../images/Traumpalast/Traum_HMW01.png" caption="" />
+        <Image src="../images/Traumpalast/Traum_HMW02.png" caption="" />
+        <Image src="../images/Traumpalast/Traum_HMW03.png" caption="" />
+        <Image src="../images/Traumpalast/Traum_HMW04.png" caption="" />
     </div>
     <MoreProjects projectNames={selectedProjects} />
     <Footer />
@@ -95,7 +105,9 @@
     p {
         margin-bottom: 3rem;
     }
-    img {
-        margin-bottom: 3rem;
+    @media (max-width: 800px) {
+        p {
+            margin-bottom: 1rem;
+        }
     }
 </style>
