@@ -10,7 +10,7 @@
             <div></div>
             <div class="imageCard">
                 <div class="innercard">
-                    <img src="../images/Portrait2.jpg" alt="Portrait" />
+                    <img src="../images/Portrait3.JPG" alt="Portrait" />
                 </div>
             </div>
             <div

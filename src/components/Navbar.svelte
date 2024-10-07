@@ -42,7 +42,7 @@
             setSelected("projects");
         } else if (route === "/aboutme") {
             setSelected("aboutme");
-        } else if (route === "/photo") {
+        } else if (route === "/playground") {
             setSelected("playground");
         }
     }
@@ -65,7 +65,7 @@
     <div id="wrapper">
         <div class="NavbarWrapper">
             <div class="highlight" style="left: {highlightLeft}; width: {highlightWidth};"></div>
-                <a class="ankerlink" href="#/photo">
+                <a class="ankerlink" href="#/playground">
                     <div id="playgroundButton" class="NavButton" class:active={selectedItem === "playground"} on:click={() => setSelected("playground")}>
                         <img src="../images/icons/pen-nib-light_white.svg" alt="">
                         <p>Playground</p>

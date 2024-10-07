@@ -93,9 +93,9 @@
         width: 80%;
         max-width: 1200px;
         height: auto;
-        aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+        aspect-ratio: 16 / 9;
         background-color: #f8f9fa;
-        transition: transform 0.3s ease; /* Nur Transform animieren */
+        transition: transform 0.3s ease;
         background: white;
         border-radius: 22px;
         border: 0.75px #e2e2e2 solid;
