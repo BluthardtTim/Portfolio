@@ -81,6 +81,7 @@
                     <img src="../images/Portrait.jpg" alt="Portrait" />
                 </div>
             </div>
+            <div class="spacer"></div>
         </div>
         <Footer />
     </div>

@@ -3,8 +3,12 @@
     import { onMount } from "svelte";
 
     let selectedItem = "projects"; 
-    let highlightLeft = "0px";
+    let highlightLeft = "240px";
     let highlightWidth = "0px";
+
+    $: if (window.innerWidth <= 800) {
+        highlightLeft = "140px";
+    }
 
     // Funktion zum Setzen des aktiven Buttons
     function setSelected(button) {
@@ -51,8 +55,8 @@
     onMount(() => {
         setTimeout(() => {
             updateFromRoute($location); // Ensure the correct route is selected
-            updateHighlightPosition(); // Update the highlight after mount
-        }, 100);
+            // updateHighlightPosition(); // Update the highlight after mount
+        }, 250);
     });
 
 

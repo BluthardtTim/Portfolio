@@ -3,6 +3,7 @@
     import Contact from "../components/Contact.svelte";
     import Footer from "../components/Footer.svelte";
     import HeaderDesignPortfolio from "../components/HeaderDesignPortfolio.svelte";
+    import Techstack from "../components/Techstack.svelte";
 </script>
 
 <main>
@@ -41,6 +42,9 @@
             experiences.
         </p>
         <Contact/>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <Techstack />
     </div>
     <Footer />
 </main>

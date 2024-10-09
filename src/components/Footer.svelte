@@ -15,12 +15,12 @@
         align-items: center;
         margin: 0 auto;
         height: 140px;
-        color: #c0c0c0;
-        margin-top: 200px;
+        color: #9d9d9d;
+        margin-top: 50px;
         gap: 50px;
     }
     a {
-        color: #c0c0c0;
+        color: #9d9d9d;
     }
     a:hover {
         color: #000;

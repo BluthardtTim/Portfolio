@@ -10,7 +10,7 @@
         "A spacial computing tool for thinking, keeping and using ideas.",
       semesterinfo: "Invention Design",
       imgClass: "backgroundimgSpot",
-      videoUrl: "path/to/spot-video.mp4",
+      videoUrl: "../videos/SpotKeyvisual.mp4",
     },
     {
       id: 2,
@@ -87,7 +87,7 @@
             <h5>{card.semesterinfo}</h5>
           </div>
             <!-- Video element -->
-            <video class="card-video" muted loop>
+            <video class="card-video" muted>
               <source src={card.videoUrl} type="video/mp4" />
               Your browser does not support the video tag.
             </video>

@@ -1,4 +1,6 @@
 <script>
+    import Footer from "../components/Footer.svelte";
+
     const projects = {
         Photography: {
             title: "My Photography Selection",
@@ -51,7 +53,7 @@
             {/each}
         </div>
     </div>
-    <div class="savespaceTop"></div>
+    <Footer />
 </main>
 
 <style>
