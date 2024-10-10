@@ -15,8 +15,8 @@
                 <h3>UI/UX Design – Portfolio</h3>
                 <h1>Tim Bluthardt</h1>
                 <p style="margin-top: 40px; max-width: 600px;">
-                    Hi! I’m Tim and I am currently studying Interaction Design
-                    in Schwäbisch Gmünd, Germany. My strong interest in new
+                    Hi! I’m Tim, an Interaction Design student based in
+                    Schwäbisch Gmünd, Germany. My strong interest in new
                     technologies and how design can help integrate them
                     seamlessly into meaningful user experience, shapes the way I
                     design.

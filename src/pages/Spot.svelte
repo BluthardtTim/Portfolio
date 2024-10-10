@@ -29,8 +29,8 @@
                 problem within the next 5 to 10 years. We started the design
                 process by creating a concept for augmented reality, which led
                 to the development of Spot. Spot is a spacial computing tool
-                where thoughts and ideas can be stored. The Location based
-                information will allow you to exes our Information wherever it
+                where thoughts and ideas can be stored. The location based
+                information will allow you to exes our information wherever it
                 gets nesesary.
             </p>
         </div>
@@ -40,8 +40,8 @@
             <p class="twocoloumns">
                 Every day, we receive countless pieces of information from
                 various sources. Whether it's feedback at university, a
-                conversation with friends, a podcast, or simply the task of
-                shopping. We store this information in different places: on the
+                conversation with friends, a podcast, or simply the act of
+                shopping. We store this information in different places: On the
                 computer, in a notes app, in a notebook, or even just in our
                 thoughts. However, when we need the information later, we often
                 forget it completely or don't remember where to find it. This is
@@ -62,17 +62,17 @@
         <div class="spacer"></div>
         <h5>Spot</h5>
         <p class="twocoloumns">
-            Our tool works with spots – but what exactly are they? Various types
+            Our tool works with spots – but what exactly are spots? Various types
             of information can be stored in the spots. With its appearance it
             prevents your environment from being overloaded with information
             allowing you to know your thoughts are stored but you need to
             actively decide to engage with them. A spot can be placed on any
             object in your environment. To make the usage as intuitive as
-            possible, there are so-called props that you can add to the spots.
+            possible, there are so-called "props" that you can add to spots.
             These allow you to decide whether you want to use the spot for
             simple, quick notes or for more complex thoughts. These props range
             from simple inputs like text, audio, or images to smart props that
-            can track data for you. With these props, you can also give the
+            can track data for you. With these props, you can also give 
             spots an expiration date, reminding you in time and specify who is
             allowed to see your spots.
         </p>
@@ -106,7 +106,7 @@
             To make our vision for Spot experiencebale, we built a prototype for
             the Apple Vision Pro. This allows us to create and interact with
             Spots already today. Our teammate Amelie developed the prototype for
-            the Vision Pro, thanks to that we were able to to make some final
+            the Vision Pro. Thanks to that we were able to to make some final
             touches to the concept of our tool with real life experience of how
             Spot interacts with the environment.
         </p>
@@ -120,8 +120,8 @@
             To present our concept, we created a video that shows the potential
             of Spot. The video shows how Spot can be used in everyday life and
             how it can help you store and reuse your thoughts. Spot is a spacial
-            concept yet but with the ongoing development of spacial computing
-            and device to make it usefull I belive that Spot can be a usefull
+            concept yet. But with the ongoing development of spacial computing
+            and device to make it usefull I believe that Spot can be a usefull
             tool in the future.
         </p>
         <YouTubeVideoEmbed url={SpotVideourl} project="Spot" />

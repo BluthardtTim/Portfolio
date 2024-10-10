@@ -15,15 +15,15 @@
             <span>developing</span> new ideas
         </h3>
         <p style="margin-bottom: 60px;">
-            With my interest in gaining an well-rounded knowledge in the rapidly
+            With my interest in gaining a well-rounded knowledge in the rapidly
             evolving digital world, including UI/UX Design, Web Application
             Development and creating visual content with Photo- and Videography,
-            I'm passionate about becoming a designer.
+            I am passionate about becoming a designer.
         </p>
         <div
             style="display: flex; flex-direction: row; justify-content: center;"
         >
-            <p style="margin: 0;">Have a look at my Projects</p>
+            <p style="margin: 0;">Have a look at my projects</p>
             <img
                 style="width: 24px;height: 24px"
                 src="../images/icons/arrow-bend-right-down-light.svg"
