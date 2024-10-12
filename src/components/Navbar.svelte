@@ -48,6 +48,10 @@
             setSelected("aboutme");
         } else if (route === "/playground") {
             setSelected("playground");
+        } else if(route === "/xtend" || route === "/photo" || route === "/respiratory") {
+            setSelected("playground");
+        } else {
+            setSelected("projects");
         }
     }
 
