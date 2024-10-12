@@ -52,6 +52,7 @@
                 </div>
             {/each}
         </div>
+
     </div>
     <Footer />
 </main>
@@ -93,6 +94,13 @@
     }
     a {
         text-decoration: none;
+    }
+    p {
+        color: #9d9d9d;
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 18px;
+        text-align: center;
     }
     .card:hover {
         transform: scale(1.02);

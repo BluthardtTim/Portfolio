@@ -110,6 +110,7 @@
         width: 300px;
         aspect-ratio: 9 / 14;
         background-color: #f8f9fa;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         background: white;
         border-radius: 22px;
         border: 0.75px #e2e2e2 solid;
@@ -123,6 +124,7 @@
         height: auto;
         aspect-ratio: 5 / 3;
         background-color: #f8f9fa;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         background: white;
         border-radius: 22px;
         border: 0.75px #e2e2e2 solid;

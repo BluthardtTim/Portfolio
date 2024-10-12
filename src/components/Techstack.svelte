@@ -2,7 +2,7 @@
 
 <main>
     <div id="wrapper">
-        <p>designed and developed by myselfe with Svelte.js, Phosphor Icons and IBM Plex Sans</p>
+        <p>designed and developed by myself with Svelte.js, Phosphor Icons and IBM Plex Sans</p>
         <!-- <div id="tableWrapper">
             <p>Framework</p>
             <p>Svelte.js</p>

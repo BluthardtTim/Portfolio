@@ -5,11 +5,9 @@
 </script>
 
 <main>
-    <!-- <ProjectHeaderCaption
+    <ProjectHeaderCaption
         title="My Photography Selection"
-        description="A selection of my best shots"
-        projectdescription="I have been taking photos for a long time now and I have a selection of my best shots here. I hope you enjoy them."
-    /> -->
+    />
     <div id="wrapper">
         <Gallerie />
     </div>

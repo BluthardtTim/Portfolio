@@ -25,7 +25,7 @@
             <p class="twocoloumns">
                 Our goal was to create an interactive exhibition design centered
                 around the theme of "Our Respiratory System." Through studying
-                various forms of interaction, we developed an engaging solution
+                various forms of interaction, we developed an solution
                 that allows users to scan their own respiratory system and
                 explore it in real-time on a screen. This experience combines
                 technology and learning, offering visitors a unique and
@@ -53,14 +53,14 @@
         <div>
             <h5>Project</h5>
             <p class="twocoloumns">
-                The Respy offers an interactive experience that visualizes your
-                lungs in real-time on a monitor, allowing you to observe and
+                Our project offers an interactive experience that visualizes your
+                lungs in real-time on a monitor, allowing you to explore and
                 learn about your own respiratory system. This experience is
-                enhanced by a finger scanner that, while simulating a lung scan,
+                made possible by a finger scanner that, while simulating a lung scan,
                 is actually scanning your puls. After completing the initial
                 scan, users are prompted to perform an exercise, such as
                 push-ups or jumping jacks. Following the workout, they can scan
-                their lungs again and witness the impact that physical activity
+                their lungs again and see the impact that physical activity
                 has on their respiratory system.
             </p>
         </div>
@@ -72,21 +72,18 @@
         <div>
             <h5>Technical Background</h5>
             <p class="twocoloumns">
-                The Respy experience includes a pulse sensor that scans your
+                The experience includes a pulse sensor that scans your
                 pulse for 10 seconds. The average pulse value from this scan is
                 then multiplied by 1.4 to estimate your breaths per minute. This
                 calculated value controls the speed of the lung animation
-                displayed on the monitor. While the user perceives the animation
+                displayed on the monitor. While the user sees the animation
                 as reflecting their current breathing rate, it is actually a
                 manipulated pulse value, creating a realistic but simulated
                 representation of their lung activity in real-time.
             </p>
         </div>
         <div class="spacer"></div>
-        <h5>The final Video</h5>
-        <p class="twocoloumns">
-            To present our concept, we created a video...
-        </p>
+        <h5>The final exhibition setup</h5>
         <YouTubeVideoEmbed url={RespiratoryVideourl} project='Respiratory'/>
 
     </div>
