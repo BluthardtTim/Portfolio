@@ -139,7 +139,7 @@
         }
         .card {
             width: 100%;
-            aspect-ratio: 9 / 14;
+            aspect-ratio: 9 / 12;
         }
         .backgroundimgPhoto {
             background-image: url("../images/gallerie/07.jpg");
