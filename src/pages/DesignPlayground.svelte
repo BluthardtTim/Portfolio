@@ -5,20 +5,20 @@
         Photography: {
             title: "My Photography Selection",
             description: "A selection of my photos",
-            imageUrl: "../images/gallerie/07.jpg",
+            imageClass: "backgroundimgPhoto",
             route: "photo",
-        },
-        Growceries: {
-            title: "Growceries",
-            description: "Description for Growceries",
-            imageUrl: "../images/GrowCard.png",
-            route: "growceries",
         },
         Xtend: {
             title: "Xtend",
             description: "Description for Xtend",
-            imageUrl: "../images/XtendCard.png",
+            imageClass: "backgroundimgXtend",
             route: "xtend",
+        },
+        Respiratory: {
+            title: "Respiratory",
+            description: "Description for Respiratory",
+            imageClass: "backgroundimgRespy",
+            route: "respiratory",
         },
     };
 
@@ -34,8 +34,8 @@
                 <div class="card">
                     <a href="#/{projects[projectName].route}">
                         <div
-                            class="innercard"
-                            style="background-image: url({projects[projectName].imageUrl}); 
+                            class="innercard {projects[projectName].imageClass}"
+                            style=" 
                                    background-size: cover; 
                                    background-position: center;  
                                    color: {projectName === 'Growceries' ? 'black' : 'white'}">
@@ -68,6 +68,7 @@
         height: auto;
         aspect-ratio: 5 / 3;
         background-color: #f8f9fa;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         background: white;
         border-radius: 22px;
         border: 0.75px #e2e2e2 solid;
@@ -107,6 +108,22 @@
         right: 40px;
         transition: transform 0.5s ease;
     }
+
+    .backgroundimgPhoto {
+        background-image: url("../images/gallerie/07.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .backgroundimgXtend {
+        background-image: url("../images/XtendCard.png");
+        background-size: cover;
+        background-position: center;
+    }
+    .backgroundimgRespy {
+        background-image: url("../images/RespyCard.png");
+        background-size: cover;
+        background-position: center;
+    }
     @media (max-width: 800px) {
         #wrapper {
             grid-template-columns: 1fr;
@@ -119,6 +136,19 @@
             right: 30px;
             height: 32px;
             width: 32px;
+        }
+        .card {
+            width: 100%;
+            aspect-ratio: 9 / 14;
+        }
+        .backgroundimgPhoto {
+            background-image: url("../images/gallerie/07.jpg");
+        }
+        .backgroundimgXtend {
+            background-image: url("../images/XtendCard_mobile.png");
+        }
+        .backgroundimgRespy {
+            background-image: url("../images/RespyCard_mobile.png");
         }
     }
 </style>

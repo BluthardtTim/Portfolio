@@ -15,7 +15,8 @@
     let thumbnails = {
         Spot: "../images/Spot/SpotVideoThumbnail.png",
         Growceries: "../images/Growceries/GrowVideoThumbnail.png",
-        Respiratory: "../images/Respiratory/RespiratoryVideoThumbnail.png",
+        Respiratory: "../images/RespyCard.png",
+        Xtend: "../images/Xtend/XtendVideoThumbnail.png",
     };
 </script>
 

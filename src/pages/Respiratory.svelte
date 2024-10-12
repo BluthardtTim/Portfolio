@@ -15,7 +15,7 @@
         title="Discover your Respiratory system"
         description="An interactive exibishion design."
         myRole="Concept design, realisation of prototype with arduino"
-        duration="2. Semester, October 23 – February 24"
+        duration="four months"
         {teamNames}
     />
     <div id="wrapper" class="pageWrapper">
@@ -65,7 +65,7 @@
             </p>
         </div>
         <Image
-            src="../images/Respiratory/Project.png"
+            src="../images/Respiratory/project.png"
             caption="Project at the exebition"
         />
         <div class="spacer"></div>
@@ -88,8 +88,8 @@
             To present our concept, we created a video...
         </p>
         <YouTubeVideoEmbed url={RespiratoryVideourl} project='Respiratory'/>
+
     </div>
-    <MoreProjects projectNames={selectedProjects} />
     <Footer />
 </main>
 
