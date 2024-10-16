@@ -105,7 +105,7 @@
         <p class="twocoloumns">
             To make our vision for Spot experiencebale, we built a prototype for
             the Apple Vision Pro. This allows us to create and interact with
-            Spots already today. Our teammate Amelie developed the prototype for
+            spots already today. Our teammate Amelie developed the prototype for
             the Vision Pro. Thanks to that we were able to to make some final
             touches to the concept of our tool with real life experience of how
             Spot interacts with the environment.
@@ -119,7 +119,7 @@
         <p class="twocoloumns">
             To present our concept, we created a video that shows the potential
             of Spot. The video shows how Spot can be used in everyday life and
-            how it can help you store and reuse your thoughts. Spot is a spacial
+            how it can help you to store and reuse your thoughts. Spot is a spacial
             concept yet. But with the ongoing development of spacial computing
             and device to make it usefull I believe that Spot can be a usefull
             tool in the future.
