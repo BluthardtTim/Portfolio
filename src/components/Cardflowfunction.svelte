@@ -117,7 +117,6 @@
   }
   .card {
     width: 100%;
-    height: 515px;
     background-color: #F9F9F9;
     transition: all 0.5s ease;
     border-radius: 22px;
@@ -145,6 +144,7 @@
     height: 100%;
     border-radius: 16px;
     background-color: white;
+    position: relative;
   }
   .prevImg img {
     width: 100%;
