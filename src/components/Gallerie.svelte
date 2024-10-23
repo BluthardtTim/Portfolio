@@ -10,6 +10,19 @@
     { url: '../images/gallerie/08.jpg' },
     { url: '../images/gallerie/09.jpg' },
     { url: '../images/gallerie/10.jpg' },
+    { url: '../images/gallerie/11.jpg' },
+    { url: '../images/gallerie/12.jpg' },
+    { url: '../images/gallerie/13.jpg' },
+    { url: '../images/gallerie/14.jpg' },
+    { url: '../images/gallerie/15.jpg' },
+    { url: '../images/gallerie/16.jpg' },
+    { url: '../images/gallerie/17.jpg' },
+    { url: '../images/gallerie/18.jpg' },
+    { url: '../images/gallerie/19.jpg' },
+    { url: '../images/gallerie/20.jpg' },
+    { url: '../images/gallerie/21.jpg' },
+    { url: '../images/gallerie/22.jpg' },
+    { url: '../images/gallerie/23.jpg' },
   ];
 
   let column1 = [];
@@ -71,12 +84,12 @@
   }
   .gallery {
     display: grid;
-    gap: 10px;
+    gap: 20px;
   }
   .column {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 
   .gallery img {

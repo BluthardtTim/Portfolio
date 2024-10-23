@@ -148,7 +148,9 @@
         />
     </div>
     <MoreProjects projectNames={selectedProjects} />
-    <Footer />
+    <div class="startpageWrapper">
+        <Footer />
+    </div>
 </main>
 
 <style>

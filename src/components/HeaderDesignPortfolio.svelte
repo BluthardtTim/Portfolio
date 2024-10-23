@@ -3,16 +3,16 @@
 </script>
 
 <main>
+    <div class="spacer"></div>
     <div id="Wrapper">
-        <!-- <div class="savespaceTop"></div> -->
-        <div class="pageWrapper">
-            <div class="imageCard">
+        <div class="startpageWrapper">
+            <!-- <div class="imageCard">
                 <div class="innercard">
                     <img src="../images/Portrait2.jpg" alt="Portrait" />
                 </div>
-            </div>
+            </div> -->
             <div>
-                <h3>UI/UX Design – Portfolio</h3>
+                <!-- <h3>Portfolio</h3> -->
                 <h1>Tim Bluthardt</h1>
                 <p style="margin-top: 40px; max-width: 600px;">
                     Hi! I’m Tim, an Interaction Design student based in
@@ -38,52 +38,19 @@
 <style>
     #Wrapper {
         width: 100vw;
-        height: 85vh;
-        background-color: #f6f6f6;
         z-index: -1;
-        border-bottom: 0.5px solid #bebebe;
-        box-shadow: inset 0px -10px 10px -10px rgba(3, 2, 2, 0.1);
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .pageWrapper {
+    .startpageWrapper {
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10rem;
+        flex-direction: column;
+        gap: 3rem;
     }
-    .imageCard {
-        width: 300px;
-        aspect-ratio: 9 / 14;
-        background-color: #f8f9fa;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        background: white;
-        border-radius: 22px;
-        border: 0.75px #e2e2e2 solid;
-        padding: 5px;
-        position: relative;
-        overflow: hidden;
-    }
-    .innercard {
-        width: 100%;
-        height: 100%;
-        background: #f7f7f7;
-        border-radius: 16px;
-        border: 0.5px #a7a7a7 solid;
-        box-sizing: border-box;
-        position: relative;
-        top: 0;
-        left: 0;
-        color: black;
-        text-decoration: none;
-    }
-    .innercard img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 16px;
+    h1 {
+        font-size: 56px;
+        margin: 0;
     }
     #iconarrow {
         width: 24px;
@@ -103,29 +70,7 @@
         color: #9d9d9d;
         font-size: 18px;
     }
-    h1 {
-        font-size: 62px;
-    }
-    h3 {
-        margin-bottom: -5px;
-        color: #9d9d9d;
-        font-weight: 400;
-        font-size: 24px;
-    }
     @media (max-width: 800px) {
-        #Wrapper {
-            height: 100vh;
-        }
-        .pageWrapper {
-            flex-direction: column;
-            gap: 2rem;
-            margin-bottom: 20px;
-        }
-        .imageCard {
-            width: 55%;
-            height: 65vw;
-            margin-bottom: 30px;
-        }
         .thatsme {
             display: none;
         }

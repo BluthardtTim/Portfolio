@@ -4,20 +4,24 @@
     const projects = {
         Photography: {
             title: "My Photography Selection",
-            description: "A selection of my photos",
+            description:
+                "This is a selection of photos I have taken in the past few years",
             imageClass: "backgroundimgPhoto",
+            imgUrl: "../images/gallerie/03.jpg",
             route: "photo",
         },
         Xtend: {
             title: "Xtend",
-            description: "Description for Xtend",
+            description: "The innovative way of playing Jenga",
             imageClass: "backgroundimgXtend",
+            imgUrl: "../images/XtendCard_mobile.png",
             route: "xtend",
         },
         Respiratory: {
-            title: "Respiratory",
-            description: "Description for Respiratory",
+            title: "Discover your Respiratory sytem",
+            description: "An interactive exibishion design",
             imageClass: "backgroundimgRespy",
+            imgUrl: "../images/RespyCard.png",
             route: "respiratory",
         },
     };
@@ -31,30 +35,29 @@
     <div class="pageWrapper">
         <div id="wrapper">
             {#each projectNames as projectName}
-                <div class="card">
-                    <a href="#/{projects[projectName].route}">
-                        <div
-                            class="innercard {projects[projectName].imageClass}"
-                            style=" 
+                <a href="#/{projects[projectName].route}">
+                    <div
+                        class="card"
+                        style=" 
                                    background-size: cover; 
-                                   background-position: center;  
-                                   color: {projectName === 'Growceries' ? 'black' : 'white'}">
+                                   background-position: center;  "
+                    >
+                        <div class="cardtxt">
                             <h3>{projects[projectName].title}</h3>
-                            <!-- <h5>{projects[projectName].description}</h5> -->
-                            <img
-                                class="icon"
-                                src="../images/icons/arrow-up-right-light.svg"
-                                alt="Arrow"
-                                style="filter: {projectName === 'Growceries' ? 'none' : 'invert(100%) sepia(100%) saturate(0%) hue-rotate(9deg) brightness(103%) contrast(103%)'};"
-                            />
+                            <p>{projects[projectName].description}</p>
                         </div>
-                    </a>
-                </div>
+                        <div class="prevImg">
+                            <img src={projects[projectName].imgUrl} alt="" />
+                        </div>
+                    </div>
+                </a>
             {/each}
         </div>
-
+        
     </div>
-    <Footer />
+    <div class="startpageWrapper">
+        <Footer />
+    </div>
 </main>
 
 <style>
@@ -64,99 +67,61 @@
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
+    p {
+        color: #9d9d9d;
+        font-size: 18px;
+    }
     .card {
         width: 100%;
-        height: auto;
-        aspect-ratio: 5 / 3;
-        background-color: #f8f9fa;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        background: white;
+        height: 360px;
+        background-color: #f9f9f9;
+        transition: all 0.3s ease;
         border-radius: 22px;
-        border: 0.75px #e2e2e2 solid;
-        padding: 5px;
+        border: 1.5px #e3e3e3 solid;
+        padding: 32px;
+        position: sticky;
+        color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .card:hover {
+        background-color: #f1f1f1;
+        transform: translateY(-5px);
+    }
+    .card:hover .prevImg img {
+        transform: scale(1.02);
+    }
+    .prevImg {
+        height: 100%;
+        border-radius: 16px;
+        background-color: white;
         position: relative;
         overflow: hidden;
-        transition: all 0.3s ease;
     }
-    .innercard {
+    .prevImg img {
         width: 100%;
         height: 100%;
-        background: #f7f7f7;
+        object-fit: cover;
         border-radius: 16px;
-        border: 0.5px #a7a7a7 solid;
-        box-sizing: border-box;
-        position: relative;
-        top: 0;
-        left: 0;
-        color: white;
-        text-decoration: none;
-        padding: 40px;
+        transition: transform 0.3s ease;
+    }
+    .cardtxt {
+        gap: 20px;
+        max-width: 200px;
     }
     a {
         text-decoration: none;
-    }
-    p {
-        color: #9d9d9d;
-        max-width: 900px;
-        margin: 0 auto;
-        font-size: 18px;
-        text-align: center;
-    }
-    .card:hover {
-        transform: scale(1.02);
-    }
-    .card:hover .icon {
-        transform: translate(10px, -10px);
-    }
-    .icon {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 40px;
-        right: 40px;
-        transition: transform 0.5s ease;
-    }
-
-    .backgroundimgPhoto {
-        background-image: url("../images/gallerie/07.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-    .backgroundimgXtend {
-        background-image: url("../images/XtendCard.png");
-        background-size: cover;
-        background-position: center;
-    }
-    .backgroundimgRespy {
-        background-image: url("../images/RespyCard.png");
-        background-size: cover;
-        background-position: center;
     }
     @media (max-width: 800px) {
         #wrapper {
             grid-template-columns: 1fr;
         }
-        .innercard {
-            padding: 30px;
-        }
-        .icon {
-            top: 30px;
-            right: 30px;
-            height: 32px;
-            width: 32px;
-        }
         .card {
             width: 100%;
-            aspect-ratio: 9 / 12;
-        }
-        .backgroundimgPhoto {
-            background-image: url("../images/gallerie/07.jpg");
-        }
-        .backgroundimgXtend {
-            background-image: url("../images/XtendCard_mobile.png");
-        }
-        .backgroundimgRespy {
-            background-image: url("../images/RespyCard_mobile.png");
+            height: 430px;
+            padding: 30px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
         }
     }
 </style>

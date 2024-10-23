@@ -11,7 +11,6 @@
     import Xtend from "./pages/Xtend.svelte";
     import Imprint from "./pages/imprint.svelte";
     import Respiratory from "./pages/Respiratory.svelte";
-    import PhotoAboutme from "./pages/PhotoAboutme.svelte";
     import Traumpalast from "./pages/Traumpalast.svelte";
     import Playground from "./pages/DesignPlayground.svelte";
 
@@ -24,7 +23,6 @@
         "/xtend": Xtend,
         "/imprint": Imprint,
         "/respiratory": Respiratory,
-        "/photoAboutme": PhotoAboutme,
         "/traumpalast": Traumpalast,
         "/playground": Playground,
     };

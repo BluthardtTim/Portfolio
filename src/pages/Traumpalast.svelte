@@ -95,7 +95,9 @@
         <Image src="../images/Traumpalast/Traum_HMW04.png" caption="" />
     </div>
     <MoreProjects projectNames={selectedProjects} />
-    <Footer />
+    <div class="startpageWrapper">
+        <Footer />
+    </div>
 </main>
 
 <style>

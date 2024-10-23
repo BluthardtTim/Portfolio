@@ -21,18 +21,10 @@
         align-items: center;
         flex-direction: column;
         color: #9d9d9d;
-        max-width: 450px;
-        margin: 0 auto;
+        /* max-width: 450px; */
+        /* margin: 0 auto; */
     }
     p {
         font-weight: 200;
-    }
-    #tableWrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        max-width: 400px;
-        text-align: left;
-        margin-top: 20px;
     }
 </style>

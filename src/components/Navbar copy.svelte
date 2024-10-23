@@ -3,14 +3,11 @@
     import { onMount } from "svelte";
 
     let selectedItem = "projects"; 
-    let highlightLeft = "160px";
+    let highlightLeft = "240px";
     let highlightWidth = "0px";
-
-    let ismobile = false;
 
     $: if (window.innerWidth <= 800) {
         highlightLeft = "140px";
-        ismobile = true;
     }
 
     // Funktion zum Setzen des aktiven Buttons
@@ -79,31 +76,24 @@
                 <a class="ankerlink" href="#/playground">
                     <div id="playgroundButton" class="NavButton" class:active={selectedItem === "playground"} on:click={() => setSelected("playground")}>
                         <img src="../images/icons/pen-nib-light_white.svg" alt="">
-                        {#if selectedItem === "playground" || ismobile}
-                            <p>Playground</p>
-                        {/if}
+                        <p>Playground</p>
                     </div>
                 </a>
                 <a class="ankerlink" href="#/">
                     <div id="projectsButton" class="NavButton" class:active={selectedItem === "projects"} on:click={() => setSelected("projects")}>
                         <img src="../images/icons/folders-light.svg" alt="">
-                        {#if selectedItem === "projects" || ismobile}
-                            <p>My Projects</p>
-                        {/if}
+                        <p>Projects</p>
                     </div>
                 </a>
                 <a class="ankerlink" href="#/aboutme">
                     <div id="aboutMeButton" class="NavButton" class:active={selectedItem === "aboutme"} on:click={() => setSelected("aboutme")}>
                         <img src="../images/icons/user-light.svg" alt="">
-                        {#if selectedItem === "aboutme" || ismobile}
-                            <p>About Me</p>
-                        {/if}
+                        <p>About me</p>
                     </div>
                 </a>
         </div>
     </div>
 </main>
-
 
 
 
@@ -135,7 +125,8 @@
         align-items: center;
         justify-content: space-around;
         transition:
-            all 0.3s ease-in-out;
+            transform 0.3s ease-in-out,
+            width 0.3s ease-in-out;
         z-index: 100;
     }
     .NavbarWrapper p {

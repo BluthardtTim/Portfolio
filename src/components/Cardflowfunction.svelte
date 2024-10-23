@@ -1,25 +1,28 @@
 <script>
   import { onMount } from "svelte";
 
-  // Array mit den Kartendaten, einschließlich videoUrl
   const cards = [
     {
       id: 1,
       title: "Spot",
-      description:
-        "A spacial computing tool for thinking, keeping and using ideas.",
+      description: "A spacial computing tool for thinking, keeping and using ideas.",
       semesterinfo: "Invention Design",
       imgClass: "backgroundimgSpot",
       videoUrl: "../videos/SpotKeyvisual.mp4",
+      imgUrl1: "../images/Spot/Spot1.png",
+      imgUrl2: "../images/Spot/Spot2.png",
+      imgUrl3: "../images/Spot/Spot3.png",
     },
     {
       id: 2,
       title: "Growceries",
-      description:
-        "Don't waste, share the taste!",
+      description: "Don't waste, share the taste!",
       semesterinfo: "Design Sprint",
       imgClass: "backgroundimgGrow",
       videoUrl: "path/to/grow-video.mp4",
+      imgUrl1: "../images/Growceries/Grow1.png",
+      imgUrl2: "../images/Growceries/Grow2.png",
+      imgUrl3: "../images/Growceries/Grow3.png",
     },
     {
       id: 3,
@@ -28,15 +31,17 @@
       semesterinfo: "Exhibition Design",
       imgClass: "backgroundimgTraumpalast",
       videoUrl: "../videos/TraumpalastKeyvisual.mp4",
+      imgUrl1: "../images/Traumpalast/Traum1.png",
+      imgUrl2: "../images/Traumpalast/Traum2.png",
+      imgUrl3: "../images/Traumpalast/Traum3.png",
     },
   ];
 
-  let loseStatus = Array(cards.length).fill(false); // Status für jede Karte
+  let loseStatus = Array(cards.length).fill(false);
   let cardHeight = 0;
   let viewportHeight = 0;
 
   onMount(() => {
-    // Höhe der ersten Karte ermitteln
     const firstCard = document.querySelector(".card");
     if (firstCard) {
       cardHeight = firstCard.clientHeight;
@@ -51,46 +56,38 @@
 
   function pauseVideo(videoElement) {
     videoElement.pause();
-    videoElement.currentTime = 0; // Zurücksetzen auf den Anfang
+    videoElement.currentTime = 0;
   }
 </script>
 
 <main>
-  <div class="container pageWrapper">
+  <div class="container">
     {#each cards as card, index}
       <div
         class:lose={loseStatus[index]}
         class="card"
-        style="
-          top: calc({viewportHeight / 2}px - {cardHeight / 2}px + {index *
-          15}px); 
-        "
+        style="top: calc({viewportHeight / 2}px - {cardHeight / 2}px + {index * 15}px);"
       >
         <a href={`#/${card.title.toLowerCase()}`}>
-          <div
-            class="innercard {card.imgClass}"
-            on:mouseenter={(e) =>
-              playVideo(e.currentTarget.querySelector("video"))}
-            on:mouseleave={(e) =>
-              pauseVideo(e.currentTarget.querySelector("video"))}
-          > 
-          <div style="height: 100%; z-index: 20; display: flex; justify-content: space-between; flex-direction: column;">
-            <div>
-              <h1>{card.title}</h1>
-              <h3>{card.description}</h3>
+          <div class="cardWrapper">
+            <div class="cardtxt">
+              <div>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+              <p>{card.semesterinfo}</p>
             </div>
-            <img
-              class="icon"
-              src="../images/icons/arrow-up-right-light.svg"
-              alt="Arrow"
-            />
-            <h5>{card.semesterinfo}</h5>
-          </div>
-            <!-- Video element -->
-            <video class="card-video" muted>
-              <source src={card.videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div class="imgWrapper">
+              <div class="prevImg">
+                <img src={card.imgUrl1} alt="">
+              </div>
+              <div class="prevImg none">
+                <img src={card.imgUrl2} alt="">
+              </div>
+              <div class="prevImg none">
+                <img src={card.imgUrl3} alt="">
+              </div>
+            </div>
           </div>
         </a>
       </div>
@@ -99,18 +96,13 @@
 </main>
 
 <style>
-  h1,
-  h3,
-  h5 {
+  h1, h3, h5 {
     z-index: 2;
+    color: black;
   }
-  h1 {
-    color: white;
-  }
-  h3 {
-    font-weight: 300;
+  p {
     color: #9d9d9d;
-    font-size: 22px;
+    font-size: 18px;
   }
   .container {
     height: auto;
@@ -119,76 +111,53 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    width: 70%;
+    max-width: 1600px;
+    margin: 0 auto;
   }
   .card {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    background-color: #f8f9fa;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease;
-    background: white;
+    height: 515px;
+    background-color: #F9F9F9;
+    transition: all 0.5s ease;
     border-radius: 22px;
-    border: 0.75px #e2e2e2 solid;
-    padding: 5px;
+    border: 1.5px #E3E3E3 solid;
+    padding: 40px;
     margin-top: 100px;
     position: sticky;
-    overflow: hidden;
   }
-  .innercard {
+  .card:hover {
+    background-color: #F1F1F1;
+    transform: translateY(-5px);
+  }
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 8px;
+  }
+  .imgWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    height: 100%;
+  }
+  .prevImg {
+    height: 100%;
+    border-radius: 16px;
+    background-color: white;
+  }
+  .prevImg img {
     width: 100%;
     height: 100%;
-    background: #f7f7f7;
+    object-fit: cover;
     border-radius: 16px;
-    border: 0.5px #a7a7a7 solid;
-    padding: 60px;
-    padding-right: 50%;
-    box-sizing: border-box;
-    position: relative;
-    top: 0;
-    left: 0;
-    color: black;
-    text-decoration: none;
+  }
+  .cardtxt {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  .icon {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 60px;
-    right: 60px;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(9deg)
-      brightness(103%) contrast(103%);
-    transition: transform 0.5s ease;
-  }
-  .backgroundimgGrow {
-    background-image: url("../images/GrowCard.png");
-    background-size: cover;
-    background-position: center;
-  }
-  .backgroundimgGrow h1 {
-    color: black;
-  }
-  .backgroundimgGrow .icon {
-    filter: none;
-  }
-  .backgroundimgSpot {
-    background-image: url("../images/SpotCard.png");
-    background-size: cover;
-    background-position: center;
-  }
-  .backgroundimgTraumpalast {
-    background-image: url("../images/TraumpalastCard.png");
-    background-size: cover;
-    background-position: center;
-  }
-  .card:hover {
-    transform: scale(1.01);
-  }
-  .card:hover .icon {
-    transform: translate(10px, -10px);
+    gap: 20px;
+    max-width: 200px;
   }
   .card.lose {
     position: absolute;
@@ -198,52 +167,32 @@
   a {
     text-decoration: none;
   }
-  .card-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .innercard:hover .card-video {
-    opacity: 1;
-  }
 
   @media (max-width: 800px) {
-    h1 {
-      font-size: 1.7rem;
-    }
     .container {
-      height: 2000px;
-    }
-    .icon {
-      width: 32px;
-      height: 32px;
-      top: 40px;
-      right: 40px;
-    }
-    .innercard {
-      padding: 40px;
-    }
-    .innercard h5 {
-      display: none;
+      height: 1800px;
+      width: 90%;
     }
     .card {
       width: 100%;
-      aspect-ratio: 9 / 16;
+      padding: 30px;
+      overflow-y: hidden; 
     }
-    .backgroundimgSpot {
-      background-image: url("../images/SpotCard_mobile.png");
+    .cardWrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr;
     }
-    .backgroundimgGrow {
-      background-image: url("../images/GrowCard_mobile.png");
+    .imgWrapper {
+      overflow: hidden;
+      grid-template-columns: 1fr;
     }
-    .backgroundimgTraumpalast {
-      background-image: url("../images/TraumpalastCard_mobile.png");
+    .prevImg {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .none {
+      display: none;
     }
   }
 </style>

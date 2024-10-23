@@ -81,7 +81,6 @@
         background-color: #f6f6f6;
         z-index: -2;
         border-bottom: 0.5px solid #bebebe;
-        box-shadow: inset 0px -10px 10px -10px rgba(3, 2, 2, 0.1);
     }
     .savespaceTop {
         height: 165px;

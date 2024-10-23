@@ -66,7 +66,9 @@
 
 
     </div>
-    <Footer />
+    <div class="startpageWrapper">
+        <Footer />
+    </div>
 </main>
 
 <style>

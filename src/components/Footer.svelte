@@ -2,8 +2,8 @@
 </script>
 
 <main>
-    <div id="wrapper" class="pageWrapper">
-        <p>© 2024 Tim Bluthardt</p>
+    <div id="wrapper">
+        <!-- <p>© 2024 Tim Bluthardt</p> -->
         <p><a href="#/imprint">Imprint</a></p>
     </div>
 </main>
@@ -16,11 +16,13 @@
         margin: 0 auto;
         height: 140px;
         color: #9d9d9d;
-        margin-top: 50px;
+        /* margin-top: 50px; */
         gap: 50px;
     }
     a {
         color: #9d9d9d;
+        /* font-weight: 200; */
+        
     }
     a:hover {
         color: #000;

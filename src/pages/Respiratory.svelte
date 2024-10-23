@@ -87,7 +87,9 @@
         <YouTubeVideoEmbed url={RespiratoryVideourl} project='Respiratory'/>
 
     </div>
-    <Footer />
+    <div class="startpageWrapper">
+        <Footer />
+    </div>
 </main>
 
 <style>

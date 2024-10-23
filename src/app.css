@@ -11,6 +11,12 @@
   margin: 0px auto;
   padding: 0px 20px;
 }
+.startpageWrapper {
+  max-width: 1600px;
+  width: 40%;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -54,6 +60,7 @@ p {
 }
 a {
   color: #80C181;
+  text-underline-offset: 4px;
 }
 img{
   border-radius: 8px;
@@ -88,6 +95,9 @@ video {
     height: 100px;
   }
   .pageWrapper {
+    width: 100%;
+  }
+  .startpageWrapper {
     width: 100%;
   }
   .spacer {

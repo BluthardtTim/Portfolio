@@ -3,7 +3,7 @@
 </script>
 
 <main>
-    <div class="pageWrapper">
+    <div class="startpageWrapper">
         <div class="spacer200"></div>
         <h3>Imprint</h3>
         <div class="spacer100"></div>
@@ -74,8 +74,8 @@
         </p>
 
         <p>Quelle: e-recht24.de</p>
+        <div class="spacer"></div>
     </div>
-    <Footer />
 </main>
 
 <style>

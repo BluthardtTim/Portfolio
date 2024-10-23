@@ -1,39 +1,39 @@
 <!-- Projects.svelte -->
 <script>
-    import Respiratory from "../pages/Respiratory.svelte";
-
     export let projectNames = [];
 
     // Mapping der Projektnamen zu den Projektdetails
     const projects = {
         Spot: {
             title: "Spot",
-            description: "Description for Spot",
-            imageUrl: "../images/SpotCard.png",
+            description:
+                "A spatial computing tool for thinking, keeping and using ideas.",
+            imageUrl: "../images/Spot/Spot1.png",
             route: "spot",
         },
         Growceries: {
             title: "Growceries",
-            description: "Description for Growceries",
-            imageUrl: "../images/GrowCard.png",
+            description:
+                "An Application that conects lokal farmers to reduse foodwaste",
+            imageUrl: "../images/Growceries/Grow1.png",
             route: "growceries",
         },
         Xtend: {
             title: "Xtend",
-            description: "Description for Xtend",
-            imageUrl: "../images/XtendCard.png",
+            description: "The innovative way of playing Jenga",
+            imageUrl: "../images/XtendCard_mobile.png",
             route: "xtend",
         },
         Respiratory: {
             title: "Respiratory",
-            description: "Description for Respiratory",
-            imageUrl: "../images/RespyCard.png",
+            description: "An interactive exibishion design",
+            imageUrl: "../images/RespyCard_mobile.png",
             route: "respiratory",
         },
         Traumpalast: {
             title: "Traumpalast App Redesign",
-            description: "Description for Traumpalast",
-            imageUrl: "../images/TraumpalastCard.png",
+            description: "An Application Redesign",
+            imageUrl: "../images/Traumpalast/Traum1.png",
             route: "traumpalast",
         },
     };
@@ -42,26 +42,31 @@
 <main>
     <div id="wrapper">
         <hr id="seperator" />
-        <p>More Projects</p>
+        <div style="text-align: center;">
+            <p>More Projects</p>
+        </div>
         <div id="projectswrapper" class="pageWrapper">
             {#each projectNames.slice(0, 2) as projectName}
                 {#if projects[projectName]}
-                    <div class="card">
-                        <a href="#/{projects[projectName].route}">
-                            <div
-                                class="innercard"
-                                style="background-image: url({projects[
-                                    projectName
-                                ]
-                                    .imageUrl}); background-size: cover; background-position: center;  color: {projectName ===
-                                'Growceries'
-                                    ? 'black'
-                                    : 'white'}">
+                    <a href="#/{projects[projectName].route}">
+                        <div
+                            class="card"
+                            style=" 
+                                    background-size: cover; 
+                                    background-position: center;  "
+                        >
+                            <div class="cardtxt">
                                 <h3>{projects[projectName].title}</h3>
-                                <!-- <p>{projects[projectName].description}</p> -->
+                                <p>{projects[projectName].description}</p>
                             </div>
-                        </a>
-                    </div>
+                            <div class="prevImg">
+                                <img
+                                    src={projects[projectName].imageUrl}
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </a>
                 {/if}
             {/each}
         </div>
@@ -73,7 +78,10 @@
         margin-top: 200px;
         margin-bottom: 200px;
         height: auto;
-        text-align: center;
+    }
+    .card p {
+        color: #9d9d9d;
+        font-size: 18px;
     }
     #seperator {
         margin-top: 20px;
@@ -82,44 +90,49 @@
         margin: 0 auto 50px;
     }
     #projectswrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         margin-top: 100px;
         height: auto;
-        gap: 50px;
+        gap: 20px;
     }
     .card {
-        width: 80%;
-        max-width: 1200px;
-        height: auto;
-        aspect-ratio: 16 / 9;
-        background-color: #f8f9fa;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-        background: white;
+        width: 100%;
+        height: 360px;
+        background-color: #f9f9f9;
+        transition: all 0.3s ease;
         border-radius: 22px;
-        border: 0.75px #e2e2e2 solid;
-        padding: 5px;
-        text-decoration: none;
+        border: 1.5px #e3e3e3 solid;
+        padding: 32px;
+        position: sticky;
+        color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     .card:hover {
+        background-color: #f1f1f1;
+        transform: translateY(-5px);
+    }
+    .card:hover .prevImg img {
         transform: scale(1.02);
     }
-    .innercard {
+    .prevImg {
+        height: 100%;
+        border-radius: 16px;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    .prevImg img {
         width: 100%;
         height: 100%;
-        background: #f7f7f7;
+        object-fit: cover;
         border-radius: 16px;
-        border: 0.5px #a7a7a7 solid;
-        padding: 7%;
-        box-sizing: border-box;
-        position: relative;
-        top: 0;
-        left: 0;
-        color: white;
-        text-decoration: none;
-        text-align: left;
+        transition: transform 0.3s ease;
+    }
+    .cardtxt {
+        gap: 20px;
+        max-width: 200px;
     }
     a {
         text-decoration: none;
@@ -137,7 +150,10 @@
         }
         .card {
             width: 100%;
-            aspect-ratio: 16 / 9;
+            height: 430px;
+            padding: 30px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
         }
         #seperator {
             width: 80vw;

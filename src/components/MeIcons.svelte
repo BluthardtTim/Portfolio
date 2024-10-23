@@ -34,7 +34,7 @@
     }
     .meicon {
         padding: 16px;
-        background-color: white;
+        background-color: #F9F9F9;
         border-radius: 12px;
         width: 65px;
         position: relative;
@@ -47,7 +47,7 @@
         height: 100%;
     }
     .meicon:hover img {
-        transform: scale(1.2);
+        transform: scale(1.1);
         transition: all 0.2s ease-in-out;
     }
     .tooltip {

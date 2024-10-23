@@ -7,21 +7,22 @@
 </script>
 
 <main>
+    <div class="spacer50"></div>
     <HeaderDesignPortfolio />
-    <div class="pageWrapper">
-        <div class="spacer200"></div>
-        <h3>
+    <div class="startpageWrapper">
+        <!-- <div class="spacer100"></div> -->
+        <!-- <h3>
             I have a passion for <span>designing</span> and
             <span>developing</span> new ideas
-        </h3>
-        <p style="margin-bottom: 60px;">
+        </h3> -->
+        <!-- <p style="margin-bottom: 60px;">
             With my interest in gaining a well-rounded knowledge in the rapidly
             evolving digital world, including UI/UX Design, Web Application
             Development and creating visual content with Photo- and Videography,
             I am passionate about becoming a designer.
-        </p>
+        </p> -->
         <div
-            style="display: flex; flex-direction: row; justify-content: center;"
+            style="display: flex; flex-direction: row; margin-top: 40px; "
         >
             <p style="margin: 0;">Have a look at my projects</p>
             <img
@@ -31,11 +32,11 @@
             />
         </div>
     </div>
-    <div class="spacer100"></div>
+    <div class="spacer50"></div>
     <Cardflowfunction />
-    <div class="pageWrapper">
+    <div class="startpageWrapper">
         <div class="spacer200"></div>
-        <h3>I am currently looking for an internship</h3>
+        <h5>I am currently looking for an internship</h5>
         <p>
             Starting in spring of 2025 I’m looking for an internship in a team
             where I can expand my skills to a new level and gain valuable
@@ -43,41 +44,31 @@
         </p>
         <Contact/>
         <div class="spacer"></div>
-        <div class="spacer"></div>
         <Techstack />
+        <Footer />
     </div>
-    <Footer />
 </main>
 
 <style>
-    .pageWrapper {
-        text-align: center;
-    }
     .spacer200 {
         height: 200px;
     }
-    .spacer100 {
-        height: 100px;
+    .spacer50 {
+        height: 50px;
     }
-    h3 {
-        font-size: 26px;
-    }
-    h3 span {
-        color: #80c181;
+    h5 {
+        color: black;
         font-weight: 500;
     }
     p {
         color: #9d9d9d;
         max-width: 900px;
-        margin: 0 auto;
+        /* margin: 0 auto; */
         font-size: 18px;
     }
     @media (max-width: 800px) {
         .spacer200 {
             height: 100px;
-        }
-        .spacer100 {
-            height: 50px;
         }
     }
 </style>
