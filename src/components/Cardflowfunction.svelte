@@ -42,12 +42,14 @@
   let viewportHeight = 0;
 
   onMount(() => {
-    const firstCard = document.querySelector(".card");
-    if (firstCard) {
-      cardHeight = firstCard.clientHeight;
-      viewportHeight = window.innerHeight;
-      console.log(cardHeight);
-    }
+    setTimeout(() => {
+      const firstCard = document.querySelector(".card");
+      if (firstCard) {
+        cardHeight = firstCard.clientHeight;
+        viewportHeight = window.innerHeight;
+        console.log(cardHeight);
+      }
+    }, 100);
   });
 
   function playVideo(videoElement) {

@@ -32,6 +32,17 @@
 
 <main>
     <div class="savespaceTop"></div>
+
+    <div class="startpageWrapper">
+        <p>
+            Welcome to my playground, my personal collection of random designs,
+            explorations or any thing that I could not find a
+            place to show...
+        </p>
+    </div>
+
+    <div class="spacer"></div>
+
     <div class="pageWrapper">
         <div id="wrapper">
             {#each projectNames as projectName}
@@ -53,8 +64,10 @@
                 </a>
             {/each}
         </div>
-        
     </div>
+
+    <div class="spacer"></div>
+    
     <div class="startpageWrapper">
         <Footer />
     </div>
@@ -79,7 +92,6 @@
         border-radius: 22px;
         border: 1.5px #e3e3e3 solid;
         padding: 32px;
-        position: sticky;
         color: black;
         display: grid;
         grid-template-columns: 1fr 1fr;

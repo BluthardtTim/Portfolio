@@ -1,22 +1,37 @@
 <script>
     import MeIcons from "./MeIcons.svelte";
+    let showImage = false;
+    let mouseX = 0;
+    let mouseY = 0;
+
+    function handleMouseMove(event) {
+        mouseX = event.clientX + 20; // Abstand zum Mauszeiger
+        mouseY = event.clientY + 20;
+    }
+
+    function handleMouseEnter() {
+        showImage = true;
+    }
+
+    function handleMouseLeave() {
+        showImage = false;
+    }
 </script>
 
 <main>
     <div class="spacer"></div>
     <div id="Wrapper">
         <div class="startpageWrapper">
-            <!-- <div class="imageCard">
-                <div class="innercard">
-                    <img src="../images/Portrait2.jpg" alt="Portrait" />
-                </div>
-            </div> -->
             <div>
-                <!-- <h3>Portfolio</h3> -->
                 <h1>Tim Bluthardt</h1>
                 <p style="margin-top: 40px; max-width: 600px;">
-                    Hi! I’m Tim, an Interaction Design student based in
-                    Schwäbisch Gmünd, Germany. My strong interest in new
+                    <span 
+                        on:mouseenter={handleMouseEnter}
+                        on:mouseleave={handleMouseLeave}
+                        on:mousemove={handleMouseMove}
+                    >Hi, I’m Tim</span
+                    >, an Interaction Design student based in Schwäbisch Gmünd, Germany.
+                    My strong interest in new
                     technologies and how design can help integrate them
                     seamlessly into meaningful user experience, shapes the way I
                     design.
@@ -29,9 +44,19 @@
                         alt="Arrow icon"
                     />
                 </div>
-                <MeIcons/>
+                <MeIcons />
             </div>
         </div>
+
+        <!-- Das Bild, das bei Hover angezeigt wird -->
+        {#if showImage}
+            <img 
+                src="../images/Portrait2.jpg" 
+                alt="Hover Image" 
+                class="hover-image" 
+                style="top: {mouseY}px; left: {mouseX}px;"
+            />
+        {/if}
     </div>
 </main>
 
@@ -56,8 +81,7 @@
         width: 24px;
         height: 24px;
         transform: rotate(90deg);
-        filter: invert(96%) sepia(0%) saturate(72%) hue-rotate(151deg)
-            brightness(77%) contrast(108%);
+        filter: invert(96%) sepia(0%) saturate(72%) hue-rotate(151deg) brightness(77%) contrast(108%);
         margin-left: 10px;
     }
     .thatsme {
@@ -69,6 +93,23 @@
         margin: 16px 0px;
         color: #9d9d9d;
         font-size: 18px;
+    }
+    p span {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: all 0.2s ease-in-out;
+    }
+    p span:hover {
+        color: black;
+    }
+    .hover-image {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        pointer-events: none;
+        z-index: 1000;
+        transition: top 0.1s, left 0.1s;
+        border-radius: 12px;
     }
     @media (max-width: 800px) {
         .thatsme {
