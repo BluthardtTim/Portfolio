@@ -36,8 +36,9 @@
     <div class="startpageWrapper">
         <p>
             Welcome to my playground, my personal collection of random designs,
+            photographs,
             explorations or any thing that I could not find a
-            place to show...
+            place to show
         </p>
     </div>
 
@@ -95,6 +96,7 @@
         color: black;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 30px;
     }
     .card:hover {
         background-color: #f1f1f1;

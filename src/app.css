@@ -75,6 +75,14 @@ video {
   height: 170px;
 }
 
+@media screen and (max-width: 1200px) {
+  .startpageWrapper {
+    width: 50%;
+  }
+  .spacer {
+    height: 5rem;
+  }
+}
 @media screen and (max-width: 800px) {
   h1 {
     font-size: 2rem;

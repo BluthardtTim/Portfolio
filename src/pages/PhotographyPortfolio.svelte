@@ -9,7 +9,7 @@
     </div>
     <div class="spacer"></div>
     <div style="text-align: center;">
-        <p>More prictures on Instagram <a href="https://www.instagram.com/blugraphy.jpg/" target="_blank">@blugraphy</a> </p>
+        <p>More prictures on Instagram <a href="https://www.instagram.com/blugraphy.jpg/" target="_blank">@blugraphy.jpg</a> </p>
     </div>
     <div class="startpageWrapper">
         <Footer />

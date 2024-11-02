@@ -108,6 +108,7 @@
         color: black;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 30px;
     }
     .card:hover {
         background-color: #f1f1f1;
