@@ -35,7 +35,7 @@
     <div class="spacer50"></div>
     <Cardflowfunction />
     <div class="startpageWrapper">
-        <div class="spacer200"></div>
+        <div class="spacer100"></div>
         <h5>I am currently looking for an internship</h5>
         <p>
             Starting in spring of 2025 I’m looking for an internship in a team
@@ -50,8 +50,8 @@
 </main>
 
 <style>
-    .spacer200 {
-        height: 200px;
+    .spacer100 {
+        height: 150px;
     }
     .spacer50 {
         height: 50px;

@@ -23,11 +23,11 @@
         <h5>Outcome of a Design Sprint</h5>
         <p class="twocoloumns">
             As part of a university project, this project focuses on the concept
-            and design of an app aimed at preventing food waste. The project
-            followed the structure of the Google Design Sprint. Over the course
-            of a week, topics such as user research, prototyping, etc. were
-            addressed, ending in the creation of a Minimum Viable Product (MVP)
-            by the end of the sprint."
+            and design of an app that aimes to prevent food waste. The project
+            followed the structure of the Google Design Sprint. Within a week,
+            topics such as user research, prototyping, etc. were addressed,
+            ending in the creation of a Minimum Viable Product (MVP) by the end
+            of the sprint."
         </p>
         <Image
             src="../images/Growceries/GrowSprint.png"
@@ -39,10 +39,10 @@
         <h5>What is Growceries?</h5>
         <p class="twocoloumns">
             Growceries is a MVP, a platform where farmers can reach out to
-            customers and customers can find grown locally food. Foodwase can be
-            reduced because farmers or any other grandma can sell their harvest
-            witch is to much for their own usage. Throught that customers have
-            easier access to regional and ecological food.
+            customers and customers can find locally grown food. Foodwaste can
+            be reduced because farmers or any other grandma can sell their
+            harvest which is to much for their own usage. That allows customers
+            to have easier access to regional and ecological food.
         </p>
         <Image
             src="../images/Growceries/GrowFlow.png"
@@ -50,38 +50,39 @@
         />
         <div class="spacer"></div>
 
-        <h5>Design Prozess</h5>
+        <h5>Design Process</h5>
         <p class="twocoloumns">
-            Firstly we reached out and did Interviews with potential users to
-            gain valuable insights. Speeking to our target griup, loakl farmers
-            and environment friendly consumers helped us to understand the needs
-            and problems of both sides. We found out that for a lot of people
-            ecological and regional food is important but having an extra step
-            of driving somwhere else to get the regional food is often to much
-            effort. So we needed a solution that makes the effort as low as
-            possible but also alows other customers drive further if they want
-            to. Secondly the privacy was an important factor, so it is important
-            to hide the exact location of a selling farmer but at the same time 
-            making the customer know how long it takes to get to the location.
-            Also later in the process the customer must know where to go to pick 
-            up the harvest.
+            First, we interviewed potential users to gain
+            valuable insights. Speaking to our target group, local farmers and
+            environment friendly consumers helped us to understand the needs and
+            problems of both sides. We discovered that ecological and regional
+            food is important for a lot of people. To drive somwhere else just to get
+            the regional food is often to much effort. 
+            
+            So we needed a solution
+            that brings transportation to a minimum and also allows other
+            customers to drive further if they want to. Secondly, privacy is an
+            important factor. Therefore it is important to hide the exact location of a
+            selling farmer, but at the same time letting the customer know how
+            long it takes to get to the target location. Additionally the
+            customer must be informed where to go ans pick up the goods.
         </p>
 
         <p class="twocoloumns">
             Out of these insights we framed 'How might we' questions to clearly
-            define the outcome for the application. Following market research,
+            define the applications outcome. After a deep market research,
             we proceeded with initial sketches and visualizations. The process
-            also included user testing to refine the concept, leading to the
+            also included user testing to refine the concept. This led to the
             development of a final Minimum Viable Product (MVP).
         </p>
         <div class="spacer"></div>
         <h5>Branding</h5>
         <p class="twocoloumns">
-            To create a playful yet professional look for our app, we developed
+            To create a professional look for our app, we developed
             brand guidelines and applied them to our product. These guidelines
             ensure an intuitive and visually appealing interface, making it easy
             for users to navigate while maintaining consistency across the
-            Application.
+            application.
         </p>
         <img src="../images/Growceries/GrowBranding.png" alt="Branding" />
 
@@ -91,9 +92,9 @@
         <p class="twocoloumns">
             The result of the project is a fully functional prototype of the
             Growceries app. The app connects local farmers with consumers,
-            allowing users to purchase fresh produce directly from the farm. The
-            app also includes a feature that allows users to share their own
-            produce with others, thereby reducing food waste.
+            allowing users to purchase fresh products directly from the farm. The
+            app also allows users to share their own
+            product with others. This helps to reduce food waste.
         </p>
         <YouTubeVideoEmbed url={GrowceriesVideourl} project="Growceries" />
     </div>

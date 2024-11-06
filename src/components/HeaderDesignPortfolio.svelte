@@ -25,22 +25,21 @@
             <div>
                 <h1>Tim Bluthardt</h1>
                 <p style="margin-top: 40px; max-width: 600px;">
-                    <span 
+                    <span
                         on:mouseenter={handleMouseEnter}
                         on:mouseleave={handleMouseLeave}
-                        on:mousemove={handleMouseMove}
-                    >Hi, I’m Tim</span
-                    >, an Interaction Design student based in Schwäbisch Gmünd, Germany.
-                    My strong interest in new
-                    technologies and how design can help integrate them
-                    seamlessly into meaningful user experience, shapes the way I
-                    design.
+                        on:mousemove={handleMouseMove}>Hi, I’m Tim</span
+                    >, an Interaction Design student based in Schwäbisch Gmünd,
+                    Germany. 
+                    The way I design is driven by my strong interest in new
+                    technologies and how design can help to seamlessly integrate
+                    them into meaningful user experiences.
                 </p>
                 <div class="thatsme">
-                    <p>that's me</p>
+                    <p>my interests</p>
                     <img
                         id="iconarrow"
-                        src="../images/icons/arrow-up-right-light.svg"
+                        src="../images/icons/arrow-bend-right-down-light.svg"
                         alt="Arrow icon"
                     />
                 </div>
@@ -50,10 +49,10 @@
 
         <!-- Das Bild, das bei Hover angezeigt wird -->
         {#if showImage}
-            <img 
-                src="../images/Portrait2.jpg" 
-                alt="Hover Image" 
-                class="hover-image" 
+            <img
+                src="../images/Portrait2.jpg"
+                alt="Hover Image"
+                class="hover-image"
                 style="top: {mouseY}px; left: {mouseX}px;"
             />
         {/if}
@@ -80,8 +79,6 @@
     #iconarrow {
         width: 24px;
         height: 24px;
-        transform: rotate(90deg);
-        filter: invert(96%) sepia(0%) saturate(72%) hue-rotate(151deg) brightness(77%) contrast(108%);
         margin-left: 10px;
     }
     .thatsme {
@@ -108,7 +105,9 @@
         height: auto;
         pointer-events: none;
         z-index: 1000;
-        transition: top 0.1s, left 0.1s;
+        transition:
+            top 0.1s,
+            left 0.1s;
         border-radius: 12px;
     }
     @media (max-width: 800px) {

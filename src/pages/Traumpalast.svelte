@@ -24,10 +24,10 @@
         <div>
             <h5>Overview of the project</h5>
             <p class="twocoloumns">
-                Traumpalast is a cinema chain from southern Germany with an app
-                that, let's say, could use a makeover. And that's exactly what
+                "Traumpalast" is a cinema chain from southern Germany with an app
+                thathas an old design and needs a makeover. And that's exactly what
                 we did! We had a look at the customer journey of the current
-                Traumpalast app, looked at what other cinema brands do well, and
+                Traumpalast app. We looked at what other cinema brands do well and
                 redesigned the Traumpalast app from scratch. This included
                 rethinking the concept, user journey, features, and visual
                 design.
@@ -37,7 +37,7 @@
         <div>
             <h5>Why Redesign the Traumpalast App?</h5>
             <p class="twocoloumns">
-                The navigation structure of the old Traumpalast App was chaotic
+                The navigation structure of the old Traumpalast app was chaotic
                 and unstructured, with many possible ways to reach the same
                 pages or features. The app also appeared to be an exact copy of
                 the website, with features unnecessary for mobile applications
@@ -50,15 +50,15 @@
         </div>
         <div class="spacer"></div>
         <div>
-            <h5>Design Prozess</h5>
+            <h5>Design Process</h5>
             <p class="twocoloumns">
-                With the current App in our hands we started having a look at
-                the navigation structure, created a Featurelist and KANO-Model
-                to outsource useless features and using the insights to a define
+                With the current App in our hands we started by having a look at
+                the old navigation structure: Afterwards we created a Featurelist and KANO-Model
+                to outsource useless features and used the insights to define
                 a new concept for the Traumpalast App. After forming personas
                 for a potential user group we did user research to find the
                 exact needs and build the new visual design upon these insights.
-                Based on these results we build mid-fidelity wireframes
+                Based on these results we build mid-fidelity wireframes.
             </p>
         </div>
         <Image
@@ -72,8 +72,8 @@
             <p class="twocoloumns">
                 To create a playful yet professional look for our app, we
                 developed brand guidelines and applied them to our product.
-                These brand guidelines ensure a consistent user interface and
-                help users navigate through the app.
+                These brand guidelines ensures a consistent user interface and
+                help users to navigate through the app.
             </p>
         </div>
         <Image

@@ -28,7 +28,7 @@
                 and selecting one that we believe has the potential to address a
                 problem within the next 5 to 10 years. We started the design
                 process by creating a concept for augmented reality, which led
-                to the development of Spot. Spot is a spacial computing tool
+                to the development of Spot. Spot is a spatial computing tool
                 where thoughts and ideas can be stored. The location based
                 information will allow you to exes our information wherever it
                 gets nesesary.
@@ -119,8 +119,8 @@
         <p class="twocoloumns">
             To present our concept, we created a video that shows the potential
             of Spot. The video shows how Spot can be used in everyday life and
-            how it can help you to store and reuse your thoughts. Spot is a spacial
-            concept yet. But with the ongoing development of spacial computing
+            how it can help you to store and reuse your thoughts. Spot is a spatial
+            concept yet. But with the ongoing development of spatial computing
             and device to make it usefull I believe that Spot can be a usefull
             tool in the future.
         </p>

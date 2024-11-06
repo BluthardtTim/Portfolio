@@ -5,7 +5,7 @@
     {
       id: 1,
       title: "Spot",
-      description: "A spacial computing tool for thinking, keeping and using ideas.",
+      description: "A spatial computing tool for thinking, keeping and using ideas.",
       semesterinfo: "Invention Design",
       imgClass: "backgroundimgSpot",
       videoUrl: "../videos/SpotKeyvisual.mp4",

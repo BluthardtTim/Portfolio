@@ -6,11 +6,12 @@
 <main>
     <div id="wrapper">
         <div class="startpageWrapper">
-
             <div class="spacer"></div>
             <div class="spacer"></div>
 
-            <div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
+            <div
+                style="display: flex; flex-direction: row; align-items: center; gap: 20px;"
+            >
                 <div class="imageCard">
                     <img src="../images/Portrait2.jpg" alt="Portrait" />
                 </div>
@@ -20,25 +21,24 @@
             </div>
             <p>
                 I'm currently studying Interaction Design at University of
-                Design in Schwäbisch Gmünd, Germany. I have a strong
-                interest in new technologies and am curious about where the
-                future of technology is heading. Through my studies, I'm
-                exploring how design and technology come together to create
-                meaningful user experiences, and I'm excited to be part of
-                this ever-evolving field. I am always looking for new
-                opportunities to learn and grow as a designer and
-                photographer.
+                Design in Schwäbisch Gmünd, Germany. I have an strong interest
+                in new technologies and I'm curious about where the future of
+                technology is heading. In my studies, I'm exploring how design
+                and technology are coming together to create meaningful user
+                experiences, and I'm excited to be part of this ever-evolving
+                field. I'm always looking for new opportunities to learn and
+                grow as a designer and photographer.
             </p>
 
             <div class="spacer"></div>
 
             <div class="text">
                 <p>
-                    Apart from design, I am passionate about sports. I spend
-                    most of my free time mountain biking, always looking for
+                    Apart from design, I'm passionate about sports. Most of my
+                    free time I spend on my mountainbike, always looking for
                     technical challenges on the trails. I also enjoy other
                     physical activities such as jogging, going to the gym or
-                    just playing basketball with friends.
+                    playing basketball with friends.
                 </p>
             </div>
             <div class="card">
@@ -54,10 +54,11 @@
 
             <div class="text">
                 <p>
-                    My second creative passion is photography. My camera has
-                    been with me for a few years now. If you are interested
-                     in seeing more of my work, you can check out my
-                    <a href="#/photo">gallery</a>
+                    My other creative passion is photography. I discoverd my
+                    passion for photography a few years ago, since then it has
+                    become difficult to leave my camera at home. If you are
+                    interested in seeing more of my work, you can have a look on my
+                    <a href="#/photo">gallery</a>.
                 </p>
             </div>
             <div class="card">
@@ -65,7 +66,7 @@
                     <img src="../images/Portrait.jpg" alt="Portrait" />
                 </div>
             </div>
-            
+
             <div class="spacer"></div>
 
             <div style="display: flex; justify-content: center;">
@@ -74,7 +75,7 @@
 
             <div>
                 <p>
-                    With riding bikes, cooking, traveling and photo- and
+                    Since I like riding bikes, cooking, traveling and photo- and
                     videography I am passionate about creating and developing
                     ideas. I also love to step outside, take a deep breath, gain
                     fresh perspectives, and find inspiration.
@@ -129,6 +130,5 @@
         height: 10px;
     }
     @media (max-width: 800px) {
-
     }
 </style>
