@@ -78,7 +78,9 @@
             <div class="highlight" style="left: {highlightLeft}; width: {highlightWidth};"></div>
                 <a class="ankerlink" href="#/playground">
                     <div id="playgroundButton" class="NavButton" class:active={selectedItem === "playground"} on:click={() => setSelected("playground")}>
+                        {#if !ismobile}
                         <img src="../images/icons/pen-nib-light_white.svg" alt="">
+                        {/if}
                         {#if selectedItem === "playground" || ismobile}
                             <p>Playground</p>
                         {/if}
@@ -86,17 +88,21 @@
                 </a>
                 <a class="ankerlink" href="#/">
                     <div id="projectsButton" class="NavButton" class:active={selectedItem === "projects"} on:click={() => setSelected("projects")}>
+                        {#if !ismobile}
                         <img src="../images/icons/folders-light.svg" alt="">
+                        {/if}
                         {#if selectedItem === "projects" || ismobile}
-                            <p>My Projects</p>
+                            <p> Projects</p>
                         {/if}
                     </div>
                 </a>
                 <a class="ankerlink" href="#/aboutme">
                     <div id="aboutMeButton" class="NavButton" class:active={selectedItem === "aboutme"} on:click={() => setSelected("aboutme")}>
+                        {#if !ismobile}
                         <img src="../images/icons/user-light.svg" alt="">
+                        {/if}
                         {#if selectedItem === "aboutme" || ismobile}
-                            <p>About Me</p>
+                            <p>About</p>
                         {/if}
                     </div>
                 </a>
@@ -205,7 +211,7 @@
         flex-direction: column;
         }
         .NavButton p{
-            font-size: 9px;
+            /* font-size: 9px; */
         }
 
     }
