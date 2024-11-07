@@ -49,7 +49,7 @@
         viewportHeight = window.innerHeight;
         console.log(cardHeight);
       }
-    }, 100);
+    }, 400);
   });
 
   function playVideo(videoElement) {
