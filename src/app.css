@@ -134,5 +134,8 @@
     .spacer {
       height: 4rem;
     }
+    .project_layout .txt{
+      grid-template-columns: 1fr;
+    }
   }
   

@@ -8,7 +8,7 @@
 </script>
 
 <main>
-    <div class="CaseStudyCredits">
+    <div class="pageWrapper CaseStudyCredits">
         <div>
             <p><strong>my role</strong></p>
             <p>{myRole}</p>
@@ -48,6 +48,32 @@
             width: 100%;
             gap: 20px;
             grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (max-width: 600px) {
+        .CaseStudyCredits {
+            width: 100%;
+            grid-template-columns: 1fr;
+        }
+        .CaseStudyCredits div {
+            grid-template-columns: 1fr;
+            gap: 0;
+            margin-bottom: 2rem;
+        }
+        .CaseStudyCredits div p:first-child {
+            text-align: left;
+        }
+        .CaseStudyCredits div p:last-child {
+            text-align: left;
+        }
+        .CaseStudyCredits div p {
+            text-align: left;
+        }
+        .CaseStudyCredits div p:first-child {
+            text-align: left;
+        }
+        .CaseStudyCredits div p:last-child {
+            text-align: left;
         }
     }
 </style>
