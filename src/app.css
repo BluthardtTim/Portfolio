@@ -137,5 +137,8 @@
     .project_layout .txt{
       grid-template-columns: 1fr;
     }
+    .project_layout .quote {
+      grid-template-columns: 1fr;
+    }
   }
   
