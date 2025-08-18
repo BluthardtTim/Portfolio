@@ -3,7 +3,7 @@
 
 <main>
     <div id="wrapper">
-        <!-- <p>© 2024 Tim Bluthardt</p> -->
+        <p>© 2025 Tim Bluthardt</p>
         <p><a href="#/imprint">Imprint</a></p>
     </div>
 </main>
@@ -11,18 +11,22 @@
 <style>
     #wrapper {
         display: flex;
-        justify-content: flex-start;
+        justify-content: flex-end;
         align-items: center;
-        margin: 0 auto;
-        height: 140px;
-        color: #9d9d9d;
-        /* margin-top: 50px; */
-        gap: 50px;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        height: auto;
+        gap: 2rem;
+        padding: 2rem;
+
+    }
+    p {
+        font-size: 14px;
+        margin: 0;
+        color: #9D9D9D;
     }
     a {
-        color: #9d9d9d;
-        /* font-weight: 200; */
-        
+        color: #9D9D9D;
     }
     a:hover {
         color: #000;

@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
+
   const cards = [
     {
       id: 2,
@@ -102,7 +103,7 @@
     color: black;
   }
   p {
-    color: #9d9d9d;
+    color: #6a6a6a;
     font-size: 18px;
   }
   .container {
@@ -118,8 +119,9 @@
   }
   .card {
     width: 100%;
-    background-color: #F9F9F9;
-    transition: all 0.5s ease;
+    background-color: rgba(249, 249, 249, 0.95);
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
     border-radius: 22px;
     border: 1.5px #E3E3E3 solid;
     padding: 40px;
@@ -133,7 +135,6 @@
   .cardWrapper {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 8px;
   }
   .imgWrapper {
     display: grid;

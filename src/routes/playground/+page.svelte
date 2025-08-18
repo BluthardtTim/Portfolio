@@ -1,7 +1,6 @@
 <script>
     import Footer from "$lib/components/Footer.svelte";
 
-
     const projects = {
         Photography: {
             title: "My Photography Selection",
@@ -27,7 +26,8 @@
         },
         Growceries: {
             title: "Growceries",
-            description: "An Application that conects lokal farmers to reduse foodwaste",
+            description:
+                "An Application that conects lokal farmers to reduse foodwaste",
             imageClass: "backgroundimgGrow",
             imgUrl: "../images/GrowCard_mobile.png",
             route: "growceries",
@@ -41,13 +41,15 @@
 <main>
     <div class="savespaceTop"></div>
 
-    <div class="startpageWrapper">
-        <p>
-            Welcome to my playground, my personal collection of random designs,
-            photographs,
-            explorations or any thing that I could not find a
-            place to show
-        </p>
+    <div class="project_layout">
+        <div class="txt">
+            <h5>Playground</h5>
+            <p>
+                Welcome to my playground, my personal collection of random
+                designs, photographs, explorations or any thing that I could not
+                find a place to show
+            </p>
+        </div>
     </div>
 
     <div class="spacer"></div>
@@ -76,7 +78,7 @@
     </div>
 
     <div class="spacer"></div>
-    
+
     <div class="startpageWrapper">
         <Footer />
     </div>
@@ -88,10 +90,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-    }
-    p {
-        color: #9d9d9d;
-        font-size: 18px;
     }
     .card {
         width: 100%;

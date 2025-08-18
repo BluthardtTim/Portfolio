@@ -6,7 +6,7 @@
     import YouTubeVideoEmbed from "$lib/components/YouTubeVideoEmbed.svelte";
 
 
-    let selectedProjects = ["Spot", "Traumpalast"];
+    let selectedProjects = ["Xtend",];
     let GrowceriesVideourl = "https://youtu.be/Di2I94OvIoo";
     let teamNames = [
         {

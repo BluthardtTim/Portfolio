@@ -63,24 +63,6 @@
                 style="left: {highlightLeft}; width: {highlightWidth};"
             ></div>
 
-            <a class="ankerlink" href="/playground">
-                <div
-                    bind:this={playgroundButton}
-                    class="NavButton"
-                    class:active={selectedItem === "playground"}
-                    on:click={() => setSelected("playground")}
-                >
-                    {#if !ismobile}
-                        <img
-                            src="../images/icons/pen-nib-light_white.svg"
-                            alt=""
-                        />
-                    {/if}
-                    {#if selectedItem === "playground" || ismobile}
-                        <p>Playground</p>
-                    {/if}
-                </div>
-            </a>
 
             <a class="ankerlink" href="/">
                 <div
@@ -89,14 +71,37 @@
                     class:active={selectedItem === "projects"}
                     on:click={() => setSelected("projects")}
                 >
-                    {#if !ismobile}
+                    <!-- {#if !ismobile}
                         <img src="../images/icons/folders-light.svg" alt="" />
                     {/if}
-                    {#if selectedItem === "projects" || ismobile}
+                    {#if selectedItem === "projects" || ismobile} -->
                         <p>Projects</p>
-                    {/if}
+                    <!-- {/if} -->
                 </div>
             </a>
+
+
+
+            <a class="ankerlink" href="/playground">
+                <div
+                    bind:this={playgroundButton}
+                    class="NavButton"
+                    class:active={selectedItem === "playground"}
+                    on:click={() => setSelected("playground")}
+                >
+                    <!-- {#if !ismobile}
+                        <img
+                            src="../images/icons/pen-nib-light_white.svg"
+                            alt=""
+                        />
+                    {/if}
+                    {#if selectedItem === "playground" || ismobile} -->
+                        <p>Playground</p>
+                    <!-- {/if} -->
+                </div>
+            </a>
+
+            
 
             <a class="ankerlink" href="/aboutme">
                 <div
@@ -105,12 +110,12 @@
                     class:active={selectedItem === "aboutme"}
                     on:click={() => setSelected("aboutme")}
                 >
-                    {#if !ismobile}
+                    <!-- {#if !ismobile}
                         <img src="../images/icons/user-light.svg" alt="" />
                     {/if}
-                    {#if selectedItem === "aboutme" || ismobile}
+                    {#if selectedItem === "aboutme" || ismobile} -->
                         <p>About</p>
-                    {/if}
+                    <!-- {/if} -->
                 </div>
             </a>
         </div>
@@ -131,12 +136,15 @@
         bottom: 0;
         gap: 20px;
         z-index: 10;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 50%;
     }
     .NavbarWrapper {
         position: relative;
         height: 56px;
-        padding: 2px;
-        background-color: #393939;
+        padding: 4px;
+        background-color: #000000;
         border: solid 0.5px #bcbcbc;
         border-radius: 50px;
         display: flex;
@@ -144,9 +152,12 @@
         justify-content: space-around;
         transition: all 0.3s ease-in-out;
         z-index: 100;
+        opacity: 0.65;
+        
     }
     .NavbarWrapper p {
         font-size: 16px;
+        font-weight: 400;
     }
     .NavbarWrapper:hover {
         animation: bounce 0.5s;
@@ -154,14 +165,14 @@
 
     .highlight {
         position: absolute;
-        height: 92%;
-        background-color: #80c181;
-        border-radius: 50px;
+        height: 46px;
+        background-color: white;
+        border-radius: 23px;
         transition: all 0.5s;
         z-index: 0;
     }
     .active {
-        color: white;
+        color: black;
     }
     .NavButton {
         height: 100%;
@@ -202,7 +213,7 @@
             flex-direction: column;
         }
         .NavButton p {
-            font-size: 9px;
+            font-size: 14px;
         }
     }
 </style>
