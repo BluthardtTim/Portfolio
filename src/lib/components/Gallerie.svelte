@@ -84,18 +84,18 @@
   }
   .gallery {
     display: grid;
-    gap: 20px;
+    gap: 4px;
   }
   .column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 4px;
   }
 
   .gallery img {
     width: 100%;
     height: auto;
-    border-radius: 6px;
+    border-radius: 2px;
     object-fit: cover;
     transition: transform 0.3s ease;
   }
