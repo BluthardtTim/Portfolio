@@ -10,6 +10,10 @@
     let selectedProjects = ["Growceries", "Spot"];
 </script>
 
+<svelte:head>
+    <title>Tim Bluthardt | Traumpalast</title>
+</svelte:head>
+
 <main>
     <ProjectHeader
         title="Traumpalast"

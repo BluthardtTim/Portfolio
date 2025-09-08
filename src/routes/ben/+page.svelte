@@ -21,6 +21,10 @@
     let selectedProjects = ["LYS", "Spot"];
 </script>
 
+<svelte:head>
+    <title>Tim Bluthardt | BEN</title>
+</svelte:head>
+
 <main>
     <ProjectHeader
         title="Ben"

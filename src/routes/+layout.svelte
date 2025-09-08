@@ -9,6 +9,10 @@
     injectSpeedInsights();
 </script>
 
+<svelte:head>
+  <title>Tim Bluthardt</title>
+</svelte:head>
+
 <main>
   <slot />
   <Navbar />

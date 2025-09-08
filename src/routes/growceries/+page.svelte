@@ -24,6 +24,10 @@
     ];
 </script>
 
+<svelte:head>
+    <title>Tim Bluthardt | Growceries</title>
+</svelte:head>
+
 <main>
     <ProjectHeader
         title="Growceries"

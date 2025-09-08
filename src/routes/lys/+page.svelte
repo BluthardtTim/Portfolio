@@ -28,6 +28,10 @@
   ];
 </script>
 
+<svelte:head>
+    <title>Tim Bluthardt | LYS</title>
+</svelte:head>
+
 <main>
     <ProjectHeader
         title="LYS"

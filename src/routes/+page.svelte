@@ -6,6 +6,12 @@
     import Techstack from "$lib/components/Techstack.svelte";
 </script>
 
+<svelte:head>
+    <title>Tim Bluthardt</title>
+    <meta name="og:title" content="Tim Bluthardt | UX Design" />
+    <meta name="twitter:title" content="Tim Bluthardt | UX Design" />
+</svelte:head>
+
 <main>
     <div class="spacer50"></div>
     <div class="savespaceTop"></div>
