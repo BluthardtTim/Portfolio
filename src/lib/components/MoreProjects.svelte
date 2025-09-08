@@ -94,7 +94,7 @@
         height: auto;
     }
     .card p {
-        color: #9d9d9d;
+        color: #6a6a6a;
         font-size: 18px;
     }
     #seperator {

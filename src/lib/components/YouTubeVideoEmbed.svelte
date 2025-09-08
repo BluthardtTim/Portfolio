@@ -118,6 +118,9 @@
         align-items: center;
         transition: width 0.3s ease-in-out;
     }
+    .play-button img {
+        margin-bottom: 0px !important;
+    }
     .play-button:hover {
         width: 120px;
     }

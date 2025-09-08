@@ -39,10 +39,18 @@
   ];
 
   let loseStatus = Array(cards.length).fill(false);
+  let blurValues = Array(cards.length).fill(0);
   let cardHeight = 0;
   let viewportHeight = 0;
+  let isMobile = false;
 
   onMount(() => {
+    const setIsMobile = () => {
+      isMobile = window.innerWidth <= 800;
+    };
+    setIsMobile();
+    window.addEventListener("resize", setIsMobile, { passive: true });
+
     setTimeout(() => {
       const firstCard = document.querySelector(".card");
       if (firstCard) {
@@ -50,6 +58,52 @@
         viewportHeight = window.innerHeight;
       }
     }, 400);
+
+    const handleScroll = () => {
+      if (isMobile) return; // keine Blur-/Overlap-Logik auf Mobile
+      const cardElements = document.querySelectorAll(".card");
+      
+      cardElements.forEach((card, index) => {
+        if (index === 0) return; // Skip first card
+        
+        const cardRect = card.getBoundingClientRect();
+        const prevCard = cardElements[index - 1];
+        const prevCardRect = prevCard.getBoundingClientRect();
+        
+        // Calculate overlap when cards start to overlap
+        const overlapStart = prevCardRect.bottom - cardRect.top;
+        const halfCardHeight = cardHeight / 2;
+        
+        if (overlapStart > 0) {
+          // Start blurring when 50% overlap is reached
+          const blurIntensity = Math.min((overlapStart / halfCardHeight) * 2, 2);
+          blurValues[index - 1] = blurIntensity;
+        } else {
+          blurValues[index - 1] = 0;
+        }
+      });
+      
+      // Trigger reactivity
+      blurValues = [...blurValues];
+    };
+
+    let ticking = false;
+    const throttledScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", throttledScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener("scroll", throttledScroll);
+  window.removeEventListener("resize", setIsMobile);
+    };
   });
 
   function playVideo(videoElement) {
@@ -68,7 +122,7 @@
       <div
         class:lose={loseStatus[index]}
         class="card"
-        style="top: calc({viewportHeight / 2}px - {cardHeight / 2}px - 6vh + {index * 15}px);"
+        style={!isMobile ? `top: calc(${viewportHeight / 2}px - ${cardHeight / 2}px - 6vh + ${index * 15}px); filter: blur(${blurValues[index]}px);` : ''}
       >
         <a href={`/${card.title.toLowerCase()}`}>
           <div class="cardWrapper">
@@ -98,7 +152,7 @@
 </main>
 
 <style>
-  h1, h3, h5 {
+  h3 {
     z-index: 2;
     color: black;
   }
@@ -119,8 +173,8 @@
   }
   .card {
     width: 100%;
-    background-color: rgba(249, 249, 249, 0.95);
-    backdrop-filter: blur(6px);
+    background-color: rgba(249, 249, 249, 1);
+    /* backdrop-filter: blur(6px); */
     transition: all 0.3s ease;
     border-radius: 22px;
     border: 1.5px #E3E3E3 solid;
@@ -175,17 +229,20 @@
 
   @media (max-width: 800px) {
     .container {
-      height: 1800px;
+      height: auto; 
       width: 90%;
     }
     .card {
       width: 100%;
-      padding: 30px;
-      overflow-y: hidden; 
+      padding: 25px; /* kompakter */
+      overflow-y: hidden;
+      position: relative; /* Sticky auf Mobile aus */
+      margin-top: 0px; /* weniger vertikaler Raum */
     }
     .cardWrapper {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 2fr;
+      grid-template-rows: auto auto;
+      gap: 2rem; /* kompakter */
     }
     .imgWrapper {
       overflow: hidden;
@@ -193,11 +250,24 @@
     }
     .prevImg {
       width: 100%;
-      height: 250px;
-      object-fit: cover;
+      aspect-ratio: 4 / 5; /* konsistente und geringere Höhe */
+      height: auto;
     }
+    .prevImg img { height: 100%; }
     .none {
       display: none;
     }
+    /* Text kompakter + clampen für geringere Höhe */
+    p { font-size: 16px; }
+  .cardtxt p { max-width: none; }
+    .cardtxt p:first-of-type {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    /* Semesterinfo inline halten, falls lang */
+    .cardtxt > p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   }
 </style>

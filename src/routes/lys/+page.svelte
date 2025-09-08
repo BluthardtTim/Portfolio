@@ -20,6 +20,12 @@
         },
     ];
     let selectedProjects = ["BEN", "Spot"];
+
+    const imgs = [
+    { src: '../images/LYS/LYSProto1.png', alt: '' },
+    { src: '../images/LYS/LYSProto2.png', alt: '' },
+    { src: '../images/LYS/LYSProto3.png', alt: '' }
+  ];
 </script>
 
 <main>
@@ -45,7 +51,6 @@
                 </p>
             </div>
             <div class="quote">
-                <div></div>
                 <p>
                     “Modern homes and their embedded technologies have been
                     built with a focus on interactions that are functional over
@@ -124,14 +129,7 @@
                     canceled - just as we imagine for the final product.
                 </p>
             </div>
-            <ThreeImages
-                src={[
-                    "../images/LYS/Prototype3.png",
-                    "../images/LYS/Prototype3.png",
-                    "../images/LYS/Prototype3.png",
-                ]}
-                caption="Prototype of Pilot"
-            />
+            <ThreeImages images={imgs} gap="1rem" rounded={true} aspectRatio="3 / 4" />
             
         </div>
     </div>
@@ -148,18 +146,5 @@
 </main>
 
 <style>
-    .spacer {
-        height: 7rem;
-    }
-    p {
-        margin-bottom: 3rem;
-    }
-    img {
-        margin-bottom: 3rem;
-    }
-    @media (max-width: 800px) {
-        p {
-            margin-bottom: 1rem;
-        }
-    }
+    
 </style>

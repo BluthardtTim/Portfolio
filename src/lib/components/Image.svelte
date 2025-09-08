@@ -25,6 +25,7 @@
     img {
         max-width: 100%;
         height: auto;
+        margin-bottom: 0px !important;
     }
     .caption {
         margin-top: 0.5rem;

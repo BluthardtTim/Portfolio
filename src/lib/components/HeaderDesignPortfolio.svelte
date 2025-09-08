@@ -63,6 +63,7 @@
         text-decoration: underline;
         text-underline-offset: 4px;
         transition: all 0.2s ease-in-out;
+        font-weight: 600;
     }
     p span:hover {
         color: black;
@@ -77,7 +78,8 @@
             top 0.1s,
             left 0.1s;
         border-radius: 12px;
-        border: solid 4px rgb(255, 255, 255);
+        border: solid 4px rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(4px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
     @media (max-width: 800px) {

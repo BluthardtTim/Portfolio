@@ -29,10 +29,10 @@
         }
     }
 
-    function updateFromRoute(route) {
-        if (path.startsWith("/aboutme")) {
+    function updateFromRoute(pathname) {
+        if (pathname.startsWith("/aboutme")) {
             selectedItem = "aboutme";
-        } else if (path.startsWith("/playground")) {
+        } else if (pathname.startsWith("/playground")) {
             selectedItem = "playground";
         } else {
             selectedItem = "projects";
@@ -53,6 +53,14 @@
         await tick(); // warte auf DOM update
         updateHighlightPosition();
     });
+
+    // Reagiere auf Route-Wechsel und halte die Highlight-Position synchron
+    $: (async () => {
+        const current = $page.url.pathname;
+        updateFromRoute(current);
+        await tick();
+        updateHighlightPosition();
+    })();
 </script>
 
 <main>
@@ -63,31 +71,38 @@
                 style="left: {highlightLeft}; width: {highlightWidth};"
             ></div>
 
-
-            <a class="ankerlink" href="/">
+            <a
+                class="ankerlink"
+                href="/"
+                bind:this={projectsButton}
+                on:click={() => setSelected("projects")}
+                aria-current={selectedItem === "projects" ? "page" : undefined}
+            >
                 <div
-                    bind:this={projectsButton}
                     class="NavButton"
                     class:active={selectedItem === "projects"}
-                    on:click={() => setSelected("projects")}
                 >
                     <!-- {#if !ismobile}
                         <img src="../images/icons/folders-light.svg" alt="" />
                     {/if}
                     {#if selectedItem === "projects" || ismobile} -->
-                        <p>Projects</p>
+                    <p>Projects</p>
                     <!-- {/if} -->
                 </div>
             </a>
 
-
-
-            <a class="ankerlink" href="/playground">
+            <a
+                class="ankerlink"
+                href="/playground"
+                bind:this={playgroundButton}
+                on:click={() => setSelected("playground")}
+                aria-current={selectedItem === "playground"
+                    ? "page"
+                    : undefined}
+            >
                 <div
-                    bind:this={playgroundButton}
                     class="NavButton"
                     class:active={selectedItem === "playground"}
-                    on:click={() => setSelected("playground")}
                 >
                     <!-- {#if !ismobile}
                         <img
@@ -96,25 +111,27 @@
                         />
                     {/if}
                     {#if selectedItem === "playground" || ismobile} -->
-                        <p>Playground</p>
+                    <p>Playground</p>
                     <!-- {/if} -->
                 </div>
             </a>
 
-            
-
-            <a class="ankerlink" href="/aboutme">
+            <a
+                class="ankerlink"
+                href="/aboutme"
+                bind:this={aboutMeButton}
+                on:click={() => setSelected("aboutme")}
+                aria-current={selectedItem === "aboutme" ? "page" : undefined}
+            >
                 <div
-                    bind:this={aboutMeButton}
                     class="NavButton"
                     class:active={selectedItem === "aboutme"}
-                    on:click={() => setSelected("aboutme")}
                 >
                     <!-- {#if !ismobile}
                         <img src="../images/icons/user-light.svg" alt="" />
                     {/if}
                     {#if selectedItem === "aboutme" || ismobile} -->
-                        <p>About</p>
+                    <p>About</p>
                     <!-- {/if} -->
                 </div>
             </a>
@@ -136,15 +153,14 @@
         bottom: 0;
         gap: 20px;
         z-index: 10;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border-radius: 50%;
+        /* Blur und Radius auf die eigentliche Navbar verlegt */
     }
     .NavbarWrapper {
         position: relative;
         height: 56px;
         padding: 4px;
-        background-color: #000000;
+        /* Halbtransparenter Hintergrund statt globaler Opacity */
+        background-color: rgba(0, 0, 0, 0.65);
         border: solid 0.5px #bcbcbc;
         border-radius: 50px;
         display: flex;
@@ -152,8 +168,11 @@
         justify-content: space-around;
         transition: all 0.3s ease-in-out;
         z-index: 100;
-        opacity: 0.65;
-        
+        /* Blur direkt auf dem Container, damit er die Pille vollständig füllt */
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        /* Clipping auf die abgerundete Form */
+        overflow: hidden;
     }
     .NavbarWrapper p {
         font-size: 16px;
@@ -165,9 +184,11 @@
 
     .highlight {
         position: absolute;
-        height: 46px;
+        /* füllt vertikal exakt zwischen dem Innenabstand */
+        top: 4px;
+        bottom: 4px;
         background-color: white;
-        border-radius: 23px;
+        border-radius: 24px;
         transition: all 0.5s;
         z-index: 0;
     }

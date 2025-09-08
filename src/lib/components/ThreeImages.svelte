@@ -1,40 +1,53 @@
-<script>
-    const images = [
-        { src: "../images/LYS/LYSProto1.png", caption: "Vision Pro Prototype" },
-        { src: "../images/LYS/LYSProto2.png", caption: "Vision Pro Prototype" },
-        { src: "../images/LYS/LYSProto3.png", caption: "Vision Pro Prototype" },
-    ];
-</script>
 
-<div class="grid-container">
-    {#each images as { src, caption }, index}
-        <div class="image-wrapper">
-            <img {src} alt={caption} />
-        </div>
-    {/each}
+	<script>
+		// Bilder als Array übergeben: [{ src: '/images/foo.jpg', alt: '...' }, ...]
+		export let images = [];
+		// Abstand zwischen den Bildern
+		export let gap = '1rem';
+		// Abgerundete Ecken ein-/ausschalten
+		export let rounded = true;
+		// Optional: gewünschtes Seitenverhältnis (CSS aspect-ratio)
+		export let aspectRatio = '4 / 3';
+  
+	</script>
+
+
+<div class="image-grid" style={`--gap: ${gap}; --aspect: ${aspectRatio};`}>
+	{#each images.slice(0, 3) as img (img.src)}
+		<img
+			class:rounded
+			src={img.src}
+			alt={img.alt ?? ''}
+			loading="lazy"
+			decoding="async"
+		/>
+	{/each}
 </div>
 
 <style>
-    .grid-container {
-        display: flex;
-        justify-content: space-between;
-        max-width: 1200px;
-        margin: 0 auto;
-        gap: 2rem;
-    }
+	.image-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		align-items: stretch;
+	}
 
-    .image-wrapper {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
+	@media (max-width: 560px) {
+		.image-grid {
+            gap: 1rem;
+		}
+	}
 
-    .image-wrapper img {
-        height: 100%;
-        width: auto;
-        object-fit: cover;
-        border-radius: 12px;
-    }
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		aspect-ratio: var(--aspect, 4 / 3);
+		object-fit: cover;
+	}
+
+	.rounded {
+		border-radius: 6px;
+	}
 </style>
+

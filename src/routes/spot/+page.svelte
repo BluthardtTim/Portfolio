@@ -71,9 +71,12 @@
             <img src="../images/Spot/SpotIdeation.png" alt="Spot" />
             <div class="txt">
                 <h5>Future Scenario</h5>
-                <p style="font-size: 22px; text-align: center;">
-                    What if, in 5-10 years, you could use regular glasses with
-                    location-based information to store ideas and information?
+                <div></div>
+            </div>
+            <div class="quote">
+                <p>
+                    "What if, in 5-10 years, you could use regular glasses with
+                    location-based information to store ideas and information?"
                 </p>
             </div>
             <div class="txt">
@@ -199,15 +202,5 @@
 </main>
 
 <style>
-    p {
-        margin-bottom: 3rem;
-    }
-    img {
-        margin-bottom: 3rem;
-    }
-    @media (max-width: 800px) {
-        p {
-            margin-bottom: 1rem;
-        }
-    }
+
 </style>

@@ -5,7 +5,7 @@
         Photography: {
             title: "My Photography Selection",
             description:
-                "This is a selection of photos I have taken in the past few years",
+                "This is a selection of photos I have taken",
             imageClass: "backgroundimgPhoto",
             imgUrl: "../images/gallerie/03.jpg",
             route: "photo",
@@ -103,6 +103,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
+    }
+    .card p {
+        color: #6a6a6a;
+        font-size: 18px;
     }
     .card:hover {
         background-color: #f1f1f1;

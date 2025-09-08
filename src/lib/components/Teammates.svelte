@@ -11,20 +11,27 @@
 
 <main>
     <div id="wrapper">
-        {#each teammates as teammate, index}
-            <div>
+        {#each teammates as teammate}
+            <div class="teammate">
                 <a href="https://{teammate.portfolio}">
-                <p>{teammate.name}{#if index < teammates.length - 1},&nbsp;{/if}</p>
+                    <p>{teammate.name}</p>
                 </a>
             </div>
         {/each}
     </div>
+    
 </main>
 
 <style>
     #wrapper {
         display: flex;
+        flex-direction: column; /* Jeder Teammate in eigener Zeile */
         width: auto;
+        gap: 0.25rem;
+    }
+
+    .teammate a {
+        display: inline-block;
     }
     
 </style>
