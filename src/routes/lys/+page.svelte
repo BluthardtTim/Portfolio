@@ -22,10 +22,10 @@
     let selectedProjects = ["BEN", "Spot"];
 
     const imgs = [
-    { src: '../images/LYS/LYSProto1.png', alt: '' },
-    { src: '../images/LYS/LYSProto2.png', alt: '' },
-    { src: '../images/LYS/LYSProto3.png', alt: '' }
-  ];
+        { src: "../images/LYS/LYSProto1.png", alt: "" },
+        { src: "../images/LYS/LYSProto2.png", alt: "" },
+        { src: "../images/LYS/LYSProto3.png", alt: "" },
+    ];
 </script>
 
 <svelte:head>
@@ -58,13 +58,18 @@
                 <p>
                     “Modern homes and their embedded technologies have been
                     built with a focus on interactions that are functional over
-                    ones that feel natural.” <br> <span>(Timi Oyedeji, Prototyper/ Designer
-                        at Apple, former interaction Designer at Google ATAP)</span> 
+                    ones that feel natural.” <br />
+                    <span
+                        >(Timi Oyedeji, Prototyper/ Designer at Apple, former
+                        interaction Designer at Google ATAP)</span
+                    >
                 </p>
             </div>
-            <img src="../images/LYS/LYSBanner.png" alt="">
+            <img src="../images/LYS/LYSBanner.png" alt="" />
             <div class="txt">
-                <h5>Problemstatment</h5>
+                <h5>
+                    Technical Interactions need more context to feel natural
+                </h5>
                 <p>
                     Interactions with technical devices are often purely
                     functional. A light switch on the wall or the volume control
@@ -81,7 +86,10 @@
                 </p>
             </div>
             <div class="txt">
-                <h5>Solution</h5>
+                <h5>
+                    Lys learns routines and behaviours to shape interaction
+                    patterns
+                </h5>
                 <p>
                     LYS continuously learns your routines and behaviors in
                     everyday life and discovers interaction patterns between you
@@ -92,9 +100,9 @@
                     vacuum cleaners shouldn't disturb you either.
                 </p>
             </div>
-            <img src="../images/LYS/LYSSolution.png" alt="">
+            <img src="../images/LYS/LYSSolution.png" alt="" />
             <div class="txt">
-                <h5>Pilot</h5>
+                <h5>Pilot - Control behaviours</h5>
                 <p>
                     The heart of our project is Pilot - a product that
                     visualizes these abstract processes. Here, the collected
@@ -113,28 +121,33 @@
                     direct, WLAN-free connection to analyze or delete patterns.
                 </p>
             </div>
-            <img src="../images/LYS/LYSPilot.png" alt="">
+            <img src="../images/LYS/LYSPilot.png" alt="" />
             <div class="txt">
                 <h5>This is LYS</h5>
                 <p>
                     To present our concept, we created a video that shows the
-                    potential of LYS. The video shows how LYS can be used in
-                    everyday life and how it can help you...
+                    potential of LYS. How LYS can be used in everyday life and
+                    how interpreting the sensor data right can make human
+                    technology interactions feel so much more natural.
                 </p>
             </div>
             <YouTubeVideoEmbed url={LYSVideourl} project="LYS" />
             <div class="txt">
-                <h5>Prototyp</h5>
+                <h5>Interactive Prototype</h5>
                 <p>
-                    To make our vision for LYS and Pilot tangible right now, we
-                    have developed a prototype that we have trained with our own
-                    AI. If clapping or flicking is detected, it moves into an
-                    unstable position, which can then either be confirmed or
-                    canceled - just as we imagine for the final product.
+                    To make our vision for LYS and Pilot tangible, we developed
+                    a prototype that is trained with our own AI model. If
+                    clapping or flicking is detected, it moves into an unstable
+                    position, which can then either be confirmed or canceled.
+                    Just as we imagine for the final product.
                 </p>
             </div>
-            <ThreeImages images={imgs} gap="1rem" rounded={true} aspectRatio="3 / 4" />
-            
+            <ThreeImages
+                images={imgs}
+                gap="1rem"
+                rounded={true}
+                aspectRatio="3 / 4"
+            />
         </div>
     </div>
     <Credits
@@ -150,5 +163,4 @@
 </main>
 
 <style>
-    
 </style>

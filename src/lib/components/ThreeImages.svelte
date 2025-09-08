@@ -44,6 +44,7 @@
 		display: block;
 		aspect-ratio: var(--aspect, 4 / 3);
 		object-fit: cover;
+        margin: 0;
 	}
 
 	.rounded {
