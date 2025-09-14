@@ -44,10 +44,6 @@
             </div>
             <div class="txt">
                 <div></div>
-                <MeIcons />
-            </div>
-            <div class="txt">
-                <div></div>
                 <p>
                     Since I like riding bikes, cooking, traveling and photo- and
                     videography I am passionate about creating and developing
@@ -62,7 +58,4 @@
 </main>
 
 <style>
-    img {
-        margin: 150px 0;
-    }
 </style>
