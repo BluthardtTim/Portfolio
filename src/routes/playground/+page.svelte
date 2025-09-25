@@ -4,8 +4,7 @@
     const projects = {
         Photography: {
             title: "My Photography Selection",
-            description:
-                "This is a selection of photos I have taken",
+            description: "This is a selection of photos I have taken",
             imageClass: "backgroundimgPhoto",
             imgUrl: "../images/gallerie/03.jpg",
             route: "photo",
@@ -41,14 +40,16 @@
 <main>
     <div class="savespaceTop"></div>
 
-    <div class="project_layout">
-        <div class="txt">
-            <h5>Playground</h5>
-            <p>
-                Welcome to my playground, my personal collection of random
-                designs, photographs, explorations or any thing that I could not
-                find a place to show
-            </p>
+    <div class="pageWrapper">
+        <div class="project_layout">
+            <div class="txt">
+                <h5>Playground</h5>
+                <p>
+                    Welcome to my playground, my personal collection of random
+                    designs, photographs, explorations or any thing that I could
+                    not find a place to show
+                </p>
+            </div>
         </div>
     </div>
 
@@ -142,10 +143,35 @@
         }
         .card {
             width: 100%;
-            height: 430px;
-            padding: 30px;
+            --pad: 25px;
+            padding: var(--pad);
+            height: auto;
+            position: relative;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 2rem;
         }
+        /* Mobile: ein Bild, inspiriert vom Landing-Style */
+        .prevImg { height: auto; aspect-ratio: 5 / 4; }
+        .prevImg img { height: 100%; }
+        /* Typo & Spacing angelehnt an Landingpage */
+        .card p { font-size: 16px; }
+        .cardtxt {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: none;
+        }
+        /* Beschreibung auf 2 Zeilen clampen */
+        .cardtxt p:first-of-type {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        /* Kein Hover-Lift auf Touch-Geräten */
+        .card:hover { transform: none; }
     }
 </style>

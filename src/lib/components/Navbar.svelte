@@ -152,7 +152,8 @@
         margin-bottom: 40px;
         bottom: 0;
         gap: 20px;
-        z-index: 10;
+        /* Hoch genug setzen, damit nichts darüber liegt */
+        z-index: 9999;
         /* Blur und Radius auf die eigentliche Navbar verlegt */
     }
     .NavbarWrapper {
@@ -173,6 +174,7 @@
         -webkit-backdrop-filter: blur(8px);
         /* Clipping auf die abgerundete Form */
         overflow: hidden;
+        pointer-events: auto; /* sicherstellen, dass die Leiste Events fängt */
     }
     .NavbarWrapper p {
         font-size: 16px;
@@ -191,6 +193,7 @@
         border-radius: 24px;
         transition: all 0.5s;
         z-index: 0;
+        pointer-events: none; /* Highlight soll Klicks nicht abfangen */
     }
     .active {
         color: black;
@@ -208,6 +211,8 @@
         text-decoration: none;
         z-index: 2;
         color: #cccccc;
+        display: block;
+        height: 100%;
     }
     .ankerlink:hover {
         color: white;

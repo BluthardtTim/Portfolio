@@ -97,12 +97,7 @@
         color: #6a6a6a;
         font-size: 18px;
     }
-    #seperator {
-        margin-top: 20px;
-        width: 40vw;
-        border: 0.5px solid #ccc;
-        margin: 0 auto 50px;
-    }
+    
     #projectswrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -165,13 +160,33 @@
         }
         .card {
             width: 100%;
-            height: 430px;
-            padding: 30px;
+            --pad: 25px;
+            padding: var(--pad);
+            height: auto;
+            position: relative; /* Sticky auf Mobile aus */
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 2rem;
         }
-        #seperator {
-            width: 80vw;
+    /* Bild: 5:4 Seitenverhältnis */
+    .prevImg { height: auto; aspect-ratio: 5 / 4; }
+        .prevImg img { height: 100%; }
+        /* Typo & Spacing angelehnt an Landingpage */
+        .card p { font-size: 18px; }
+        .cardtxt {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: none;
+        }
+        /* Beschreibung auf 2 Zeilen clampen */
+        .cardtxt p:first-of-type {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
     }
 </style>

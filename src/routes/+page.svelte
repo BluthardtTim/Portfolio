@@ -50,19 +50,11 @@
     .spacer50 {
         height: 50px;
     }
-    h5 {
-        color: black;
-        font-weight: 500;
-    }
     p {
         color: #474747;
         max-width: 900px;
         /* margin: 0 auto; */
         font-size: 18px;
     }
-    @media (max-width: 800px) {
-        .spacer200 {
-            height: 100px;
-        }
-    }
+
 </style>

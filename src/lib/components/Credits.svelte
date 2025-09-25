@@ -26,7 +26,7 @@
 
 <style>
     p strong {
-        font-weight: 500;
+        font-weight: 600;
     }
     .CaseStudyCredits {
         margin-top: 15vh;
