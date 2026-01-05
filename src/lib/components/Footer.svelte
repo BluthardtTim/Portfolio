@@ -4,7 +4,7 @@
 <main>
     <div id="wrapper">
         <p>© 2025 Tim Bluthardt</p>
-        <p><a href="#/imprint">Imprint</a></p>
+        <p><a href="/imprint">Imprint</a></p>
     </div>
 </main>
 

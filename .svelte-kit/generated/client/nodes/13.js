@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/traumpalast/+page.svelte";
+export { default as component } from "../../../../src/routes/playground/xtend/+page.svelte";

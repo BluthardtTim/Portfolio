@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/playground/respiratorysystem/+page.svelte";
+export { default as component } from "../../../../src/routes/playground/growceries/+page.svelte";
