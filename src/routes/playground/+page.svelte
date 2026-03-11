@@ -63,11 +63,19 @@
     let mounted = false;
 
     onDestroy(() => {
-        if (browser) document.body.style.overflow = '';
+        if (browser) {
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+            document.documentElement.style.position = '';
+            document.documentElement.style.width = '';
+        }
     });
 
     onMount(() => {
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+        document.documentElement.style.position = 'fixed';
+        document.documentElement.style.width = '100%';
         cards = cards.map(c => ({
             ...c,
             x: (c.initX / 100) * window.innerWidth,
@@ -83,6 +91,7 @@
     let dragStartY = 0;
 
     function onPointerDown(e, i) {
+        e.preventDefault();
         dragIndex = i;
         dragOffsetX = e.clientX - cards[i].x;
         dragOffsetY = e.clientY - cards[i].y;
@@ -265,6 +274,7 @@
         background: var(--bg);
         overflow: hidden;
         user-select: none;
+        touch-action: none;
     }
 
     .checker-bg {
@@ -316,6 +326,7 @@
         width: 320px;
         cursor: grab;
         will-change: transform;
+        touch-action: none;
     }
 
 

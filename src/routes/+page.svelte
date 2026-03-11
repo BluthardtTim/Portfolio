@@ -7,8 +7,8 @@
 </script>
 
 <svelte:head>
-    <title>Tim Bluthardt — Interaction Designer</title>
-    <meta name="description" content="Portfolio of Tim Bluthardt — Interaction Designer studying at HfG Schwäbisch Gmünd. Exploring UX, product design, and new technologies." />
+    <title>Tim Bluthardt — Digital Product Designer</title>
+    <meta name="description" content="Portfolio of Tim Bluthardt — Digital Product Designer studying at HfG Schwäbisch Gmünd. Exploring UX, product design, and new technologies." />
     <link rel="canonical" href="https://timbluthardt.com/" />
     <meta property="og:title" content="Tim Bluthardt — Interaction Designer" />
     <meta property="og:description" content="Portfolio of Tim Bluthardt — Interaction Designer studying at HfG Schwäbisch Gmünd." />

@@ -166,7 +166,7 @@
         padding: 4px;
         /* Halbtransparenter Hintergrund statt globaler Opacity */
         background-color: rgba(0, 0, 0, 0.65);
-        border: solid 0.5px #bcbcbc;
+        border: solid 1px #8e8e8e;
         border-radius: 50px;
         display: flex;
         align-items: center;

@@ -147,6 +147,22 @@
     a {
         text-decoration: none;
     }
+    :global(html[data-theme='dark']) .card {
+        background-color: #1a1a1c;
+        border-color: #2e2e30;
+    }
+    :global(html[data-theme='dark']) .card:hover {
+        background-color: #222224;
+    }
+    :global(html[data-theme='dark']) .prevImg {
+        background-color: #252528;
+    }
+    :global(html[data-theme='dark']) .card h3 {
+        color: #eaeaea;
+    }
+    :global(html[data-theme='dark']) .card p {
+        color: #888;
+    }
     @media (max-width: 800px) {
         #wrapper {
             margin-top: 100px;

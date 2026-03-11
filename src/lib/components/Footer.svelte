@@ -29,4 +29,10 @@
     a:hover {
         color: var(--text);
     }
+    @media (max-width: 800px) {
+        main {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
 </style>
