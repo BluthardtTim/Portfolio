@@ -6,7 +6,8 @@
             description: 'The innovative way of playing Jenga',
             imgUrl: '/images/XtendCard_mobile.png',
             dark: false,
-            rotation: -6,
+            rotation: -5.5,
+            startRot: 9,
             initX: 12, initY: 18,
             mobileX: 4, mobileY: 9,
             route: '/playground/xtend',
@@ -17,7 +18,8 @@
             description: 'A personal selection of photos',
             imgUrl: '/images/gallerie/17.jpg',
             dark: false,
-            rotation: 4,
+            rotation: 3.8,
+            startRot: -7,
             initX: 28, initY: 55,
             mobileX: 5, mobileY: 65,
             route: '/playground/photo',
@@ -29,7 +31,8 @@
             imgUrl: '/images/RespyCard.png',
             dark: false,
             imgOnly: true,
-            rotation: 3,
+            rotation: 2.5,
+            startRot: 8,
             initX: 60, initY: 14,
             mobileX: 58, mobileY: 4,
             route: '/playground/respiratorysystem',
@@ -42,7 +45,8 @@
             imgUrl: '/images/Growceries/Grow3.png',
             dark: true,
             imgOnly: true,
-            rotation: -3,
+            rotation: -4.2,
+            startRot: -9,
             initX: 62, initY: 58,
             mobileX: 55, mobileY: 67,
             route: '/playground/growceries',
@@ -53,7 +57,8 @@
             title: 'favicon',
             imgUrl: '/images/faviconHighRes.png',
             dark: false,
-            rotation: 8,
+            rotation: 7.5,
+            startRot: 11,
             initX: 27, initY: 51,
             mobileX: 61, mobileY: 30,
             route: null,
@@ -197,7 +202,7 @@
                         class:dragging={card.dragging}
                         class:settling={card.settling}
                         class:entered={card.entered}
-                        style="--i: {i}; --hover-rot: {card.hoverRot}deg"
+                        style="--i: {i}; --hover-rot: {card.hoverRot}deg; --start-rot: {card.startRot}deg"
                         on:animationend={() => onCardEntered(i)}
                     >
                         <img src={card.imgUrl} alt="favicon" draggable="false" class="favicon-img" />
@@ -208,7 +213,7 @@
                         class:dragging={card.dragging}
                         class:settling={card.settling}
                         class:entered={card.entered}
-                        style="--i: {i}; --hover-rot: {card.hoverRot}deg"
+                        style="--i: {i}; --hover-rot: {card.hoverRot}deg; --start-rot: {card.startRot}deg"
                         on:animationend={() => onCardEntered(i)}
                     >
                         <img src={card.imgUrl} alt={card.title} draggable="false" class="photo-only-img" />
@@ -220,7 +225,7 @@
                         class:dragging={card.dragging}
                         class:settling={card.settling}
                         class:entered={card.entered}
-                        style="--i: {i}; --hover-rot: {card.hoverRot}deg"
+                        style="--i: {i}; --hover-rot: {card.hoverRot}deg; --start-rot: {card.startRot}deg"
                         on:animationend={() => onCardEntered(i)}
                     >
                         <img src={card.imgUrl} alt={card.title} draggable="false" class="imgonly-img" />
@@ -232,7 +237,7 @@
                         class:dragging={card.dragging}
                         class:settling={card.settling}
                         class:entered={card.entered}
-                        style="--i: {i}; --hover-rot: {card.hoverRot}deg"
+                        style="--i: {i}; --hover-rot: {card.hoverRot}deg; --start-rot: {card.startRot}deg"
                         on:animationend={() => onCardEntered(i)}
                     >
                         <div class="card-body">
@@ -375,9 +380,9 @@
     }
 
     @keyframes blobIn {
-        0%   { scale: 0.6; opacity: 0; }
+        0%   { scale: 0.6; opacity: 0; rotate: var(--start-rot, -8deg); }
         60%  { opacity: 1; }
-        100% { scale: 1; opacity: 1; }
+        100% { scale: 1; opacity: 1; rotate: 0deg; }
     }
 
     .float-card:not(.dragging):not(.settling):hover {
@@ -517,8 +522,6 @@
         justify-content: center;
         z-index: 10000;
         padding: 32px;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
     }
 
     .overlay-card {
@@ -526,9 +529,10 @@
         border-radius: 20px;
         width: 100%;
         max-width: 960px;
-        height: 85vh;
+        height: 80vh;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
         position: relative;
         flex-shrink: 0;
     }
@@ -544,6 +548,7 @@
         height: auto;
         overflow: hidden;
         background: #000;
+        flex-shrink: 0;
     }
 
     .overlay-video-wrap {
@@ -562,8 +567,9 @@
 
     .overlay-gallery {
         overflow-y: auto;
-        height: auto;
-        max-height: 90vh;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+        height: 80vh;
         background: #fff;
     }
 
@@ -605,13 +611,11 @@
     @media (max-width: 600px) {
         .overlay-backdrop {
             padding: 16px;
-            align-items: flex-start;
         }
         .overlay-card {
-            height: auto;
-            max-height: 85vh;
+            height: 80vh;
         }
-        .canvas-center h1 { font-size: 2rem; }
+        .canvas-center h1 { font-size: 2rem; white-space: nowrap; }
         .float-card-anchor { width: 230px; }
     }
 </style>
