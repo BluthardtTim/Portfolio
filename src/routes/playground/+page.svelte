@@ -8,7 +8,7 @@
             dark: false,
             rotation: -6,
             initX: 12, initY: 18,
-            mobileX: 4, mobileY: 19,
+            mobileX: 4, mobileY: 9,
             route: '/playground/xtend',
         },
         {
@@ -31,7 +31,7 @@
             imgOnly: true,
             rotation: 3,
             initX: 60, initY: 14,
-            mobileX: 58, mobileY: 14,
+            mobileX: 58, mobileY: 4,
             route: '/playground/respiratorysystem',
             videoUrl: 'https://www.youtube.com/embed/wimssUKgVVg',
         },
@@ -55,7 +55,7 @@
             dark: false,
             rotation: 8,
             initX: 27, initY: 51,
-            mobileX: 61, mobileY: 36,
+            mobileX: 61, mobileY: 30,
             route: null,
         },
     ];
