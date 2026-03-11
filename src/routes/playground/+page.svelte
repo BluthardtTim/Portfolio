@@ -8,6 +8,7 @@
             dark: false,
             rotation: -6,
             initX: 12, initY: 18,
+            mobileX: 4, mobileY: 19,
             route: '/playground/xtend',
         },
         {
@@ -18,6 +19,7 @@
             dark: false,
             rotation: 4,
             initX: 28, initY: 55,
+            mobileX: 5, mobileY: 65,
             route: '/playground/photo',
         },
         {
@@ -29,6 +31,7 @@
             imgOnly: true,
             rotation: 3,
             initX: 60, initY: 14,
+            mobileX: 58, mobileY: 14,
             route: '/playground/respiratorysystem',
             videoUrl: 'https://www.youtube.com/embed/wimssUKgVVg',
         },
@@ -41,6 +44,7 @@
             imgOnly: true,
             rotation: -3,
             initX: 62, initY: 58,
+            mobileX: 55, mobileY: 67,
             route: '/playground/growceries',
             videoUrl: 'https://www.youtube.com/embed/Di2I94OvIoo',
         },
@@ -51,6 +55,7 @@
             dark: false,
             rotation: 8,
             initX: 27, initY: 51,
+            mobileX: 61, mobileY: 36,
             route: null,
         },
     ];
@@ -61,6 +66,17 @@
     let cards = cardDefs.map((c, i) => ({ ...c, x: 0, y: 0, dragging: false, hasDragged: false, settling: false, entered: false, hoverRot: -c.rotation }));
     let activeOverlay = null;
     let mounted = false;
+
+    // Unlock html scroll when overlay is open so iOS can scroll inside it
+    $: if (browser && mounted) {
+        if (activeOverlay) {
+            document.documentElement.style.position = '';
+            document.documentElement.style.overflow = '';
+        } else {
+            document.documentElement.style.position = 'fixed';
+            document.documentElement.style.overflow = 'hidden';
+        }
+    }
 
     onDestroy(() => {
         if (browser) {
@@ -76,10 +92,11 @@
         document.documentElement.style.overflow = 'hidden';
         document.documentElement.style.position = 'fixed';
         document.documentElement.style.width = '100%';
+        const mobile = window.innerWidth <= 600;
         cards = cards.map(c => ({
             ...c,
-            x: (c.initX / 100) * window.innerWidth,
-            y: (c.initY / 100) * window.innerHeight,
+            x: ((mobile && c.mobileX != null ? c.mobileX : c.initX) / 100) * window.innerWidth,
+            y: ((mobile && c.mobileY != null ? c.mobileY : c.initY) / 100) * window.innerHeight,
         }));
         mounted = true;
     });
@@ -143,6 +160,12 @@
     <meta property="og:description" content="An interactive canvas of Interaction Design projects." />
     <meta property="og:url" content="https://timbluthardt.com/playground" />
     <meta name="robots" content="noindex" />
+    <!-- Preload card images -->
+    <link rel="preload" as="image" href="/images/XtendCard_mobile.png" />
+    <link rel="preload" as="image" href="/images/gallerie/17.jpg" />
+    <link rel="preload" as="image" href="/images/RespyCard.png" />
+    <link rel="preload" as="image" href="/images/Growceries/Grow3.png" />
+    <link rel="preload" as="image" href="/images/faviconHighRes.png" />
 </svelte:head>
 
 <svelte:window on:pointermove={onPointerMove} />
@@ -494,6 +517,8 @@
         justify-content: center;
         z-index: 10000;
         padding: 32px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .overlay-card {
@@ -502,8 +527,10 @@
         width: 100%;
         max-width: 960px;
         height: 85vh;
-        overflow: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         position: relative;
+        flex-shrink: 0;
     }
 
     .overlay-iframe {
@@ -515,6 +542,7 @@
 
     .overlay-video-card {
         height: auto;
+        overflow: hidden;
         background: #000;
     }
 
@@ -575,7 +603,14 @@
     .overlay-close:hover { background: rgba(128,128,128,0.25); }
 
     @media (max-width: 600px) {
-        .overlay-card { height: 90vh; }
+        .overlay-backdrop {
+            padding: 16px;
+            align-items: flex-start;
+        }
+        .overlay-card {
+            height: auto;
+            max-height: 85vh;
+        }
         .canvas-center h1 { font-size: 2rem; }
         .float-card-anchor { width: 230px; }
     }

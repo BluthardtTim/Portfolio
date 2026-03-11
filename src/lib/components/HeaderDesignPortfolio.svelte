@@ -83,6 +83,7 @@
         padding: 0;
         margin-top: 14px;
         transition: opacity 0.2s ease;
+        position: relative;
     }
 
     .theme-dot:hover {
@@ -129,6 +130,12 @@
         }
         .theme-dot {
             justify-self: start;
+        }
+        /* Expand touch target to 48×48px without changing the visual circle */
+        .theme-dot::after {
+            content: '';
+            position: absolute;
+            inset: -17px; /* (48 - 14) / 2 = 17px */
         }
         h1 {
             font-size: 2rem;
