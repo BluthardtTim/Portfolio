@@ -1,0 +1,56 @@
+import "clsx";
+import { F as Footer } from "../../../../chunks/Footer.js";
+import { I as Image } from "../../../../chunks/Image.js";
+import { P as ProjectHeader } from "../../../../chunks/ProjectHeader.js";
+import { Y as YouTubeVideoEmbed } from "../../../../chunks/YouTubeVideoEmbed.js";
+function _page($$payload) {
+  let teamNames = ["Amelie", "Julia", "Tim"];
+  $$payload.out += `<main>`;
+  ProjectHeader($$payload, {
+    title: "Xtend",
+    description: "The innovative way of playing Jenga",
+    myRole: "Concept, Prototype, Video",
+    duration: "four months",
+    teamNames
+  });
+  $$payload.out += `<!----> <div class="pageWrapper"><div class="savespaceTop"></div> <div class="project_layout"><div class="txt"><h5>What is Xtend?</h5> <p>This was a university project where the goal of the project
+                    was to design and develop a controller to easily navigate a
+                    Jenga robot to push Jenga blocks out of the Jenga tower.
+                    Xtend is a one-hand controller optimized to control each
+                    level of freedom of the robot with one finger. The goal of
+                    the project was to get an idea of how physical interfaces
+                    present different challenges than digital interfaces. We
+                    needed to get an idea of how affordance can allow users to
+                    understand which button triggers which function.</p></div> <div class="txt"><h5>The robot</h5> <p>The robot was not built by us, it was given to us by our
+                professors at the university. So we had to build every function
+                of the robot into a controller. The robot has several functions:
+                Thanks to special wheels, the robot has the ability to move not
+                only forward and backward, but also sideways and rotate around
+                its own axis. The built-in measuring wheel is there to push out
+                the bricks. So the measuring wheel is able to go up and down and
+                push out and go back in.</p></div></div> `;
+  Image($$payload, {
+    src: "../images/Xtend/robotControlls.png",
+    caption: "movement of the robot"
+  });
+  $$payload.out += `<!----> `;
+  Image($$payload, { src: "../images/Xtend/robot.png", caption: "" });
+  $$payload.out += `<!----> <div class="spacer"></div> <h5>Prototype</h5> `;
+  Image($$payload, {
+    src: "../images/Xtend/prototype.png",
+    caption: ""
+  });
+  $$payload.out += `<!----> <div class="spacer"></div> <h5>Xtend</h5> `;
+  Image($$payload, { src: "../images/Xtend/xtend.png", caption: "" });
+  $$payload.out += `<!----> <div class="spacer"></div> <h5>This is Xtend</h5> `;
+  YouTubeVideoEmbed($$payload, {
+    url: "https://youtu.be/2iG09vxBUnU",
+    project: "Xtend"
+  });
+  $$payload.out += `<!----></div> <div class="startpageWrapper">`;
+  Footer($$payload);
+  $$payload.out += `<!----></div></main>`;
+}
+export {
+  _page as default
+};

@@ -1,93 +1,137 @@
 <script>
-    import MeIcons from "./MeIcons.svelte";
-    let showImage = false;
-    let mouseX = 0;
-    let mouseY = 0;
+    import { onMount } from 'svelte';
+    import { toggleTheme } from '$lib/theme';
+    let current = 'light';
+    let activeIndex = 0;
 
-    function handleMouseMove(event) {
-        mouseX = event.clientX + 20; // Abstand zum Mauszeiger
-        mouseY = event.clientY + 20;
-    }
+    onMount(() => {
+        current = document.documentElement.getAttribute('data-theme') || 'light';
 
-    function handleMouseEnter() {
-        showImage = true;
-    }
+        const paras = document.querySelectorAll('.hero-text p.scrollable');
 
-    function handleMouseLeave() {
-        showImage = false;
+        function onScroll() {
+            const mid = window.innerHeight / 2;
+            let closest = 0;
+            let closestDist = Infinity;
+            paras.forEach((p, i) => {
+                const rect = p.getBoundingClientRect();
+                const pMid = rect.top + rect.height / 2;
+                const dist = Math.abs(pMid - mid);
+                if (dist < closestDist) {
+                    closestDist = dist;
+                    closest = i;
+                }
+            });
+            activeIndex = closest;
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        return () => window.removeEventListener('scroll', onScroll);
+    });
+
+    function handleToggle() {
+        current = toggleTheme();
     }
 </script>
 
-<main>
+<section class="hero">
+    <div class="hero-inner">
+        <button
+            class="theme-dot"
+            aria-label="Toggle dark mode"
+            on:click={handleToggle}
+        ></button>
 
-    <div class="pageWrapper">
-
-        <div class="project_layout">
-            <div class="txt">
-                <div>
-                    <h1>Tim Bluthardt</h1>
-                    <h3>Interaction Design Portfolio</h3>
-                </div>
-                <p>
-                    <span
-                            on:mouseenter={handleMouseEnter}
-                            on:mouseleave={handleMouseLeave}
-                            on:mousemove={handleMouseMove}>Hi, I’m Tim</span
-                        > and I am currently studying Interaction Design in
-                    Schwäbisch Gmünd, Germany. My strong interest in new
-                    technologies and how design can help integrate them seamlessly
-                    into meaningful user experience, shapes the way I design.
-                </p>
-            </div>
-            {#if showImage}
-                <img
-                    src="../images/Portrait2.jpg"
-                    alt="Hover Image"
-                    class="hover-image"
-                    style="top: {mouseY}px; left: {mouseX}px;"
-                />
-            {/if}
+        <div class="hero-text">
+            <h1>Hello, I'm Tim.</h1>
+            <p class="subtitle">I'm a digital product designer</p>
+            <p class="scrollable" class:active={activeIndex === 0}>I am currently studying Interaction Design<br />in Schwäbisch Gmünd, Germany.</p>
+            <p class="scrollable" class:active={activeIndex === 1}>Spending a semester abroad in Tallinn,<br />and an Internship at Manyone helped me<br />gain valuable experience</p>
+            <p class="scrollable" class:active={activeIndex === 2}>My strong interest in new technologies<br />and how design can help integrate them<br />seamlessly into meaningful user<br />experience, shapes the way I design.</p>
         </div>
     </div>
-    
-        
-</main>
+</section>
 
 <style>
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: calc(50vh - 6rem) 0 10vh;
+    }
+
+    .hero-inner {
+        width: 70%;
+        max-width: 1600px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: start;
+    }
+
+    .theme-dot {
+        justify-self: end;
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: var(--text);
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin-top: 14px;
+        transition: opacity 0.2s ease;
+    }
+
+    .theme-dot:hover {
+        opacity: 0.6;
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.6rem;
+        font-weight: 400;
+        color: var(--text);
+        margin: 0;
+        line-height: 1.15;
+    }
+
+    .subtitle {
+        color: var(--text);
+        margin: -20px 0 20px 0;
+        font-size: 22px;
+    }
+
     p {
-        margin: 16px 0px;
-        color: #474747;
-        font-size: 18px;
+        color: var(--muted);
+        transition: color 240ms ease;
     }
-    p span {
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        transition: all 0.2s ease-in-out;
-        font-weight: 600;
+
+    p.active {
+        color: var(--text);
     }
-    p span:hover {
-        color: black;
-    }
-    .hover-image {
-        position: absolute;
-        width: 200px;
-        height: auto;
-        pointer-events: none;
-        z-index: 1000;
-        transition:
-            top 0.1s,
-            left 0.1s;
-        border-radius: 12px;
-        border: solid 4px rgba(255, 255, 255, 0.6);
-        backdrop-filter: blur(4px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    }
-    @media (max-width: 800px) {
-        .thatsme {
-            display: none;
+
+    @media (max-width: 600px) {
+        .hero {
+            padding: calc(50vh - 11rem) 0 10vh;
+        }
+        .hero-inner {
+            width: 90%;
+            grid-template-columns: 1fr;
+        }
+        .theme-dot {
+            justify-self: start;
         }
         h1 {
-            font-size: 48px;
+            font-size: 2rem;
         }
     }
 </style>

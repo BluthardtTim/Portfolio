@@ -6,7 +6,7 @@
       id: 2,
       title: "Ben",
       description: "The App for Better Evidence News",
-      semesterinfo: "App Concept and Design",
+      semesterinfo: "– a concept of how consuming news and social threads online can be more thoughtful and save",
       imgClass: "backgroundimgGrow",
       videoUrl: "path/to/grow-video.mp4",
       imgUrl1: "../images/BEN/BEN1.png",
@@ -17,7 +17,7 @@
       id: 3,
       title: "LYS",
       description: "Interactions shaped around you",
-      semesterinfo: "Specualtive Design",
+      semesterinfo: "– how can we bring human and technology closer together?",
       imgClass: "backgroundimgTraumpalast",
       videoUrl: "../videos/TraumpalastKeyvisual.mp4",
       imgUrl1: "../images/LYS/LYS1.png",
@@ -182,7 +182,7 @@
         class:lose={loseStatus[index]}
         class="card"
         style={!isMobile
-          ? `top: calc(${viewportHeight / 2}px - ${cardHeight / 2}px - 6vh + ${index * 15}px); filter: blur(${blurValues[index]}px);`
+          ? `top: calc(${viewportHeight / 2}px - ${cardHeight / 2}px - 6vh + ${index * 15}px);`
           : ""}
       >
         <a href={`/${card.title.toLowerCase()}`}>
@@ -221,6 +221,12 @@
     color: #6a6a6a;
     font-size: 18px;
   }
+  :global(html[data-theme='dark']) h3 {
+    color: #eaeaea;
+  }
+  :global(html[data-theme='dark']) p {
+    color: #888;
+  }
   .container {
     height: auto;
     display: flex;
@@ -234,40 +240,59 @@
   }
   .card {
     width: 100%;
+    height: 480px;
     background-color: rgba(249, 249, 249, 1);
-    /* backdrop-filter: blur(6px); */
-    transition: all 0.3s ease;
+    transition: background-color 240ms ease, border-color 240ms ease, transform 0.3s ease;
     border-radius: 22px;
     border: 1.5px #e3e3e3 solid;
-    padding: 40px;
-    margin-top: 100px;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 40px;
     position: sticky;
   }
   .card:hover {
     background-color: #f1f1f1;
     transform: translateY(-5px);
   }
+  :global(html[data-theme='dark']) .card {
+    background-color: #1a1a1c;
+    border-color: #2e2e30;
+  }
+  :global(html[data-theme='dark']) .card:hover {
+    background-color: #222224;
+  }
+  :global(html[data-theme='dark']) .prevImg {
+    background-color: #252528;
+  }
   .cardWrapper {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    gap: 24px;
+    height: 100%;
+    align-items: stretch;
   }
   .imgWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
+    gap: 6px;
     height: 100%;
+    padding: 24px 24px 24px 0;
+    box-sizing: border-box;
+    align-items: stretch;
   }
   .prevImg {
     height: 100%;
-    border-radius: 16px;
+    border-radius: 12px;
     background-color: white;
     position: relative;
+    overflow: hidden;
   }
   .prevImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 12px;
+    display: block;
   }
   .cardtxt {
     display: flex;
@@ -275,9 +300,12 @@
     justify-content: space-between;
     gap: 20px;
     width: 100%;
+    padding: 32px 0 32px 48px;
+    box-sizing: border-box;
   }
   .cardtxt p {
     max-width: 200px;
+    font-weight: 100;
   }
   .card.lose {
     position: absolute;
@@ -292,84 +320,86 @@
     .container {
       height: auto;
       width: 90%;
+      gap: 16px;
     }
     .card {
       width: 100%;
-      /* Nutze Variable, um sie für Kind-Elemente (z.B. Ausgleich am rechten Rand) zu verwenden */
-      --pad: 25px;
-      padding: var(--pad); /* kompakter */
-      overflow-y: hidden;
-      position: relative; /* Sticky auf Mobile aus */
-      margin-top: 0px; /* weniger vertikaler Raum */
-      /* Scroll-In Animation Ausgangszustand */
+      height: auto;
+      --pad: 24px;
+      padding: var(--pad) var(--pad) 0 var(--pad);
+      overflow: hidden;
+      position: relative;
+      margin-top: 0;
       transform: translateY(16px);
       opacity: 0;
       transition: transform 420ms ease, opacity 420ms ease, background-color 0.3s ease;
     }
     .card:hover {
-      transform: translateY(0px);
-    }
-    .cardWrapper {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-      gap: 2rem; /* kompakter */
-    }
-    /* Horizontaler Scroll für Bilder: 1.5 sichtbar, swipebar */
-    .imgWrapper {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 12px;
-      overflow-x: auto;
-      overflow-y: hidden;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      touch-action: pan-x;
-      padding-bottom: 4px; /* Platz für ggf. Scrollbar */
-      padding-right: var(--pad); /* sichtbares Padding am Ende des Scrolls */
-      /* Scrollbar ausblenden */
-      scrollbar-width: none; /* Firefox */
-      /* Rechtes Padding der Karte ignorieren: Container  um die Padding-Breite nach rechts herausziehen */
-      margin-right: calc(-1 * var(--pad));
-    }
-    .imgWrapper::-webkit-scrollbar {
-      display: none;
-    }
-    .prevImg {
-      flex: 0 0 66.666%; /* ~1.5 Karten sichtbar */
-      aspect-ratio: 4 / 5; /* konsistente Höhe */
-      height: auto;
-      scroll-snap-align: start;
-    }
-    .prevImg img {
-      height: 100%;
-    }
-    /* Alle drei Bilder auf Mobile anzeigen */
-    .none {
-      display: block;
-    }
-    /* Text kompakter + clampen für geringere Höhe */
-    p {
-      font-size: 18px;
+      transform: translateY(0);
     }
     :global(.card.in-view) {
       transform: translateY(0);
       opacity: 1;
     }
+    .cardWrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      height: auto;
+      gap: 20px;
+    }
+    .cardtxt {
+      padding: 0;
+      gap: 10px;
+      min-width: 0;
+    }
     .cardtxt p {
       max-width: none;
+      font-size: 16px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
     }
-    .cardtxt p:first-of-type {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
+    .cardtxt > p:last-child {
+      overflow: visible;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    /* Image strip: left-aligned, bleeds right */
+    .imgWrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 10px;
+      height: auto;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      margin-right: calc(-1 * var(--pad));
+      padding-left: 0;
+      padding-right: var(--pad);
+      padding-bottom: var(--pad);
+      box-sizing: border-box;
+    }
+    .imgWrapper::-webkit-scrollbar {
+      display: none;
+    }
+    .prevImg {
+      flex: 0 0 65%;
+      height: 220px;
+      scroll-snap-align: start;
+      border-radius: 14px;
       overflow: hidden;
     }
-    /* Semesterinfo inline halten, falls lang */
-    .cardtxt > p {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .prevImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+    .none {
+      display: block;
     }
   }
 </style>

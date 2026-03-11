@@ -1,6 +1,5 @@
 <script>
   const images = [
-    { url: '../images/gallerie/01.jpg' },
     { url: '../images/gallerie/02.jpg' },
     { url: '../images/gallerie/03.jpg' },
     { url: '../images/gallerie/04.jpg' },
@@ -9,7 +8,6 @@
     { url: '../images/gallerie/07.jpg' },
     { url: '../images/gallerie/08.jpg' },
     { url: '../images/gallerie/09.jpg' },
-    { url: '../images/gallerie/10.jpg' },
     { url: '../images/gallerie/11.jpg' },
     { url: '../images/gallerie/12.jpg' },
     { url: '../images/gallerie/13.jpg' },
@@ -24,57 +22,13 @@
     { url: '../images/gallerie/22.jpg' },
     { url: '../images/gallerie/23.jpg' },
   ];
-
-  let column1 = [];
-  let column2 = [];
-  let column3 = [];
-  let column4 = [];
-
-  $: distributeImages();
-
-  function distributeImages() {
-    column1 = [];
-    column2 = [];
-    column3 = [];
-    column4 = [];
-    images.forEach((image, index) => {
-      if (index % 4 === 0) column1.push(image);
-      else if (index % 4 === 1) column2.push(image);
-      else if (index % 4 === 2) column3.push(image);
-      else column4.push(image);
-    });
-  }
 </script>
 
 <main>
   <div class="gallery">
-    <!-- Erste Spalte -->
-    <div class="column">
-      {#each column1 as image}
-        <img src={image.url} alt="Gallery Image" />
-      {/each}
-    </div>
-    
-    <!-- Zweite Spalte -->
-    <div class="column">
-      {#each column2 as image}
-        <img src={image.url} alt="Gallery Image" />
-      {/each}
-    </div>
-    
-    <!-- Dritte Spalte -->
-    <div class="column">
-      {#each column3 as image}
-        <img src={image.url} alt="Gallery Image" />
-      {/each}
-    </div>
-
-    <!-- Vierte Spalte -->
-    <div class="column">
-      {#each column4 as image}
-        <img src={image.url} alt="Gallery Image" />
-      {/each}
-    </div>
+    {#each images as image}
+      <img src={image.url} alt="Gallery Image" />
+    {/each}
   </div>
 </main>
 
@@ -82,40 +36,31 @@
   main {
     width: 100%;
   }
+
   .gallery {
-    display: grid;
-    gap: 4px;
-  }
-  .column {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    columns: 1;
+    column-gap: 8px;
   }
 
   .gallery img {
     width: 100%;
     height: auto;
+    display: block;
     border-radius: 2px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    margin-bottom: 8px;
+    break-inside: avoid;
   }
 
-  /* Responsive grid layout */
   @media (min-width: 600px) {
-    .gallery {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    .gallery { columns: 2; }
   }
 
   @media (min-width: 900px) {
-    .gallery {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .gallery { columns: 3; }
   }
 
   @media (min-width: 1200px) {
-    .gallery {
-      grid-template-columns: repeat(4, 1fr); /* Update to 4 columns */
-    }
+    .gallery { columns: 4; }
   }
 </style>

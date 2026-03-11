@@ -29,7 +29,7 @@
     }
     .caption {
         margin-top: 0.5rem;
-        color: #888;
+        color: var(--muted);
         font-style: italic;
         margin-left: 1rem;
         font-size: 16px;

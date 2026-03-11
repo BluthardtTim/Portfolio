@@ -119,7 +119,6 @@
             <YouTubeVideoEmbed url={GrowceriesVideourl} project="Growceries" />
         </div>
     </div>
-    <MoreProjects projectNames={selectedProjects} />
     <div class="startpageWrapper">
         <Footer />
     </div>

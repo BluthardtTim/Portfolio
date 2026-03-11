@@ -1,12 +1,68 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Neue Montreal", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #9d9d9d;
+  --muted-2: #cccccc;
+  --muted-3: #7d7d7d;
+  --link: #000000;
+  --surface: #ffffff;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f0f10;
+  --text: #eaeaea;
+  --muted: #9d9d9d;
+  --muted-2: #bdbdbd;
+  --muted-3: #9a9a9a;
+  --link: #eaeaea;
+  --surface: #1c1c1e;
+}
+
+html, body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Smooth theme transitions */
+html.theme-transition {
+  animation: theme-fade 240ms ease;
+}
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: color 240ms ease, background-color 240ms ease,
+              border-color 240ms ease, box-shadow 240ms ease, fill 240ms ease,
+              stroke 240ms ease;
+}
+
+@keyframes theme-fade {
+  from { opacity: 0.92; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.theme-transition {
+    animation: none;
+  }
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition: none;
+  }
+}
+
 h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -16,26 +72,30 @@ h1 span {
   font-size: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: 400;
-  color: #9D9D9D;
+  color: var(--muted);
 }
 
 h3 {
+  font-family: 'Playfair Display', serif;
   font-size: 24px;
   margin-bottom: 1rem;
   font-weight: 500;
 }
 
 h5 {
+  font-family: 'Playfair Display', serif;
   font-size: 30px;
   margin-bottom: 0.7rem;
   font-weight: 500;
 }
 
-h5 span {
-  font-weight: 400;
-  color: #ccc;
-  font-weight: 400;
+h6 {
+  font-size: 22px;
+  font-weight: 100;
+  margin-top: -10px;
+  color: var(--muted);
 }
+
 
 p {
   font-size: 18px;
@@ -44,7 +104,7 @@ p {
 
 .caption {
   font-size: 16px;
-  color: #9D9D9D;
+  color: var(--muted);
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -61,7 +121,7 @@ p {
 }
 
 a {
-  color: black;
+  color: var(--link);
   text-underline-offset: 4px;
 }
 
@@ -105,7 +165,7 @@ video {
 .project_layout .quote {
   max-width: 800px;
   margin: 4rem auto 8rem;
-  color: #000;
+  color: var(--text);
 }
 
 .project_layout .quote p {
@@ -116,7 +176,7 @@ video {
 }
 
 .project_layout .quote span {
-  color: #7d7d7d;
+  color: var(--muted-3);
   text-align: right;
   font-size: 18px;
 }

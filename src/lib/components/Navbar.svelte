@@ -2,6 +2,8 @@
     import { onMount, tick } from "svelte";
     import { page } from "$app/stores";
 
+    $: isEmbed = $page.url.searchParams.get('embed') === '1';
+
     let selectedItem = "projects";
     let highlightLeft = "160px";
     let highlightWidth = "0px";
@@ -64,6 +66,7 @@
 </script>
 
 <main>
+    {#if !isEmbed}
     <div id="wrapper">
         <div class="NavbarWrapper">
             <div
@@ -137,6 +140,7 @@
             </a>
         </div>
     </div>
+    {/if}
 </main>
 
 <style>

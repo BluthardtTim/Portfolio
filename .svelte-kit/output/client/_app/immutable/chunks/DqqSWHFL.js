@@ -1,0 +1,1 @@
+import"./CWj6FrbW.js";import"./BU9TsfTT.js";import{t,a as e}from"./CaOfsPV0.js";var p=t('<main><div id="wrapper" class="svelte-s493db"><p class="svelte-s493db">© 2025 Tim Bluthardt</p> <p class="svelte-s493db"><a href="/imprint" class="svelte-s493db">Imprint</a></p></div></main>');function l(a){var s=p();e(a,s)}export{l as F};

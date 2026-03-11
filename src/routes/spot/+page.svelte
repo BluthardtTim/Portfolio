@@ -23,7 +23,16 @@
 </script>
 
 <svelte:head>
-    <title>Tim Bluthardt | Spot</title>
+    <title>Spot — A spatial computing tool</title>
+    <meta name="description" content="Spot is a spatial computing tool for capturing, organising, and using ideas — an Invention Design project." />
+    <link rel="canonical" href="https://timbluthardt.com/spot" />
+    <meta property="og:title" content="Spot — A spatial computing tool" />
+    <meta property="og:description" content="A spatial computing tool for thinking, keeping and using ideas." />
+    <meta property="og:url" content="https://timbluthardt.com/spot" />
+    <meta property="og:image" content="/images/Spot/Spot1.png" />
+    <meta name="twitter:title" content="Spot — A spatial computing tool" />
+    <meta name="twitter:description" content="A spatial computing tool for thinking, keeping and using ideas." />
+    <meta name="twitter:image" content="/images/Spot/Spot1.png" />
 </svelte:head>
 
 <main>

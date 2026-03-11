@@ -11,7 +11,15 @@
 </script>
 
 <svelte:head>
-    <title>Tim Bluthardt | Traumpalast</title>
+    <title>Traumpalast — Cinema Branding</title>
+    <meta name="description" content="Traumpalast is a cinema branding and interaction design project." />
+    <link rel="canonical" href="https://timbluthardt.com/traumpalast" />
+    <meta property="og:title" content="Traumpalast — Cinema Branding" />
+    <meta property="og:description" content="Cinema branding and interaction design project." />
+    <meta property="og:url" content="https://timbluthardt.com/traumpalast" />
+    <meta property="og:image" content="/images/Traumpalast/Traumpalast1.png" />
+    <meta name="twitter:title" content="Traumpalast — Cinema Branding" />
+    <meta name="twitter:description" content="Cinema branding and interaction design project." />
 </svelte:head>
 
 <main>

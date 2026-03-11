@@ -110,7 +110,7 @@
         transform: translate(-50%, -50%);
         width: 70px;
         height: 70px;
-        background-color: white;
+        background-color: var(--surface);
         border-radius: 40px;
         cursor: pointer;
         display: flex;

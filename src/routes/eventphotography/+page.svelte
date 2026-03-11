@@ -44,6 +44,18 @@
   }
 </script>
 
+<svelte:head>
+    <title>Event Photography</title>
+    <meta name="description" content="A selection of photos from concerts, festivals, and cultural events." />
+    <link rel="canonical" href="https://timbluthardt.com/eventphotography" />
+    <meta property="og:title" content="Event Photography" />
+    <meta property="og:description" content="Photos from concerts, festivals, and cultural events." />
+    <meta property="og:url" content="https://timbluthardt.com/eventphotography" />
+    <meta property="og:image" content="/images/EventPhotos/1.png" />
+    <meta name="twitter:title" content="Event Photography" />
+    <meta name="twitter:image" content="/images/EventPhotos/1.png" />
+</svelte:head>
+
 <main>
   <div class="gallery">
     <!-- Erste Spalte -->

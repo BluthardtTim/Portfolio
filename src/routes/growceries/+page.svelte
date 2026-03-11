@@ -25,7 +25,16 @@
 </script>
 
 <svelte:head>
-    <title>Tim Bluthardt | Growceries</title>
+    <title>Growceries — Local food, less waste</title>
+    <meta name="description" content="Growceries connects local farmers with consumers to reduce food waste — a Google Design Sprint project." />
+    <link rel="canonical" href="https://timbluthardt.com/growceries" />
+    <meta property="og:title" content="Growceries — Local food, less waste" />
+    <meta property="og:description" content="A platform connecting local farmers with consumers to reduce food waste." />
+    <meta property="og:url" content="https://timbluthardt.com/growceries" />
+    <meta property="og:image" content="/images/Growceries/Grow1.png" />
+    <meta name="twitter:title" content="Growceries — Local food, less waste" />
+    <meta name="twitter:description" content="A platform connecting local farmers with consumers to reduce food waste." />
+    <meta name="twitter:image" content="/images/Growceries/Grow1.png" />
 </svelte:head>
 
 <main>

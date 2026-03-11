@@ -4,12 +4,24 @@
 
 </script>
 
+<svelte:head>
+    <title>About — Tim Bluthardt</title>
+    <meta name="description" content="Hi, I'm Tim — an Interaction Designer studying at HfG Schwäbisch Gmünd with a passion for new technologies, UX, and physical computing." />
+    <link rel="canonical" href="https://timbluthardt.com/aboutme" />
+    <meta property="og:title" content="About — Tim Bluthardt" />
+    <meta property="og:description" content="Interaction Designer studying at HfG Schwäbisch Gmünd." />
+    <meta property="og:url" content="https://timbluthardt.com/aboutme" />
+</svelte:head>
+
 <main>
     <div class="pageWrapper">
         <div class="savespaceTop"></div>
         <div class="project_layout">
             <div class="txt">
-                <h5>Hi I'm Tim</h5>
+                <div>
+                    <h5>Hi, I'm Tim</h5>
+                    <h6>I design digital products</h6>
+                </div>
                 <p>
                     I'm currently studying Interaction Design at University of
                 Design in Schwäbisch Gmünd, Germany. I have an strong interest
@@ -18,7 +30,7 @@
                 and technology are coming together to create meaningful user
                 experiences, and I'm excited to be part of this ever-evolving
                 field. I'm always looking for new opportunities to learn and
-                grow as a designer and photographer.
+                grow as a designer.
                 </p>
             </div>
             <div class="txt">
@@ -31,7 +43,6 @@
                     playing basketball with friends.
                 </p>
             </div>
-            <img src="../images/AboutMe/aboutme.png" alt="">
             <div class="txt">
                 <div></div>
                 <p>
@@ -39,7 +50,7 @@
                     passion for photography a few years ago, since then it has
                     become difficult to leave my camera at home. If you are
                     interested in seeing more of my work, have a look at my
-                    <a href="#/photo">gallery</a>.
+                    <a href="/playground/photo">gallery</a>.
                 </p>
             </div>
             <div class="txt">
@@ -53,6 +64,7 @@
             </div>
         </div>
         <Footer />
+        <div class="spacer"></div>
     </div>
 
 </main>

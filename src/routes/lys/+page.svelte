@@ -29,7 +29,16 @@
 </script>
 
 <svelte:head>
-    <title>Tim Bluthardt | LYS</title>
+    <title>LYS — Interactions shaped around you</title>
+    <meta name="description" content="LYS explores interactions shaped around the individual — a product design project bridging humans and technology." />
+    <link rel="canonical" href="https://timbluthardt.com/lys" />
+    <meta property="og:title" content="LYS — Interactions shaped around you" />
+    <meta property="og:description" content="Interactions shaped around you — bringing human and technology closer together." />
+    <meta property="og:url" content="https://timbluthardt.com/lys" />
+    <meta property="og:image" content="/images/LYS/LYS1.png" />
+    <meta name="twitter:title" content="LYS — Interactions shaped around you" />
+    <meta name="twitter:description" content="Interactions shaped around you — bringing human and technology closer together." />
+    <meta name="twitter:image" content="/images/LYS/LYS1.png" />
 </svelte:head>
 
 <main>

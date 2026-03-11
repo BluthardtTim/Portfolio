@@ -1,0 +1,1 @@
+.image-grid.svelte-npdygt{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;align-items:stretch}@media (max-width: 560px){.image-grid.svelte-npdygt{gap:1rem}}img.svelte-npdygt{width:100%;height:auto;display:block;aspect-ratio:var(--aspect, 4 / 3);object-fit:cover;margin:0}.rounded.svelte-npdygt{border-radius:6px}
