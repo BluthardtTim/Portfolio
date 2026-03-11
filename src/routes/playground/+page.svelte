@@ -70,6 +70,7 @@
 
     let cards = cardDefs.map((c, i) => ({ ...c, x: 0, y: 0, dragging: false, hasDragged: false, settling: false, entered: false, hoverRot: -c.rotation }));
     let activeOverlay = null;
+    let overlayOpenedAt = 0;
     let mounted = false;
 
     // Unlock html scroll when overlay is open so iOS can scroll inside it
@@ -144,6 +145,7 @@
             setTimeout(() => { cards[i].settling = false; cards = cards; }, 500);
         } else if (cards[i].route) {
             activeOverlay = cards[i];
+            overlayOpenedAt = Date.now();
         }
     }
 
@@ -153,6 +155,7 @@
     }
 
     function closeOverlay(e) {
+        if (Date.now() - overlayOpenedAt < 350) return;
         if (e.target === e.currentTarget) activeOverlay = null;
     }
 </script>
@@ -546,6 +549,7 @@
 
     .overlay-video-card {
         height: auto;
+        max-height: 80vh;
         overflow: hidden;
         background: #000;
         flex-shrink: 0;
@@ -614,6 +618,11 @@
         }
         .overlay-card {
             height: 80vh;
+            max-height: 80vh;
+        }
+        .overlay-video-card {
+            height: auto;
+            max-height: 80vh;
         }
         .canvas-center h1 { font-size: 2rem; white-space: nowrap; }
         .float-card-anchor { width: 230px; }
