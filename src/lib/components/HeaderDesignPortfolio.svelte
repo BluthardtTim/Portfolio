@@ -97,9 +97,7 @@
     }
 
     h1 {
-        font-family: 'Playfair Display', serif;
         font-size: 2.6rem;
-        font-weight: 400;
         color: var(--text);
         margin: 0;
         line-height: 1.15;

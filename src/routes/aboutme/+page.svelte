@@ -63,11 +63,14 @@
                 </p>
             </div>
         </div>
-        <Footer />
         <div class="spacer"></div>
     </div>
+    <Footer />
 
 </main>
 
 <style>
+.txt {
+    margin-bottom: 0rem;
+}
 </style>

@@ -182,7 +182,7 @@
     <div class="checker-bg"></div>
     <div class="canvas-center">
         <h1>My Playground</h1>
-        <p class="sub">Interaction Design · Portfolio</p>
+        <h6 class="sub">Interaction Design · Portfolio</h6>
     </div>
 
     {#if mounted}
@@ -338,15 +338,12 @@
     }
 
     .canvas-center h1 {
-        font-family: 'Playfair Display', serif;
         font-size: 3rem;
-        font-weight: 400;
         color: var(--text);
         margin: 0 0 0.25rem;
     }
 
     .canvas-center .sub {
-        color: var(--muted);
         margin: 0;
     }
 

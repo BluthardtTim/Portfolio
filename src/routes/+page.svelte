@@ -43,8 +43,8 @@
         </div>
         <!-- <Techstack /> -->
     </div>
-    <Footer />
     <div class="spacer100"></div>
+    <Footer />
 </main>
 
 <style>

@@ -164,8 +164,8 @@
 
     <MoreProjects projectNames={selectedProjects} />
     <div class="startpageWrapper">
-        <Footer />
     </div>
+    <Footer />
 </main>
 
 <style>
