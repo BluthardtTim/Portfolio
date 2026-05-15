@@ -49,7 +49,7 @@
         <div class="project_layout">
             <div class="txt">
                 <h5>
-                    Spot – a spacial computing tool fot thinking keeping and
+                    Spot – a spacial computing tool for thinking keeping and
                     using ideas
                 </h5>
                 <p>
@@ -177,7 +177,7 @@
             </div>
             <YouTubeVideoEmbed url={SpotVideourl} project="Spot" />
             <div class="txt">
-                <h5>Vision of Spot</h5>
+                <h5>What's next?</h5>
                 <p>
                     Our vision for Spot goes further. The concept is infinitely
                     expandable. What if institutions like universities could use
