@@ -38,7 +38,7 @@
 <main>
     <ProjectHeader
         title="Spot"
-        description="A spatial computing tool for thinking, keeping and using ideas."
+        description="A spatial computing tool for thinking, keeping, and using ideas."
         myRole="concept, visual Design, video film and editing"
         duration="four months"
         {teamNames}
@@ -49,7 +49,7 @@
         <div class="project_layout">
             <div class="txt">
                 <h5>
-                    Spot – a spatial computing tool for thinking keeping and
+                    Spot – a spatial computing tool for thinking, keeping, and
                     using ideas
                 </h5>
                 <p>
