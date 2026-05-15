@@ -49,7 +49,7 @@
         <div class="project_layout">
             <div class="txt">
                 <h5>
-                    Spot – a spacial computing tool for thinking keeping and
+                    Spot – a spatial computing tool for thinking keeping and
                     using ideas
                 </h5>
                 <p>
