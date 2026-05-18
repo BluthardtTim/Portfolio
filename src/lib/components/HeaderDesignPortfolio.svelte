@@ -47,7 +47,7 @@
             <h1>Hello, I'm Tim.</h1>
             <p class="subtitle">I'm a digital product designer</p>
             <p class="scrollable" class:active={activeIndex === 0}>I am currently studying Interaction Design<br />in Schwäbisch Gmünd, Germany.</p>
-            <p class="scrollable" class:active={activeIndex === 1}>Spending a semester abroad in Tallinn,<br />and an Internship at Manyone helped me<br />gain valuable experience</p>
+            <p class="scrollable" class:active={activeIndex === 1}>Spending a semester abroad in Tallinn,<br />and an Internship at Manyone helped me<br />gain valuable experience.</p>
             <p class="scrollable" class:active={activeIndex === 2}>My strong interest in new technologies<br />and how design can help integrate them<br />seamlessly into meaningful user<br />experience, shapes the way I design.</p>
         </div>
     </div>

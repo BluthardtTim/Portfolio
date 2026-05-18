@@ -168,6 +168,11 @@
         background-color: rgba(0, 0, 0, 0.65);
         border: solid 1px #8e8e8e;
         border-radius: 50px;
+        box-shadow:
+            0 1px 2px rgba(0, 0, 0, 0.16),
+            0 8px 18px rgba(0, 0, 0, 0.18),
+            inset 0 1px 0 rgba(255, 255, 255, 0.12),
+            inset 0 -1px 0 rgba(0, 0, 0, 0.24);
         display: flex;
         align-items: center;
         justify-content: space-around;

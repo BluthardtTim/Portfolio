@@ -1,0 +1,26 @@
+# Tim Bluthardt Portfolio
+
+This website showcases interaction design and product design projects by Tim Bluthardt.
+
+## Primary pages
+- / : Home and project overview
+- /aboutme : Biography and background
+- /playground : Interactive experiments and prototypes
+- /imprint : Legal information
+
+## Case studies
+- /ben
+- /eventphotography
+- /growceries
+- /lys
+- /spot
+- /traumpalast
+
+## Content notes
+- Project pages include images, videos, and descriptive captions.
+- The site supports light and dark mode.
+- Embedded views may append ?embed=1 for iframe usage.
+
+## Crawl hints
+- Canonical root: https://timbluthardt.com/
+- Sitemap: https://timbluthardt.com/sitemap.xml

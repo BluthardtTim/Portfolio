@@ -14,7 +14,7 @@
         Growceries: {
             title: "Growceries",
             description:
-                "An Application that conects lokal farmers to reduse foodwaste",
+                "An application that connects local farmers to reduce food waste",
             imageUrl: "../images/Growceries/Grow1.png",
             route: "growceries",
         },
@@ -26,7 +26,7 @@
         },
         Respiratory: {
             title: "Respiratory",
-            description: "An interactive exibishion design",
+            description: "An interactive exhibition design",
             imageUrl: "../images/RespyCard_mobile.png",
             route: "respiratory",
         },

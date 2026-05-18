@@ -59,8 +59,8 @@
                     years. We started the design process by creating a concept
                     for augmented reality, which led to the development of Spot.
                     Spot is a spatial computing tool where thoughts and ideas
-                    can be stored. The location based information will allow you
-                    to exes our information wherever it gets nesesary.
+                    can be stored. The location-based information will allow you
+                    to access our information wherever it is necessary.
                 </p>
             </div>
             <div class="txt">
@@ -148,14 +148,14 @@
                 caption="Immersive Space"
             />
             <div class="txt">
-                <h5>Spot allready today</h5>
+                <h5>Spot already today</h5>
                 <p>
-                    To make our vision for Spot experiencebale, we built a
-                    prototype for the Apple Vision Pro. This allows us to create
-                    and interact with spots already today. Our teammate Amelie
-                    developed the prototype for the Vision Pro. Thanks to that
-                    we were able to to make some final touches to the concept of
-                    our tool with real life experience of how Spot interacts
+                    To make our vision for Spot tangible, we built a prototype
+                    for the Apple Vision Pro. This allows us to create and
+                    interact with Spots already today. Our teammate Amelie
+                    developed the prototype for the Vision Pro. Thanks to that,
+                    we were able to make some final touches to the concept of
+                    our tool with real-life experience of how Spot interacts
                     with the environment.
                 </p>
             </div>
@@ -169,10 +169,10 @@
                     To present our concept, we created a video that shows the
                     potential of Spot. The video shows how Spot can be used in
                     everyday life and how it can help you to store and reuse
-                    your thoughts. Spot is a spatial concept yet. But with the
-                    ongoing development of spatial computing and device to make
-                    it usefull I believe that Spot can be a usefull tool in the
-                    future.
+                    your thoughts. Spot is still a conceptual project. But with
+                    the ongoing development of spatial computing and devices that
+                    make it useful, I believe that Spot can become a useful tool
+                    in the future.
                 </p>
             </div>
             <YouTubeVideoEmbed url={SpotVideourl} project="Spot" />

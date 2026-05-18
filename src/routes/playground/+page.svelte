@@ -167,7 +167,7 @@
     <meta property="og:title" content="Playground — Tim Bluthardt" />
     <meta property="og:description" content="An interactive canvas of Interaction Design projects." />
     <meta property="og:url" content="https://timbluthardt.com/playground" />
-    <meta name="robots" content="noindex" />
+    <meta name="robots" content="index, follow" />
     <!-- Preload card images -->
     <link rel="preload" as="image" href="/images/XtendCard_mobile.png" />
     <link rel="preload" as="image" href="/images/gallerie/17.jpg" />
@@ -364,15 +364,57 @@
         border-radius: 18px;
         padding: 20px;
         position: relative;
+        --card-shadow-rest:
+            0 0.4px 0.8px rgba(0,0,0,0.10),
+            0 1.6px 3px rgba(0,0,0,0.09),
+            0 6px 12px rgba(0,0,0,0.085),
+            0 16px 28px rgba(0,0,0,0.075),
+            0 32px 52px rgba(0,0,0,0.06);
+        --card-shadow-hover:
+            0 0.6px 1px rgba(0,0,0,0.11),
+            0 2.5px 5px rgba(0,0,0,0.10),
+            0 10px 18px rgba(0,0,0,0.10),
+            0 24px 42px rgba(0,0,0,0.09),
+            0 44px 70px rgba(0,0,0,0.08);
+        --card-shadow-drag:
+            0 1px 1.5px rgba(0,0,0,0.13),
+            0 4px 8px rgba(0,0,0,0.13),
+            0 14px 24px rgba(0,0,0,0.13),
+            0 34px 56px rgba(0,0,0,0.12),
+            0 64px 96px rgba(0,0,0,0.10);
         box-shadow:
-            0 1px 2px rgba(0,0,0,0.10),
-            0 4px 8px rgba(0,0,0,0.09),
-            0 10px 20px rgba(0,0,0,0.08),
-            0 20px 40px rgba(0,0,0,0.06);
-        transition: box-shadow 0.2s ease, scale 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1), rotate 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+            var(--card-shadow-rest),
+            inset 0 1px 0 rgba(255,255,255,0.35),
+            inset 0 -1px 0 rgba(0,0,0,0.05);
+        transition: box-shadow 260ms cubic-bezier(.2,.85,.2,1), scale 220ms cubic-bezier(0.175, 0.885, 0.32, 1.1), rotate 220ms cubic-bezier(0.175, 0.885, 0.32, 1.2);
         transform-origin: center center;
         animation: blobIn 0.5s cubic-bezier(0.34, 1.1, 0.64, 1) both;
         animation-delay: calc(var(--i, 0) * 50ms);
+    }
+
+    :global(html[data-theme='dark']) .float-card {
+        --card-shadow-rest:
+            0 0.5px 1px rgba(0,0,0,0.40),
+            0 2px 5px rgba(0,0,0,0.36),
+            0 8px 16px rgba(0,0,0,0.34),
+            0 20px 36px rgba(0,0,0,0.32),
+            0 38px 64px rgba(0,0,0,0.28);
+        --card-shadow-hover:
+            0 0.6px 1.1px rgba(0,0,0,0.44),
+            0 3px 6px rgba(0,0,0,0.42),
+            0 12px 22px rgba(0,0,0,0.40),
+            0 28px 50px rgba(0,0,0,0.36),
+            0 52px 84px rgba(0,0,0,0.30);
+        --card-shadow-drag:
+            0 1px 2px rgba(0,0,0,0.48),
+            0 5px 10px rgba(0,0,0,0.46),
+            0 18px 30px rgba(0,0,0,0.44),
+            0 42px 70px rgba(0,0,0,0.40),
+            0 72px 112px rgba(0,0,0,0.34);
+        box-shadow:
+            var(--card-shadow-rest),
+            inset 0 1px 0 rgba(255,255,255,0.06),
+            inset 0 -1px 0 rgba(0,0,0,0.36);
     }
 
     .float-card.entered {
@@ -388,6 +430,10 @@
     .float-card:not(.dragging):not(.settling):hover {
         scale: 1.04;
         rotate: var(--hover-rot, 2deg);
+        box-shadow:
+            var(--card-shadow-hover),
+            inset 0 1px 0 rgba(255,255,255,0.32),
+            inset 0 -1px 0 rgba(0,0,0,0.06);
     }
 
     .float-card.dark { background: #111; }
@@ -466,12 +512,11 @@
     .float-card.dragging {
         cursor: grabbing;
         box-shadow:
-            0 4px 6px rgba(0,0,0,0.10),
-            0 12px 24px rgba(0,0,0,0.12),
-            0 28px 52px rgba(0,0,0,0.14),
-            0 48px 80px rgba(0,0,0,0.08);
+            var(--card-shadow-drag),
+            inset 0 1px 0 rgba(255,255,255,0.24),
+            inset 0 -1px 0 rgba(0,0,0,0.08);
         scale: 1.02;
-        transition: box-shadow 0.15s ease, scale 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+        transition: box-shadow 180ms ease, scale 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.4);
     }
 
     .float-card.settling {

@@ -13,7 +13,7 @@
 <main>
     <ProjectHeader
         title="Discover your Respiratory system"
-        description="An interactive exibishion design."
+        description="An interactive exhibition design."
         myRole="Concept design, realisation of prototype with arduino"
         duration="four months"
         {teamNames}

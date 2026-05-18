@@ -28,15 +28,15 @@
             <h3 id="description">{description}</h3> -->
             <!-- <div class="CaseStudyCredits">
                 <div>
-                    <p><strong>my role</strong></p>
+                    <p><strong>My role</strong></p>
                     <p>{myRole}</p>
                 </div>                
                 <div>
-                    <p><strong>duration</strong></p>
+                    <p><strong>Duration</strong></p>
                     <p>{duration}</p>
                 </div>
                 <div>
-                    <p><strong>teammates</strong></p>
+                    <p><strong>Teammates</strong></p>
                     <Teammates teammates={teamNames} />
                 </div>
             </div> -->
@@ -55,6 +55,10 @@
         left: 8vw;
         width: 30px;
         height: 30px;
+        filter: none;
+    }
+    :global(html[data-theme="dark"]) .back {
+        filter: invert(1) brightness(1.15);
     }
     .back:hover {
         cursor: pointer;
@@ -84,6 +88,10 @@
     }
     .CaseStudyCredits div p:first-child {
         text-align: right;
+    }
+    .CaseStudyCredits div p:first-child strong {
+        font-family: var(--font-heading);
+        font-weight: 400;
     }
     @media (max-width: 800px) {
         .CaseStudyCredits {

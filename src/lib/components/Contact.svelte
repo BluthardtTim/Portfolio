@@ -15,13 +15,13 @@
         <a href="mailto:tim.bluthardt@gmail.com">
             <div class="contactGroup">
                 <img src="../images/icons/envelope-simple-light.svg" alt="icon">
-                <div class="tooltip">E-Mail</div>
+                <div class="tooltip">Email</div>
             </div>
         </a>
         <a href="https://www.linkedin.com/in/tim-bluthardt/" target="_blank">
             <div class="contactGroup">
                 <img src="../images/icons/linkedin-logo-light.svg" alt="icon">
-                <div class="tooltip">linkedIn</div>
+                <div class="tooltip">LinkedIn</div>
             </div>
         </a>
 

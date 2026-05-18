@@ -37,9 +37,9 @@
             <h5>Overview of the project</h5>
             <p class="twocoloumns">
                 "Traumpalast" is a cinema chain from southern Germany with an app
-                thathas an old design and needs a makeover. And that's exactly what
-                we did! We had a look at the customer journey of the current
-                Traumpalast app. We looked at what other cinema brands do well and
+                that has an old design and needs a makeover. And that's exactly
+                what we did! We looked at the customer journey of the current
+                Traumpalast app, studied what other cinema brands do well, and
                 redesigned the Traumpalast app from scratch. This included
                 rethinking the concept, user journey, features, and visual
                 design.
@@ -54,23 +54,24 @@
                 pages or features. The app also appeared to be an exact copy of
                 the website, with features unnecessary for mobile applications
                 such as "go back" or "scroll up" buttons in the navigation bar.
-                The app lacked a clear visual hierarchy to guide users easily
-                through its interface. Additionally, we believed that a cinema
-                visit is an experience in itself, and we wanted to reflect this
-                through the app's appearance.
+                The app lacked a clear visual hierarchy to guide users through
+                the interface. Additionally, we believed that a cinema visit is
+                an experience in itself, and we wanted to reflect this through
+                the app's appearance.
             </p>
         </div>
         <div class="spacer"></div>
         <div>
             <h5>Design Process</h5>
             <p class="twocoloumns">
-                With the current App in our hands we started by having a look at
-                the old navigation structure: Afterwards we created a Featurelist and KANO-Model
-                to outsource useless features and used the insights to define
-                a new concept for the Traumpalast App. After forming personas
-                for a potential user group we did user research to find the
-                exact needs and build the new visual design upon these insights.
-                Based on these results we build mid-fidelity wireframes.
+                With the current app in our hands, we started by examining the
+                old navigation structure. Afterwards, we created a feature list
+                and Kano model to remove unnecessary features and used the
+                insights to define a new concept for the Traumpalast app. After
+                forming personas for a potential user group, we did user
+                research to find the exact needs and build the new visual
+                design upon these insights. Based on these results, we created
+                mid-fidelity wireframes.
             </p>
         </div>
         <Image
@@ -84,8 +85,8 @@
             <p class="twocoloumns">
                 To create a playful yet professional look for our app, we
                 developed brand guidelines and applied them to our product.
-                These brand guidelines ensures a consistent user interface and
-                help users to navigate through the app.
+                These brand guidelines ensure a consistent user interface and
+                help users navigate through the app.
             </p>
         </div>
         <Image
@@ -96,9 +97,9 @@
         <div class="spacer"></div>
         <div>
             <p class="twocoloumns">
-                To present the final visual design, this is how we made sure our
-                at the beginning of the process defined How might We Questions
-                are implemented in the new Design:
+                To present the final visual design, this is how we made sure
+                the "How might we" questions defined at the beginning of the
+                process are implemented in the new design:
             </p>
         </div>
         <Image src="../images/Traumpalast/Traum_HMW01.png" caption="" />
